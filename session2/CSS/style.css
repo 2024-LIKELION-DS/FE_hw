@@ -1,0 +1,66 @@
+.aside {
+  float: left;
+  clear: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  background-color: rgb(71, 106, 65);
+}
+
+#name1 {
+  font-weight: 800;
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+#name2 {
+  font-weight: 800;
+  padding-top: 0;
+  margin-top: 0;
+  color: aliceblue;
+}
+
+#manggom {
+  border-radius: 10%;
+  border: 2px solid rgb(233, 210, 0);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  background-color: rgb(250, 244, 235);
+  border-left: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+}
+
+#a {
+  font-size: 12px;
+}
+
+#b {
+  font-size: 12px;
+}
+
+#c {
+  font-size: 12px;
+}
+
+.d {
+  font-size: 12px;
+}
+
+.love {
+  display: flex;
+  flex-direction: row;
+}
