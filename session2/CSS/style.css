@@ -1,0 +1,42 @@
+.header {
+  font-weight: bold;
+}
+
+.img {
+  width: 200px;
+  margin-right: 30px;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+}
+
+.year {
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.foodpic {
+  width: 200px;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.pick {
+  display: flex;
+  justify-content: center;
+}
