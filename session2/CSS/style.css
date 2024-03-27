@@ -1,0 +1,47 @@
+.container, .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.me, .one {
+    max-width: 500px;
+    margin: 0 10px; /* 좌우 여백 추가 */
+    line-height: 200%;
+}
+
+/* 환영 메시지 스타일링 */
+.intext {
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 50px;
+}
+
+/* 교육 및 활동 섹션 컨테이너 */
+.two {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* 교육 및 활동 섹션의 내부 스타일링 */
+.ed, .ac {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+    white-space: pre-wrap;
+    line-height: 200%;
+}
