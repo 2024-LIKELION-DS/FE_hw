@@ -1,0 +1,138 @@
+.geologica-uniquifier {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+}
+
+body {
+  font-family: "Geologica", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left,
+.right {
+  padding: 30px;
+}
+
+/*왼쪽 프로필, 개인정보*/
+.left {
+  flex: 30%;
+  background-color: #ffecd4;
+  text-align: center;
+}
+
+.profile {
+  width: 60%;
+  border-radius: 50%;
+  margin: 30px 0px; /*상하에만 30px*/
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-bar ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/*오른쪽 div 섹션들*/
+.right {
+  flex: 70%;
+}
+
+section {
+  min-height: 20vh;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*INTODUCE*/
+#introduce {
+  margin-top: -20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개의 열로 나눔 */
+  gap: 20px; /* 그리드 아이템 사이의 간격 */
+  text-align: center;
+  padding: 20px;
+  justify-items: start; /* 그리드 아이템을 열의 시작 부분(왼쪽)으로 정렬 */
+}
+
+.info-item {
+  display: flex; /* 플렉스박스를 사용하여 내용을 가로로 나열 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  padding: 10px;
+}
+
+.info-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.text {
+  margin-left: 20px; /*이미지와 텍스트 사이 간격*/
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+.text span {
+  color: rgb(111, 111, 111);
+}
+
+strong {
+  display: block; /* 볼드 텍스트를 블록 요소로 만들어 줄바꿈 */
+}
+
+/*EDUCATION*/
+#education {
+  margin-top: -30px; /* EDUCATION 섹션의 상단 마진을 줄임 */
+}
+
+.school {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝에 내용을 배치 */
+  font-size: 17px;
+  margin: 18px 0px;
+}
+
+.year {
+  margin-right: 20px;
+}
+
+.major {
+  font-size: 15px;
+  margin: 0px 0px 40px 20px;
+}
+
+/*ACTIVITES*/
+.club {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝에 내용을 배치 */
+  font-size: 17px;
+  margin: 18px 0px;
+}
+
+.year {
+  margin-right: 20px;
+}
+
+.club-img {
+  width: 50px;
+  height: 100px;
+  max-width: 100%;
+}
