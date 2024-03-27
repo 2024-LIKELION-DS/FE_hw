@@ -29,11 +29,12 @@
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 40px;
+  margin-left: 120px;
 }
 
 .name {
-  display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin-right: 250px;
 }
 
 .pick {
