@@ -34,6 +34,8 @@ body {
   width: 60%;
   border-radius: 50%;
   margin: 30px 0px; /*상하에만 30px*/
+  padding: 5px;
+  background-color: #a59e95;
 }
 
 .nav-bar ul {
