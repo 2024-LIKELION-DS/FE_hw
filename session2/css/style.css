@@ -1,0 +1,119 @@
+.header {
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 20px;
+}
+
+.header_img {
+  width: 80%;
+  height: 600px;
+  position: relative;
+}
+
+.rubik-scribble-regular {
+  position: absolute;
+  text-align: right;
+  top: 30%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.article1_p1,
+.article2_p1,
+.article3_p1 {
+  text-align: center;
+  font-size: 25px;
+  color: hotpink;
+}
+
+#article1_p2,
+#article2_p2,
+#article3_p2 {
+  text-align: center;
+  color: hotpink;
+}
+
+.line {
+  margin: auto;
+  width: 30%;
+  height: 2px;
+  background-color: hotpink;
+}
+
+.article1_photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.article1_photo img {
+  width: 15%;
+}
+
+.article1_text,
+.article2_text,
+.article3_p2 {
+  text-align: center;
+}
+
+.rubik-scribble-regular {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.article2 {
+  display: flex;
+  justify-content: center;
+}
+
+.article2_photo {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#a2_photo {
+  width: 368px;
+  height: 368px;
+  margin: 4px;
+}
+
+#a2_photo:hover {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+}
+
+.article3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.photo1_p {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  color: hotpink;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.article3_photo1,
+.article3_photo3 {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.article3_photo2 {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
