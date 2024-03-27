@@ -1,0 +1,55 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+.circle:hover {
+  content: url("https://i.pinimg.com/564x/4d/ee/67/4dee67174360ffff5a9ade3a475a6a5a.jpg");
+}
+
+.circle {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; /* 이미지를 수평 가운데로 정렬하기 위해 수정 */
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  float: none;
+}
+
+article img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+
+article.img {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  display: block;
+  margin-left: 20px;
+}
+
+body {
+  background-color: skyblue;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+article figure {
+  display: inline-block;
+  text-align: center; /* 이미지를 가운데 정렬 */
+  margin-bottom: 20px; /* 각 이미지 아래에 간격 주기*/
+}
+
+.image-container {
+  display: flex; /* 이미지 컨테이너를 플렉스 박스로 설정 */
+  flex-wrap: wrap; /* 이미지들이 넘칠 경우 줄바꿈을 허용 */
+  justify-content: space-around; /* 이미지들을 가운데 정렬하고 주변 공간을 균등*/
+  margin-bottom: 20px; /* 이미지 그룹 사이에 간격을 줍니다. */
+}
