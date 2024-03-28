@@ -1,9 +1,77 @@
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.box1 {
+
+.info {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#sec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#sec2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.edu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.act {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.act23 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  left: 50px;
+}
+
+.act24 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  right: 30px;
+}
+
+.sch {
+  position: relative;
+  left: 50px;
+}
+
+.cate {
+  font-weight: 700;
+  background-color: blanchedalmond;
 }
