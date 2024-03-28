@@ -27,9 +27,10 @@
   color: hotpink;
 }
 
-#article1_p2,
-#article2_p2,
-#article3_p2 {
+/* id에서 class로 수정함 */
+.article1_p2,
+.article2_p2,
+.article3_p2 {
   text-align: center;
   color: hotpink;
 }
