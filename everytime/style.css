@@ -4,6 +4,10 @@ nav {
   padding: 10px 0;
 }
 
+body {
+  margin: 0;
+}
+
 nav .wrap {
   width: 1180px;
   height: 80px;
@@ -11,6 +15,15 @@ nav .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav .icon {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 1px;
 }
 
 #logo img {
@@ -33,10 +46,6 @@ nav .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#account .icon {
-  margin-right: 20px;
 }
 
 #menu {
@@ -101,12 +110,63 @@ nav .wrap {
 }
 
 #container .title,
-.new,
+.new, .bubblespost, .text,
 .subtitle {
   border: 1px solid #e3e3e3;
   width: 900px;
   margin-top: 10px;
   padding-left: 1%;
+}
+
+#container .new {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+}
+
+.bubble {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+}
+
+#container .item {
+  display: block;
+  padding: 12px;
+}
+
+.bubblespost {
+  display: flex; 
+  flex-direction: column; 
+  border: 1px solid #e3e3e3;
+  margin-top: 10px;
+}
+
+.bubbles {
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  margin: 7px;
+}
+
+.bubbles > .item1 {
+  background-color: #e0feff;
+  color: #666;
+  font-size: 12px;
+  padding: 12px;
+  margin-left: 10px;
+  display: block;
+  border-radius: 10px;
+}
+
+.bubbles > .item2 {
+  background-color: #ffe6ea;
+  color: #666;
+  font-size: 12px;
+  padding: 12px;
+  margin-left: 10px;
+  display: block;
+  border-radius: 10px;
 }
 
 .text {
@@ -141,10 +201,38 @@ nav .wrap {
 
 .post2 {
   font-weight: bold;
+  margin-left: 10px;
 }
 
 #container hr {
   clear: both;
   width: 100%;
   border: 1px solid #e3e3e3;
+}
+
+#container .article2 {
+  display: flex; 
+  flex-direction: row; 
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+#container .time {
+  color: darkgray;
+  font-size: 14px;
+  margin-left: 180px;
+}
+
+#container .postname {
+  color: darkgray;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.post {
+  font-weight: bold;
+}
+
+.small {
+  margin-left: 10px;
 }

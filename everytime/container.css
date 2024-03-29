@@ -1,0 +1,58 @@
+/*container*/
+#container {
+    background: #fff;
+}
+
+#container .wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container .title,
+.new,
+.subtitle {
+    border: 1px solid #e3e3e3;
+    width: 900px;
+    margin-top: 10px;
+    padding-left: 1%;
+}
+
+.text {
+    border: 1px solid #e3e3e3;
+    width: 900px;
+    margin-top: 10px;
+}
+
+.content {
+    padding-left: 1%;
+}
+
+#container .name {
+    margin-left: 10px;
+    color: #056ab5;
+}
+.new {
+    background: #f4f4f4;
+    color: darkgray;
+}
+
+.board {
+    background: #f9f9f9;
+    border: 1px solid #e3e3e3;
+    width: 350px;
+    margin-top: 10px;
+}
+
+.article {
+    padding-left: 2%;
+}
+
+.post2 {
+    font-weight: bold;
+}
+
+#container hr {
+    clear: both;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+}

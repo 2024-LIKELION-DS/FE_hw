@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-">
     <title>everytime</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="containersheet" href="./container.css">
 </head>
 <body>
 <nav>
     <div class="wrap">
         <div id="logo">
-            <img class ="me" src ="C:\Users\82105\Desktop\FE_hw\everytime\everytime_img\nav.logo.png" alt="에브리타임 로고" >
+            <img class ="me" src ="./everytime_img\nav.logo.png" alt="에브리타임 로고" >
             <p><span class="name">에브리타임</span><br><span class="subname">덕성여대</span></p>
         </div>
         <ul id="menu">
@@ -22,8 +23,8 @@
             <li>캠퍼스픽</li>
         </ul>
         <div id="account">
-            <a title="쪽지함" class="icon message">쪽지함
-            <a title="내 정보" class="icon myinfo">내 정보
+            <img alt="쪽지함" class="icon" src="./everytime_img/icn_m_chat_gray800_light.png">
+            <img alt="내 정보" class="icon" src="./everytime_img/icn_m_account_gray800_light.png">
         </div>
     </div>
 </nav>
@@ -117,32 +118,54 @@
             <div class="title">
                 <h3><span class="name1">비밀게시판</span></h3>
             </div>
-            <div class="subtitle">
-                <p>추천</p>
+            <div class="bubblespost">
+                <div class="bubbles">
+                    <img alt="아이콘1" class="bubble" src="./everytime_img/icn_mcr_board_question_light.png">
+                        <div class="item1">
+                                <span>배고프다</span>
+                        </div>
+                        <div class="item1">
+                            <span>덕성여대</span>
+                        </div>
+                        <div class="item1">
+                            <span>마라탕 먹고싶다</span>
+                        </div>
+                </div>
+                <div class="bubbles">
+                    <img alt="아이콘2" class="bubble" src="./everytime_img/icn_mcr_board_hotarticle_light.png">
+                    <div class="item2">
+                            <span>졸리다</span>
+                    </div>
+                </div>
             </div>
             <div class="new">
                 <p><span class="post1">새 글을 작성해주세요!</span></p>
+                <img alt="새글아이콘" class="bubble" src="./everytime_img/container.write.background.png">
             </div>
             <div class="text">
                 <div class="content">
                 <p><span class="post">내용</span></p>
                 <p>어쩌구 저쩌구</p>
                 </div>
+                <p><span class="postname">방금 | 익명</span></p>
                 <hr>
                 <div class="content">
                     <p><span class="post">내용</span></p>
                     <p>어쩌구 저쩌구</p>
                     </div>
+                    <p><span class="postname">1분전 | 익명</span></p>
                     <hr>
                     <div class="content">
                         <p><span class="post">내용</span></p>
                         <p>어쩌구 저쩌구</p>
                         </div>
+                        <p><span class="postname">4분전 | 익명</span></p>
                         <hr>
                         <div class="content">
                             <p><span class="post">내용</span></p>
                             <p>어쩌구 저쩌구</p>
                             </div>
+                            <p><span class="postname">10분전 | 익명</span></p>
             </div>
         </div>
         <div class="divider"></div>
@@ -155,13 +178,13 @@
                 <div class="article">
                     <p class="post2">신기한 알바하는 덕우 있나</p>
                     <p class="small">난 파중류샵 알바<br>사진은 맨날 나한테 밥달라고 쳐다보는 애</p>
-                    <h4>비밀게시판</h4>
+                    <p><span class="postname">비밀게시판</span></p>
                 </div>
                 <hr>
                 <div class="article">
-                    <p class="post2">신기한 알바하는 덕우 있나</p>
-                    <p class="small">난 파중류샵 알바<br>사진은 맨날 나한테 밥달라고 쳐다보는 애</p>
-                    <h4>비밀게시판</h4>
+                    <p class="post2">anti-hero</p>
+                    <p class="small">it's me, hi<br>i'm the problem it's me</p>
+                    <p><span class="postname">비밀게시판</span></p>
                 </div>
             </div>
             <div class="board">
@@ -169,14 +192,20 @@
                     <h3><span class="name">HOT 게시물</span></h3>
                 </div>
                 <hr>
-                <div class="article">
-                    <p>신기한 알바하는 덕우 있나</p></div>
+                <div class="article2">
+                    <p>단호박 양갱</p>
+                    <p><span class="time">12분 전</span></p>
+                </div>
                 <hr>
-                <div class="article">
-                    <p>신기한 알바하는 덕우 있나</p></div>
+                <div class="article2">
+                    <p>꿀단밤 양갱</p>
+                    <p><span class="time">50분 전</span></p>
+                </div>
                 <hr>
-                <div class="article">
-                    <p>신기한 알바하는 덕우 있나</p></div>
+                <div class="article2">
+                    <p>고구마 양갱</p>
+                    <p><span class="time">5시간 전</span></p>
+                </div>
             </div>
         </div>
     </div>
