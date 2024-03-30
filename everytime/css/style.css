@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*header*/
+header {
+  margin: 25px 150px 10px 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo img {
+  width: 210px;
+}
+
+#menu {
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+#menu li {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.board {
+  color: red;
+}
+
+#account img {
+  width: 40px;
+}
+
+/*submenu(게시판 종류)*/
+nav {
+  display: flex;
+  height: 200px;
+  background-color: #efefef;
+  padding: 10px 180px;
+  border: 1px solid #d2d2d2;
+}
+
+.section {
+  display: flex;
+  border-right: 1px solid #d2d2d2;
+}
+
+.section:last-child {
+  border-right: none;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0px 20px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 180px;
+}
+
+.section ul li {
+  list-style-type: none;
+  margin: 0px 25px 4px 0px;
+  font-size: 13px;
+}
+
+.more {
+  color: red;
+  font-weight: bold;
+}
+
+/*main-content(본문)*/
+.main-content {
+  display: flex; /* flexbox를 활성화 */
+}
+
+.left-side {
+  margin: 0px 25px;
+}
+
+/*1) 게시판 제목*/
+.title-wrap {
+  margin: 25px 0px 0px 140px;
+  width: 780px;
+  height: auto;
+  border: 1px solid #d2d2d2;
+}
+
+.title {
+  margin: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*2) 미리보기 bubble*/
+.bubbles-wrap {
+  margin: 5px 0px 0px 140px;
+  width: 780px;
+  height: auto;
+  border: 1px solid #d2d2d2;
+}
+
+.bubble-question,
+.bubble-popular {
+  margin: 10px 0px 20px 5px;
+}
+
+.bubble-img {
+  width: 24px;
+  height: 24px;
+  display: inline;
+}
+
+.items,
+.item,
+.like-num {
+  display: inline;
+}
+
+.item {
+  padding: 10px;
+  width: auto;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 11px;
+  color: #5a5a5a;
+}
+
+.bubble-question > .items > .item {
+  background-color: rgba(169, 248, 255, 0.253);
+}
+
+.bubble-popular > .items > .item {
+  background-color: rgba(255, 233, 237, 0.47);
+}
+
+.like-num {
+  color: rgb(225, 0, 0);
+}
+
+/*3) 새 글 작성*/
+.new-article {
+  margin: 5px 0px 5px 140px;
+  padding: 10px;
+  width: 780px;
+  height: auto;
+  border: 2px solid #d2d2d2;
+  background-color: #f9f9f9;
+  color: #8f8f8f;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+/*4) 다른 글들*/
+.one-article {
+  margin: 0px 0px 0px 140px;
+  width: 780px;
+  height: auto;
+  border: 1px solid #d2d2d2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-writing {
+  margin: 20px;
+  font-size: 14px;
+}
+
+.article-title,
+.article-writer {
+  font-weight: bold;
+}
+
+.article-time,
+.article-writer {
+  display: inline;
+  font-size: 13px;
+  color: #8f8f8f;
+}
+
+.article-title,
+.article-text,
+.article-time,
+.article-writer {
+  padding: 1px 0px;
+}
+
+/*오른쪽 게시글*/
+/*실시간 인기글*/
+.realtime {
+  margin: 25px 0px 5px 0px;
+  width: 320px;
+  height: auto;
+  box-shadow: 0 0 0 1px #d2d2d2;
+  background-color: #f9f9f9;
+}
+
+.realtime-bigtitle {
+  font-weight: bold;
+  color: rgb(47, 96, 169);
+  font-size: 17px;
+  box-shadow: 0 0 0 1px #d2d2d2;
+  padding: 8px;
+}
+
+.realtime-writing {
+  box-shadow: 0 0 0 1px #d2d2d2;
+}
+
+.realtime-title {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 0px 3px 8px;
+}
+
+.realtime-text {
+  font-size: 13px;
+  padding: 0px 0px 3px 8px;
+}
+
+.realtime-board {
+  font-size: 12px;
+  padding: 0px 0px 8px 8px;
+  color: #8f8f8f;
+  font-weight: bold;
+}
+
+.realtime-info {
+  display: flex;
+  align-items: center;
+}
+
+.realtime-img {
+  display: flex; /* 이미지와 숫자를 가로로 나란히 배열 */
+  align-items: center; /* 세로 중앙 정렬 */
+  margin: 0px 0px 10px 5px; /* 이미지 사이의 간격 조정 */
+}
+
+.realtime-like-num {
+  font-size: 12px;
+  margin-left: 3px;
+  color: rgb(225, 0, 0);
+}
+
+.realtime-reply-num {
+  font-size: 12px;
+  margin-left: 3px;
+  color: rgb(0, 165, 190);
+}
+
+/*HOT 게시물*/
+.hotboard {
+  width: 320px;
+  height: auto;
+  box-shadow: 0 0 0 1px #d2d2d2;
+  background-color: #f9f9f9;
+}
+
+.hotboard-bigtitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.hotboard-title {
+  font-weight: bold;
+  color: rgb(47, 96, 169);
+  font-size: 17px;
+  padding: 8px;
+}
+
+.hotboard-add {
+  font-size: 12px;
+  padding: 10px;
+  color: #8f8f8f;
+}
+
+.hotboard-writing {
+  box-shadow: 0 0 0 1px #d2d2d2;
+  justify-content: space-between;
+  display: flex;
+}
+
+.hotboard-text {
+  font-size: 14px;
+  padding: 10px 8px;
+}
+
+.hotboard-time {
+  font-size: 12px;
+  padding: 10px;
+  color: #8f8f8f;
+}
