@@ -1,0 +1,432 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.link {
+  color: red;
+}
+
+p.let {
+  padding-top: 5px;
+  font-size: 9px;
+  line-height: 0%;
+}
+
+.imgandtext {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+span.ev {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 0px;
+}
+
+.text {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.img2 {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  padding-right: 200px;
+}
+
+.message {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.account {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* div에게 height 1px주면 줄 하나 생김 */
+
+/* 여기서부터 nav라인*/
+div.container {
+  display: flex;
+  margin-top: 15px;
+  background-color: rgb(235, 235, 235);
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  padding: 15px;
+  justify-content: center;
+}
+
+div.게시판 {
+  border-right: 2px solid lightgray;
+  border-left: 2px solid lightgray;
+  padding: 40px;
+  font-size: 15px;
+  text-align: center;
+}
+
+div.게시판1 {
+  border-right: 2px solid lightgray;
+  padding: 30px;
+  font-size: 15px;
+}
+
+div.게시판2 {
+  border-right: 2px solid lightgray;
+  padding: 30px;
+  font-size: 15px;
+}
+
+div.게시판3 {
+  border-right: 2px solid lightgray;
+  padding: 30px;
+  font-size: 15px;
+}
+
+div.게시판4 {
+  border-right: 2px solid lightgray;
+  padding: 30px;
+  font-size: 15px;
+}
+
+div.게시판5 {
+  border-right: 2px solid lightgray;
+  padding: 30px;
+  font-size: 15px;
+}
+
+/* 여기서부터 section라인 */
+
+span.secret {
+  display: flex;
+  border: 2px solid lightgray;
+  margin-top: 20px;
+  margin-left: 270px;
+  margin-right: 530px;
+  padding-left: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+section2 {
+  display: flex;
+  flex-direction: column; /* 한줄 띄워서 애들 내려보내고 싶으면 씁시다*/
+  border: 2px solid lightgray;
+  margin-top: 10px;
+  margin-left: 270px;
+  margin-right: 530px;
+}
+
+div.bluethings {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+p.덕성 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  background-color: rgb(219, 244, 253);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+p.기 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  background-color: rgb(219, 244, 253);
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+p.파이팅 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  background-color: rgb(219, 244, 253);
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+div.redthings {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+p.덕멋최고 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  background-color: rgb(253, 224, 219);
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+p.어흥 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  background-color: rgb(253, 224, 219);
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+section3 {
+  display: flex;
+  border: 2px solid lightgray;
+  margin-top: 10px;
+  margin-left: 270px;
+  margin-right: 530px;
+  font-size: 13px;
+  color: gray;
+  justify-content: space-between;
+  background-color: rgb(235, 235, 235);
+}
+
+span.new {
+  padding-left: 15px;
+}
+
+img.pen {
+  padding-top: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+section4 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid lightgray;
+  margin-top: 10px;
+  margin-left: 270px;
+  margin-right: 530px;
+}
+
+span.sorry {
+  font-weight: bold;
+  padding-left: 15px;
+}
+p.no {
+  font-size: 13px;
+  padding-left: 15px;
+  line-height: 0px;
+}
+
+div.like {
+  display: flex;
+  line-height: 0px;
+  font-size: 13px;
+  align-items: center;
+}
+
+img.likes {
+  width: 15px;
+  height: 15px;
+  padding-left: 15px;
+}
+
+img.comment {
+  padding-left: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+p.ten {
+  color: rgb(254, 112, 112);
+}
+
+p.seventeen {
+  color: rgb(184, 243, 249);
+  padding-right: 10px;
+}
+
+p.min {
+  color: rgb(168, 168, 168);
+}
+
+div.lion {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  top: 728px;
+  right: 300px;
+}
+
+section5,
+section6 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid lightgray;
+  border-top: 0px;
+  margin-left: 270px;
+  margin-right: 530px;
+}
+
+div.lion2 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  top: 820px;
+  right: 300px;
+}
+
+div.lion3 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  top: 912px;
+  right: 300px;
+}
+/* 죄송합니다... 이미지 옆에 띄우는거 모르겠어서 그냥 하나씩 숫자 써가면서 맞춰봤어요...*/
+
+/* aside라인*/
+aside1 {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  border: 2px solid lightgray;
+  padding-right: 120px;
+  margin-left: 1100px;
+  position: absolute;
+  top: 434px;
+}
+
+p.실시간 {
+  font-weight: bolder;
+  color: rgb(53, 102, 155);
+  padding-left: 15px;
+  padding-right: 99px;
+}
+
+aside2 {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  border: 2px solid lightgray;
+  padding-right: 120px;
+  margin-left: 1100px;
+  position: absolute;
+  top: 486.8px;
+}
+
+span.sorry1 {
+  font-weight: bold;
+  padding-left: 15px;
+}
+p.no1 {
+  font-size: 13px;
+  padding-left: 15px;
+  line-height: 0px;
+}
+
+div.like1 {
+  display: flex;
+  line-height: 0px;
+  font-size: 13px;
+  align-items: center;
+}
+
+img.likes1 {
+  width: 15px;
+  height: 15px;
+  padding-left: 15px;
+}
+
+img.comment1 {
+  padding-left: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+p.ten1 {
+  color: rgb(254, 112, 112);
+}
+
+p.seventeen1 {
+  color: rgb(133, 172, 176);
+  padding-right: 10px;
+}
+
+p.min1 {
+  color: rgb(168, 168, 168);
+  padding-left: 15px;
+}
+
+aside3 {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  border: 2px solid lightgray;
+  padding-right: 120px;
+  margin-left: 1100px;
+  position: absolute;
+  top: 580px;
+  border-top: 0px;
+}
+
+aside4 {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  border: 2px solid lightgray;
+  padding-right: 142px;
+  margin-left: 1100px;
+  position: absolute;
+  top: 685px;
+}
+
+p.HOT {
+  font-weight: bolder;
+  color: rgb(53, 102, 155);
+  padding-left: 15px;
+  padding-right: 98px;
+}
+
+aside5 {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  border: 2px solid lightgray;
+  padding-right: 120px;
+  margin-left: 1100px;
+  position: absolute;
+  top: 740px;
+  border-top: 0px;
+}
+
+aside6 {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  border: 2px solid lightgray;
+  padding-right: 120px;
+  margin-left: 1100px;
+  position: absolute;
+  top: 830px;
+}
