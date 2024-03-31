@@ -1,0 +1,86 @@
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p.music {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container {
+  border: 100px solid aliceblue;
+  border-radius: 40px;
+}
+
+div.main {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+div.haha {
+  border: 10px solid white;
+  width: 250px;
+  margin-left: 30px;
+  margin-right: 15px;
+  margin-top: 13px;
+}
+
+div.text {
+  border: 10px solid rgb(60, 65, 69);
+  margin-left: 60px;
+  width: 400px;
+  padding: 15px;
+}
+
+div.music {
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+}
+
+p.front {
+  font-size: 20px;
+  margin-right: auto;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+
+/* 무조건 가운데로 감!!*/
+span.name {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+/* margin -> 이쪽 방향, padding은 <- 이쪽 방향*/
+
+span {
+  font-weight: bold;
+}
+
+a:link {
+  color: black;
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: black;
+}
+
+.btb {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+div.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
