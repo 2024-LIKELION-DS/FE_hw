@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+div {
+  text-align: center;
+}
+
+h3 {
+  font-family: "IM_Hyemin-Bold";
+  color: blue;
+}
+
+h2,
+pre,
+li,
+p {
+  font-family: "IM_Hyemin-Bold";
+  font-style: normal;
+}
+
+.background {
+  background-attachment: fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background-image: url("./img/background.png");
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px lightgray;
+}
+
+.aboutme {
+  width: 400px;
+}
+
+.profile {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 70%;
+}
+
+.intro {
+  background-attachment: fixed;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background-image: url("./img/background.png");
+  background-size: cover;
+  border-radius: 5px;
+}
