@@ -13,7 +13,7 @@ p {
 .circle {
   border-radius: 50%;
   display: block;
-  margin: 0 auto; /* 이미지를 수평 가운데로 정렬하기 위해 수정 */
+  margin: 0 auto;
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -37,19 +37,23 @@ article.img {
 
 body {
   background-color: skyblue;
-  color: #ffffff;
+  color: #444;
   margin: 0 auto;
 }
 
 article figure {
   display: inline-block;
-  text-align: center; /* 이미지를 가운데 정렬 */
-  margin-bottom: 20px; /* 각 이미지 아래에 간격 주기*/
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .image-container {
-  display: flex; /* 이미지 컨테이너를 플렉스 박스로 설정 */
-  flex-wrap: wrap; /* 이미지들이 넘칠 경우 줄바꿈을 허용 */
-  justify-content: space-around; /* 이미지들을 가운데 정렬하고 주변 공간을 균등*/
-  margin-bottom: 20px; /* 이미지 그룹 사이에 간격을 줍니다. */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-inline-start: 0px;
 }
