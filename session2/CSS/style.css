@@ -27,17 +27,36 @@
 .foodpic {
   width: 200px;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  margin-left: 120px;
+  margin: 10px;
 }
 
 .name {
-  justify-content: left;
-  margin-right: 250px;
+  justify-content: center;
 }
 
 .pick {
   display: flex;
+  justify-content: center;
+}
+
+.place {
+  justify-content: center;
+}
+
+.nearschool {
+  margin: 20px;
+  width: 500px;
+}
+.pickimg {
+  margin: 20px;
+  width: 500px;
+}
+.pickedcenter {
+  display: flex;
+  justify-content: center;
+}
+.nearschooltxt {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
