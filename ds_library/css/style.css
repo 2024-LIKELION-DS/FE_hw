@@ -1,0 +1,102 @@
+/*header*/
+div.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/*section1*/
+img.search {
+  width: 1712px;
+  height: 300px;
+}
+
+img.searchbarimg {
+  position: absolute;
+  top: 210px;
+  left: 650px;
+  width: 450px;
+  height: 75px;
+}
+
+/*section2*/
+div.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/*section3_공지사항*/
+div.noticeandimg {
+  display: flex;
+}
+
+div.notice {
+  float: left;
+  margin-left: 200px;
+  padding-top: 50px;
+}
+
+span.noticetext {
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgb(171, 14, 92);
+}
+
+span.noticeen {
+  font-size: 12px;
+  color: gray;
+}
+
+span.culturetext {
+  padding-left: 50px;
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgb(149, 149, 149);
+}
+
+span.cultureen {
+  font-size: 12px;
+  color: gray;
+}
+
+.no {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+img.no {
+  padding-left: 120px;
+}
+
+div.line_first {
+  border-top: 5px solid black;
+  border-bottom: 2px solid lightgray;
+}
+
+p.grayfont {
+  color: gray;
+  font-size: 12px;
+  line-height: 0;
+}
+
+div.line {
+  border-bottom: 2px solid lightgray;
+}
+
+/*section3_이미지*/
+img.banner {
+  width: 600px;
+  padding-left: 150px;
+  padding-top: 50px;
+}
+/*...*/
