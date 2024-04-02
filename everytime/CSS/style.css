@@ -15,7 +15,7 @@ a:visited {
 /* 기능이동 */
 
 #topmenu {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   position: fixed;
   left: 0;
@@ -64,6 +64,10 @@ a:visited {
   font-weight: bold;
   list-style: none;
   margin-right: 22px;
+}
+
+.category li a:hover {
+  color: red;
 }
 
 #board {
@@ -125,7 +129,7 @@ a:visited {
   color: red;
 }
 
-.more {
+.more a {
   color: red;
   font-weight: bold;
 }
@@ -174,20 +178,24 @@ a:visited {
   margin-top: 10px;
 }
 
-.QnA p,
-.hot p {
+.QnA a p,
+.hot a p {
   font-size: 12px;
 }
 
 .hot {
-  display: flex;
-  justify-content: center;
   border-radius: 10px;
   height: 40px;
-  width: 145px;
+  width: 150px;
   background-color: #fff3f3;
   margin-left: 20px;
   margin: 10px 0;
+  justify-content: center;
+}
+
+.hot a {
+  display: flex;
+  align-items: center;
 }
 
 .hot img {
@@ -199,22 +207,25 @@ a:visited {
   border: 2px solid #d0cfcf;
   width: 780px;
   height: 50px;
-  display: flex;
-  align-items: center;
   background-color: #f5f5f5;
   margin-top: 8px;
 }
 
-.new form input {
+.new a {
+  display: flex;
   margin-left: 10px;
   font-size: 14px;
   color: #8f8f8f;
-  border: none;
   background-color: #f5f5f5;
+  align-items: center;
 }
 
-.new img {
-  margin-left: 550px;
+.new a p {
+  margin-top: 15px;
+}
+
+.new a img {
+  margin-left: 590px;
 }
 
 .post {
@@ -241,11 +252,13 @@ a:visited {
 .post_title {
   margin: 15px 0 0 15px;
   font-size: 14px;
+  color: black;
 }
 
 .post_text {
   font-size: 14px;
   margin: 5px 0 0 15px;
+  color: black;
 }
 
 .post_detail {
@@ -336,13 +349,15 @@ a:visited {
 
 .hot_post p {
   margin-left: 10px;
+  color: black;
 }
 
 .side_post_content {
   margin: 0;
+  color: black;
 }
 
-p.more_content {
+a.more_content {
   font-size: 13px;
   color: #8f8f8f;
   margin: 10px 10px 10px 0;
@@ -353,7 +368,6 @@ p.more_content {
   color: #8f8f8f;
   font-size: 12px;
 }
-
 .hot_post_detail {
   margin-right: 10px;
 }
@@ -366,6 +380,7 @@ p.more_content {
   margin: 10px 0 0 10px;
   font-size: 14px;
   font-weight: 600;
+  color: black;
 }
 
 .side_post img {
