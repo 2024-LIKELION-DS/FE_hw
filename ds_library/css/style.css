@@ -1,0 +1,130 @@
+.dslogo {
+  margin-left: 80px;
+}
+
+.banner {
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.content {
+  font-size: 15px;
+  color: gray;
+  font-weight: bold;
+}
+
+.littleimg {
+  justify-content: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.midset {
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.midsetex {
+  flex-direction: column;
+}
+
+.middlebarall {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgb(245, 245, 245);
+}
+
+.leftbottom {
+  width: 500px;
+  height: 500px;
+  border: 2px;
+  color: black;
+  margin-left: 200px;
+}
+
+.title {
+  font-size: 15px;
+  color: black;
+}
+
+.date {
+  font-size: 14px;
+  color: gray;
+}
+
+.tida {
+  flex-direction: column;
+}
+
+.noticekor {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.noticeeng {
+  font-size: 15px;
+  color: gray;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.notice {
+  display: flex;
+  flex-direction: row;
+}
+
+.culturekor {
+  font-size: 20px;
+}
+
+.cultureeeng {
+  font-size: 10px;
+  color: gray;
+  margin-top: 12px;
+  font-weight: lighter;
+}
+
+.culture {
+  display: flex;
+  flex-direction: row;
+  margin-left: 80px;
+  margin-top: 5px;
+}
+
+.moreimage {
+  justify-content: right;
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
+.nocul {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.rightbottom {
+  margin-left: 50px;
+}
+
+.mainimg {
+  display: flex;
+  object-fit: cover;
+  background-size: cover;
+}
