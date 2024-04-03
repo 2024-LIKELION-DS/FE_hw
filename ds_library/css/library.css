@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 17px 150px;
+}
+
+.dslogo {
+  object-fit: contain;
+  margin-top: 10px 0px;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin: 17px 30px 10px 0px;
+}
+
+li {
+  margin: 10px 18px;
+}
+
+.background_img {
+  width: 100%;
+  height: 275px;
+  background: url(../library_img/library_img/main-img3.jpg) no-repeat
+    center/cover;
+  background-position: 0px -515px;
+  padding: 0;
+}
+
+.title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #666;
+}
+
+.bar {
+  margin: 10px -3px;
+}
+
+.cat_bar {
+  margin: 0;
+  padding: 28px 155px 18px 155px;
+  background-color: #f4f3f0;
+  border-bottom: 1px solid #dfdedd;
+}
+
+.sec3 {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.sec3_title_notice {
+  height: 30px;
+  margin-left: 0px;
+  margin-right: 30px;
+  margin-bottom: 17px;
+  text-align: left;
+  padding-left: 0;
+}
+
+.sec3_title {
+  box-sizing: border-box;
+  margin-right: 5px;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+.notice {
+  margin-left: 2px;
+  font-size: 26px;
+  font-weight: 600;
+  width: 160px;
+}
+.notice_subtitle {
+  font-size: 15px;
+  color: #999;
+  font-weight: 500;
+}
+.culture {
+  padding-left: 0;
+  font-size: 22px;
+  font-weight: 400;
+  width: 150px;
+}
+.culture_subtitle {
+  font-size: 15px;
+  color: #999;
+  font-weight: 400;
+}
+.more {
+  width: 22px;
+  height: 22px;
+  margin-top: 30px;
+  margin-bottom: 17px;
+  margin-left: 125px;
+  text-align: right;
+}
+
+.sec3_left {
+  box-sizing: border-box;
+  width: 550px;
+  height: 420px;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+#pink {
+  color: #e888a5;
+}
+#gray {
+  color: #999;
+}
+
+.postbox {
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-top: 5px;
+  width: 550px;
+  height: 40px;
+  border-bottom: 1px solid #999;
+}
+
+.post {
+  font-weight: 200;
+  box-sizing: border-box;
+  height: 40px;
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+
+.date {
+  color: #999;
+  font-weight: 300;
+}
+
+.sec3_right {
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-left: 30px;
+}
