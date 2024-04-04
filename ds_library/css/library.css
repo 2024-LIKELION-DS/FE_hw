@@ -1,0 +1,335 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html,
+body,
+* {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-wrap {
+  text-align: center;
+}
+
+#header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header-nav {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.nav .ds-nav {
+  display: block;
+  max-width: 1200px;
+  height: 43px;
+  margin: 0 auto;
+}
+
+#ds-logonav {
+  float: right;
+  display: block;
+  max-width: 1200px;
+  height: 43px;
+  margin: 0 auto;
+}
+
+#header-1 li {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10px;
+
+  display: inline-block;
+  height: 43px;
+  padding: 0 16px;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: bold;
+  border-left: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+#header-2 {
+  display: table;
+  width: 100%;
+  padding: 20px 0 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+
+.ds-logo {
+  display: table-cell;
+  vertical-align: top;
+}
+
+#header-2 li {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10px;
+
+  display: inline-block;
+  height: 43px;
+  padding: 0 16px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  border-top: none;
+  border-bottom: none;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+#nav22-search {
+  height: 300px;
+  background-image: url("../img/main-img3.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#nav3-icon {
+  height: 220px;
+  background-color: #f4f3f0;
+  border: 1px solid #dfdedd;
+}
+
+.ikc-imagezone-intro {
+  padding-top: 85px;
+  box-sizing: border-box;
+}
+.ikc-imagezone-wrap .ikc-search-wrap ul {
+  display: table;
+}
+
+.ikc-search-summery li.ikc-active,
+.k-tabstrip .k-tabstrip-items > .k-item.k-state-active {
+  background: #901e43;
+}
+
+.ikc-imagezone-wrap .ikc-search-wrap form {
+  position: relative;
+  display: table;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  opacity: 0.9;
+}
+.ikc-imagezone-wrap .ikc-search-wrap .ikc-search .ikc-search-keyword {
+  display: inline-block;
+  width: 100%;
+  height: 59px;
+  margin: 0;
+  border: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.ikc-imagezone-wrap .ikc-search-wrap ul {
+  display: table;
+}
+.ikc-imagezone-intro
+  .k-tabstrip
+  .k-tabstrip-items
+  > .k-item.k-state-active
+  > .k-link {
+  padding: 0;
+  display: block;
+  background: 0 0;
+}
+
+.ikc-imagezone-wrap .ikc-search-wrap {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border: 0;
+  background: 0 0;
+}
+
+.ds-quick {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  max-width: 1200px;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+.ds-quick li {
+  display: inline-block;
+  width: 12.5%;
+}
+
+.ds-quick li a {
+  display: block;
+  height: 76px;
+  padding: 90px 0 0;
+  box-sizing: border-box;
+}
+.ds-quick li span {
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.ds-quick .main-q1 {
+  background: url(../img/main-q1.png) center top no-repeat;
+}
+
+.ds-quick .main-q2 {
+  background: url(../img/main-q2.png) center top no-repeat;
+}
+
+.ds-quick .main-q3 {
+  background: url(../img/main-q3.png) center top no-repeat;
+}
+.ds-quick .main-q4 {
+  background: url(../img/main-q4.png) center top no-repeat;
+}
+.ds-quick .main-q5 {
+  background: url(../img/main-q5.png) center top no-repeat;
+}
+.ds-quick .main-q6 {
+  background: url(../img/main-q6.png) center top no-repeat;
+}
+.ds-quick .main-q7 {
+  background: url(../img/main-q7.png) center top no-repeat;
+}
+.ds-quick .main-q8 {
+  background: url(../img/main-q8.png) center top no-repeat;
+}
+
+#content-wrap {
+  width: 100%;
+  height: auto; /* changed to auto */
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+#content-wrap .col-lg-6 a span {
+  color: #e888a5;
+}
+
+.k-tabstrip-items {
+  font-size: 1.7em;
+  color: #333;
+  font-weight: 600;
+  background: 0 0;
+}
+
+#content-wrap .col-lg-6 .small {
+  color: #999;
+  font-size: 0.5em;
+  letter-spacing: 1px;
+}
+
+.ds-first-section .ds-notice-wrap .list {
+  width: 100%;
+  margin-top: 10px;
+  border-top: 2px solid #000;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+.ds-first-section .ds-notice-wrap {
+  position: relative;
+  padding-left: 0;
+  margin-top: 9px;
+  border: none;
+}
+
+.ds-first-section .ds-banner-wrap {
+  position: relative;
+  z-index: 0;
+}
+
+.ds-first-section .ds-notice-wrap .list > ul > li {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #cdcdcd;
+  box-sizing: border-box;
+}
+
+.ds-first-section .ds-notice-wrap .list > ul > li a {
+  display: block;
+  width: 100%;
+  padding: 10px 25px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.ds-first-section .ds-notice-wrap .list > ul > li > span {
+  display: block;
+  padding: 2px 0 0 25px;
+  color: #b5b4b4;
+  box-sizing: border-box;
+}
+
+.ds-first-section .ds-notice-wrap .list > ul > li {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #cdcdcd;
+  box-sizing: border-box;
+}
+
+.ds-first-section .ds-notice-wrap .list > ul > li a {
+  display: block;
+  width: 100%;
+  padding: 10px 25px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.ds-first-section .ds-notice-wrap .list > ul > li > span {
+  display: block;
+  padding: 2px 0 0 25px;
+  color: #b5b4b4;
+  box-sizing: border-box;
+}
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0, 0);
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  margin: 5px;
+}

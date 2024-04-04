@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글 작성</title>
+    <link rel="stylesheet" href="./css/post.css" />
+    <link rel="icon" href="./img/logo.png" />
+  </head>
+  <body>
+    <div id="container" class="article">
+      <div class="wrap articles">
+        <form class="write">
+          <p>
+            <input
+              name="title"
+              autocomplete="off"
+              placeholder="글 제목"
+              class="title"
+            />
+          </p>
+          <p><textarea name="text" class="smallplaceholder"></textarea></p>
+          <ul class="option">
+            <li title="해시태그" class="hashtag"></li>
+            <li title="첨부" class="attach"></li>
+            <li title="완료" class="submit"></li>
+            <li title="익명" class="anonym"></li>
+            <li title="질문" class="question"></li>
+          </ul>
+          <div class="clearBothOnly"></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
