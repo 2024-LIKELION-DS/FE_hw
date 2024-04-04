@@ -1,0 +1,47 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  width: max-content;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5px 20px 20px 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 400px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  text-align: left;
+  margin-top: 0px;
+  outline: none;
+  padding-left: 10px;
+}
+
+button {
+  width: 400px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  margin: 3px;
+  background-color: #bd4936;
+  color: white;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+p {
+  font-size: 14px;
+}
+
+button {
+  margin-top: 15px;
+}
