@@ -46,6 +46,12 @@ a {
   font-size: 10px;
 }
 
+.DS_homepage span,
+.full_menu span {
+  position: relative;
+  bottom: 5px;
+}
+
 /*메뉴 바*/
 .menu {
   height: 100px;
@@ -185,6 +191,7 @@ a {
 }
 
 .notice_title {
+  position: relative;
   display: flex;
   align-items: center;
   border-bottom: 2px solid black;
@@ -196,7 +203,8 @@ a {
 }
 
 .notice_more {
-  margin-left: 170px;
+  position: absolute;
+  right: 10px;
 }
 
 .type_notice {
@@ -259,4 +267,27 @@ a {
 .ad {
   margin-left: 30px;
   margin-top: 30px;
+}
+
+/*저작권 표시*/
+.copyright {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.copyright p {
+  color: white;
+  font-size: 13px;
+  margin: 40px 0;
+}
+
+/*맨 위로 가기 버튼*/
+.top_button {
+  float: right;
+  position: fixed;
+  right: 100px;
+  bottom: 60px;
 }
