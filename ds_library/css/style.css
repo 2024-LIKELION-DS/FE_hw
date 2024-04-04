@@ -12,8 +12,9 @@ div.header {
 
 /*section1*/
 img.search {
-  width: 1712px;
-  height: 300px;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
 
 img.searchbarimg {
@@ -26,6 +27,7 @@ img.searchbarimg {
 
 /*section2*/
 div.section {
+  background-color: rgb(208, 186, 196);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,4 +101,3 @@ img.banner {
   padding-left: 150px;
   padding-top: 50px;
 }
-/*...*/
