@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>덕성여자대학교 도서관</title>
+    <link rel="stylesheet" href="./css/library.css" />
+    <link rel="icon" href="./img/ds-icon.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- (1) 상단 메뉴 wrap -->
+    <div id="nav-wrap">
+      <!-- (1-1) header -->
+      <div class="nav" id="nav1-header">
+        
+        <!-- (1-1-2) header-logo -->
+        <div id="header-2">
+            <img
+              class="ds-logo"
+              src="./img/ds-logo.jpg"
+              height="50px"
+              style="display: inline-block; vertical-align: middle; vertical-align: top;"
+            />
+          <ul>
+            <li><a class="ds-portal">e컨텐츠</a></li>
+            <li><a class="ds-portal">이용자서비스</a></li>
+            <li><a class="ds-portal">연구학습지원</a></li>
+            <li><a class="ds-portal">도서관안내</a></li>
+            <li><a class="ds-portal">컬렉션</a></li>
+            <li><a class="ds-portal">게시판</a></li>
+            <li><a class="ds-portal">Help Desk</a></li>
+            <li><a class="ds-portal">My library</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- (1-2) search -->
+      <div id="nav22-search">
+        <div id="nav2-search">
+
+        <ul class="k-tabstrip-items k-reset">
+          <li
+            class="k-state-active k-item k-tab-on-top k-state-default k-first"
+            role="tab"
+            aria-selected="true"
+            aria-controls="1c7b7910-4668-47bc-b4f9-60494164a7c1-1"
+          >
+            <span class="k-loading k-complete"></span
+            ><a
+              href=""
+              ng-class="{'ds-stab-active' : isSearchOpt==1 || !isSearchOpt }"
+              ng-click="isSearchOpt = 1"
+              class="k-link ds-stab-active"
+              >통합검색</a
+            >
+          </li>
+          <li
+            class="k-item k-state-default"
+            role="tab"
+            aria-controls="1c7b7910-4668-47bc-b4f9-60494164a7c1-2"
+          >
+            <span class="k-loading k-complete"></span
+            ><a href="" class="k-link">e-컨텐츠</a>
+          </li>
+          <li
+            class="k-item k-state-default k-last"
+            role="tab"
+            aria-controls="1c7b7910-4668-47bc-b4f9-60494164a7c1-3"
+          >
+            <span class="k-loading k-complete"></span
+            ><a href="#/search/ex" ui-sref="root.search.ex" class="k-link"
+              >상세검색</a
+            >
+          </li>
+        </ul>
+        <div
+          class="ikc-search k-content k-state-active"
+          id="1c7b7910-4668-47bc-b4f9-60494164a7c1-1"
+          role="tabpanel"
+          aria-expanded="true"
+          style="display: block"
+        >
+          <div class="searchGroup">
+            <div class="searchwrap1">
+              <h3 class="swh1">통합검색</h3>
+              <form
+                name="searchForm"
+                ng-submit="search(keyword)"
+                class="ng-pristine ng-valid"
+              >
+                <div class="db-input-wrap">
+                  <span
+                    tabindex="-1"
+                    role="presentation"
+                    class="k-widget k-autocomplete k-header ikc-search-keyword ng-pristine ng-untouched ng-valid k-state-default"
+                    style=""
+                    ><input
+                      ik-auto-complete=""
+                      id="keyword"
+                      class="ikc-search-keyword ng-pristine ng-untouched ng-valid k-input ng-empty"
+                      placeholder="검색어를 입력하세요 (통합검색)"
+                      ng-model="keyword"
+                      data-role="autocomplete"
+                      type="text"
+                      autocomplete="off"
+                      role="textbox"
+                      aria-haspopup="true"
+                      aria-disabled="false"
+                      aria-readonly="false"
+                      aria-owns="keyword_listbox"
+                      aria-autocomplete="list"
+                      style="width: 100%"
+                    /><span
+                      class="k-icon k-loading"
+                      style="display: none"
+                    ></span
+                    ><a class="button ikc-btn-turnon" style="display: none"
+                      >자동완성켜기</a
+                    ></span
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="ikc-btn-search"
+                  ng-click="search()"
+                >
+                  <span>검색</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ikc-search k-content"
+          style="display: none"
+          id="1c7b7910-4668-47bc-b4f9-60494164a7c1-2"
+          role="tabpanel"
+          aria-hidden="true"
+          aria-expanded="false"
+        >
+          <div class="searchGroup">
+            <form
+              action="https://duksung.summon.serialssolutions.com/search/"
+              target="_self"
+              class="ng-pristine ng-valid"
+            >
+              <div class="db-input-wrap">
+                <input type="hidden" name="ho" value="t" />
+                <input type="hidden" name="l" value="ko-KO" />
+                <input
+                  name="q"
+                  class="ikc-search-keyword"
+                  placeholder="검색어를 입력하세요 (e-컨텐츠)"
+                />
+              </div>
+              <button type="submit" class="ikc-btn-search">
+                <span>검색</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="k-content"
+          id="1c7b7910-4668-47bc-b4f9-60494164a7c1-3"
+          role="tabpanel"
+          aria-hidden="true"
+          aria-expanded="false"
+        ></div>
+      </div></div>
+      <!-- (1-3) icon -->
+      <div class="nav" id="nav3-icon">
+        <div class="ds-quick-wrap">
+            <ul class="ds-quick">
+              <li>
+                <a
+                  href="#/mylibrary/dashboard"
+                  ui-sref="root.mylibrary.dashboard"
+                  class="main-q1"
+                ></a
+                ><span>대출/연장/예약</span>
+              </li>
+              <!--
+          -->
+              <li>
+                <a
+                  href="#/mylibrary/request-service-state"
+                  ui-sref="root.mylibrary.request-service-state"
+                  class="main-q2"
+                ></a
+                ><span>서비스신청 현황</span>
+              </li>
+              <!--
+          -->
+              <li class="hidden-xs">
+                <a
+                  href="#/service/request"
+                  ui-sref="root.service.request"
+                  class="main-q3"
+                ></a
+                ><span>자료구입신청</span>
+              </li>
+              <!--
+          -->
+              <li>
+                <a
+                  href="#/service/other-college/dds"
+                  ui-sref="root.service.other-college.dds"
+                  class="main-q4"
+                ></a
+                ><span>원문복사신청</span>
+              </li>
+              <!--
+          -->
+              <li class="hidden-xs">
+                <a
+                  href="#/service/mobile"
+                  ui-sref="root.service.mobile"
+                  class="main-q5"
+                ></a
+                ><span>모바일이용증</span>
+              </li>
+              <!--
+          -->
+              <li>
+                <a
+                  href="#/guide/use"
+                  ui-sref="root.guide.use"
+                  class="main-q6"
+                ></a
+                ><span>도서관이용안내</span>
+              </li>
+              <!--
+          -->
+              <li>
+                <a
+                  href="#/guide/facility"
+                  ui-sref="root.guide.facility"
+                  class="main-q7"
+                ></a
+                ><span>PLAy N Create</span>
+              </li>
+              
+              <li>
+                <a ng-click="goStudyRoom()" target="_blank" 
+                class="main-q8"></a
+                ><span>스터디룸예약</span>
+              </li>
+            </ul>
+          </div>
+      </div></ik-static>
+    </div>
+    <!-- (2) 상단 메뉴 wrap -->
+<div id="content-wrap">
+  <!-- (2-1) notice와 (2-2) widget를 같은 수준으로 배치 -->
+  <div class="row">
+    <!-- (2-1) notice -->
+    <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+      <div kendo-tab-strip="" class="ds-notice-wrap k-widget k-header k-tabstrip k-floatwrap k-tabstrip-top" data-role="tabstrip" tabindex="0" role="tablist">
+        <ul class="k-tabstrip-items">
+          <li>
+            <a class="k-link">
+              <span>공지</span>
+              사항
+              <span class="small">/ Notice</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="list k-content k-state-active" id="ebf94dee-1181-4dbd-a796-b611c070873a-1" role="tabpanel" aria-expanded="true" style="display: block; height: auto; overflow: auto; opacity: 1;">
+        <ul>
+            <li ng-repeat="notice in notices"><a ng-href="#/bbs/notice/6126" href="#/bbs/notice/6126">제10회 도서관 리베상 안내</a> <span class="day">2024.04.01</span></li>
+            <li ng-repeat="notice in notices"><a ng-href="#/bbs/notice/6124" href="#/bbs/notice/6124">제60회 도서관 주간 기념 영화자료 전시 '영화로 만나는 미래' | 4/1~4/26</a> <span class="day">2024.03.29</span></li>
+            <li ng-repeat="notice in notices"><a ng-href="#/bbs/notice/6123" href="#/bbs/notice/6123">PLAy N Create(플랭크) 단축운영 안내</a> <span class="day">2024.03.29</span></li>
+            <li ng-repeat="notice in notices"><a ng-href="#/bbs/notice/6122" href="#/bbs/notice/6122">2024 뉴욕타임스 퀴즈 이벤트｜4월 1일~4월 15일</a> <span class="day">2024.03.28</span></li>
+            <li ng-repeat="notice in notices"><a ng-href="#/bbs/notice/6119" href="#/bbs/notice/6119">DBpia 4월 온라인 이용교육 안내</a> <span class="day">2024.03.28</span></li>
+            <li ng-repeat="notice in notices"><a ng-href="#/bbs/notice/6118" href="#/bbs/notice/6118">제57회 독서카페 참여자 대상 독후감 공모 안내</a> <span class="day">2024.03.26</span></li>
+        </ul>
+      </div>
+    </div>
+      <!-- (2-2) widget -->
+      <div class="ds-banner-wrap col-lg-6 col-md-6 col-sm-6">
+        <div class="ds-banner">
+          <ul>
+            <div class="owl-carousel banner owl-theme owl-loaded owl-drag">
+              <img src="./img/banner.png" style="display: block;
+              width: 100%;
+              height: 430px;">
+
+              <div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    
+    </div>
+  </body>
+</html>
