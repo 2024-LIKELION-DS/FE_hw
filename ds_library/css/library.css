@@ -13,13 +13,14 @@ header {
 .baset {
   display: flex;
   flex-direction: row;
+  margin-right: 150px;
 }
 
 .baset1 {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   border-left: solid 1px rgb(200, 200, 200);
-  padding: 5px 10px;
+  padding: 8px 15px;
 
   display: flex;
   flex-direction: column;
@@ -27,19 +28,20 @@ header {
 }
 
 .sub {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
+  margin-top: 3px;
 }
 
 .baset3 {
   display: flex;
   align-items: center;
 
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
 
   border-left: solid 1px rgb(200, 200, 200);
-  padding: 5px 10px;
+  padding: 8px 15px;
 }
 
 .baset4 {
@@ -47,11 +49,11 @@ header {
   flex-direction: row;
   align-items: center;
 
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
 
   border-left: solid 1px rgb(200, 200, 200);
-  padding: 5px 10px;
+  padding: 8px 15px;
 }
 
 .sc_logo {
@@ -67,12 +69,12 @@ header {
   flex-direction: row;
   align-items: center;
 
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
 
   border-left: solid 1px rgb(200, 200, 200);
   border-right: solid 1px rgb(200, 200, 200);
-  padding: 5px 10px;
+  padding: 8px 15px;
 
   background-color: rgb(220, 220, 220);
 }
@@ -104,8 +106,7 @@ nav {
 
 /* section1 */
 .search {
-  background-color: blanchedalmond;
-  height: 260px;
+  height: 280px;
 
   display: flex;
   justify-content: center;
@@ -132,6 +133,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  align-items: center;
 }
 
 .serv_name {
@@ -154,9 +157,15 @@ nav {
 .announce {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 
   border-bottom: solid 2px black;
+}
+
+.announce1 {
+  display: flex;
+  flex-direction: row;
 }
 
 .notion {
@@ -186,7 +195,6 @@ nav {
 .culture {
   display: flex;
   flex-direction: row;
-  margin-right: 220px;
 
   position: relative;
   top: 2px;
