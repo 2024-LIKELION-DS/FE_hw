@@ -1,0 +1,64 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+img {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  width: 400px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  margin: 3px;
+  padding-left: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+button {
+  background-color: #bd4936;
+  color: white;
+}
+
+a {
+  text-decoration: underline;
+  color: #8e8b8b;
+}
+
+p {
+  margin: 80px;
+}
+
+.list ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+}
+
+.list ul li {
+  margin: 10px;
+}
+
+.boldUl {
+  font-weight: bold;
+  color: #8e8b8b;
+}
+
+.ul {
+  color: #a09e9e;
+}
