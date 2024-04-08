@@ -7,7 +7,9 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  margin: 17px 150px;
+  margin: 17px auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .dslogo {
@@ -62,30 +64,32 @@ li {
 }
 
 .sec3_title_notice {
-  height: 30px;
-  margin-left: 0px;
-  margin-right: 30px;
-  margin-bottom: 17px;
+  margin-top: 25px;
+  margin-right: 0;
   text-align: left;
+  display: flex;
   padding-left: 0;
+  height: 50px;
 }
 
 .sec3_title {
   box-sizing: border-box;
+  width: 550px;
   margin-right: 5px;
+  margin-bottom: 0;
   display: flex;
   border-bottom: 2px solid black;
 }
 .notice {
   margin-left: 2px;
   font-size: 26px;
-  font-weight: 600;
+  font-weight:normal
   width: 160px;
 }
 .notice_subtitle {
   font-size: 15px;
   color: #999;
-  font-weight: 500;
+  font-weight: 400;
 }
 .culture {
   padding-left: 0;
@@ -101,10 +105,8 @@ li {
 .more {
   width: 22px;
   height: 22px;
-  margin-top: 30px;
-  margin-bottom: 17px;
-  margin-left: 125px;
-  text-align: right;
+  margin-top: 40px;
+  margin-left: 160px;
 }
 
 .sec3_left {
@@ -127,7 +129,6 @@ li {
   margin-right: 10px;
   margin-top: 5px;
   width: 550px;
-  height: 40px;
   border-bottom: 1px solid #999;
 }
 
@@ -135,8 +136,7 @@ li {
   font-weight: 200;
   box-sizing: border-box;
   height: 40px;
-  margin-left: 10px;
-  padding-bottom: 5px;
+  margin: 10px 20px;
 }
 
 .date {
