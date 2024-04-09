@@ -1,0 +1,84 @@
+body {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+}
+
+
+.secBox {
+  border: 3px solid #e7e7e7;
+  width: 700px;
+  height: 500px;
+}
+
+.sec1 {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.title {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.sec2 {
+  height: 410px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.title {
+  font-size: 16px;
+  width: 650px;
+  margin: 15px;
+}
+
+.content {
+  font-size: 14px;
+  margin: 15px;
+  width: 650px;
+}
+
+.sec3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+}
+
+img {
+  height: 38px;
+}
+
+.checkbox {
+  display: flex;
+  margin-right: 10px;
+}
+
+.checkbox > p {
+  font-size: 11px;
+  font-weight: bolder;
+  margin-top: 12px;
+  color: #959494;
+}
+
+.pencil {
+  background-color: #d94423;
+
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+
+input
+textarea
+텍스트아리아 패스워드로 설정 ->알아서 점으로 뜸
+submit
+checkbox
+content 박스 크기 설정
+submit 어디에 설정해야되는지 찾아보기
+체크박스 크기, 위치 설정하기
+빨간박스 만들고 연필이미지 옮기기
