@@ -1,0 +1,76 @@
+.top1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top2 {
+  font-size: 12px;
+  color: rgb(141, 140, 140);
+
+  margin-top: 10px;
+}
+
+.kor {
+  font-size: 11px;
+  color: rgb(141, 140, 140);
+}
+
+.namebox {
+  background: rgb(232, 229, 229);
+  height: 30px;
+  width: 380px;
+  border-radius: 10px;
+  border: 2px solid rgb(232, 229, 229);
+}
+
+.nameboxtext {
+  margin-left: 5px;
+}
+
+.name {
+  margin-top: 15px;
+}
+
+.redbox {
+  background: rgb(222, 55, 55);
+  height: 30px;
+  width: 380px;
+  border-radius: 10px;
+  border: 2px solid rgb(222, 55, 55);
+
+  margin-top: 5px;
+}
+
+.joinkor {
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+
+  justify-content: center;
+  margin-left: 150px;
+  margin-top: 3px;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.middleall {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-top: 15px;
+}
+
+.all {
+  flex-direction: column;
+}

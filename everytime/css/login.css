@@ -1,0 +1,68 @@
+.logo {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.loginall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.idbox {
+  background: rgb(232, 229, 229);
+  height: 35px;
+  width: 280px;
+  border-radius: 10px;
+  border: 2px solid rgb(232, 229, 229);
+
+  margin-top: 5px;
+}
+
+.idboxall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.redbox {
+  background: rgb(222, 55, 55);
+  height: 35px;
+  width: 280px;
+  border-radius: 10px;
+  border: 2px solid rgb(222, 55, 55);
+
+  margin-top: 5px;
+}
+
+.loginkor {
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+
+  justify-content: center;
+  margin-left: 70px;
+  margin-top: 3px;
+}
+
+.middleboxall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom1 {
+  font-size: 15px;
+  margin: 90px;
+}
+
+.bottom2 {
+  font-size: 12px;
+}
+
+.bottomall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
