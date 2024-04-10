@@ -163,3 +163,29 @@ nav .menu {
 .search-click {
     height: 106px;
 }
+
+footer {
+  height: 90px;
+  position : relative;
+  bottom : 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+}
+
+footer > p{
+  color: #ddd;
+}
+
+.ds-static-top {
+  position: fixed;
+  left: 90%;
+  bottom: 30px;
+  z-index: 9990;
+  display: block;
+  width: 62px;
+  height: 67px;
+  background: url(../img/ds-static-top.png) no-repeat;
+  font-size: 0;
+}
