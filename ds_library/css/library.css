@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "NanumGothicBold";
-  src: url(NanumGothicBold.ttf);
+  font-family: NG;
+  src: url(font/NanumGothicBold.woff);
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 header,
 section {
-  font-family: NanumGothicBold;
+  font-family: NG;
 }
 
 .top_bar,
@@ -24,10 +24,12 @@ section {
 .top_bar {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  width: 1200px;
   height: 43px;
   border-bottom: 1px solid #dcdcdc;
   font-size: 12px;
-  padding-left: 840px;
+  margin: 0 auto;
 }
 
 .top_bar > div {
