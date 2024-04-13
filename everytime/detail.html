@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/style_detail.css"></link>
     <title>에브리타임</title>
   </head>
   <body>
@@ -127,50 +127,75 @@
         <h1>비밀게시판</h1>
       </div>
       <div class="wrap bubbles">
-        <div class="bubble question"><img src="img/questImg.png" alt="말풍선"/>
-          <div class="items">
-            <div class="item"><span>교환</span></div>
-            <div class="item"><span>이러닝</span></div>
-            <div class="item"><span>덕기초 노트북으로 들으려는데 줌설치 어떻게</span></div>
+        <article class="write">
+            <div class="itmes">
+                <img src="img/anonymous.profile.png" alt="익명">
+            </div>
+            <div class="profile">
+                <h3>익명</h3>
+                <time>24/04/10 12:46</time>
+            </div>
+            <div class="staus">
+                <p>쪽지</p><p>신고</p>
+            </div>
+            <h2 style="margin: 20px 0; font-size: 22px; font-weight: bold;">🦁멋쟁이사자처럼 아기사자 모집 완료🦁</h2>
+            <p class="wirte_content">
+                안녕하세요, 덕성여자대학교 멋쟁이사자처럼 12기 아기사자 선발이 완료되었습니다!
+                <br>최종 선발 결과는 홈페이지에서 확인 가능합니다. 
+                <br>📍http://likelion-ds.site/
+                <br>덕성여자대학교 멋쟁이사자처럼 12기 모집에 지원해 주신 모든 모든 분들께 감사드립니다.
+                <br>기타 문의사항은 http://open.kakao.com/o/sa1eBUSf로 문의 부탁드립니다.
+            </p>
+            <div class="img_list">
+                <img src="img/KakaoTalk_Photo_2024-04-11-01-27-54 001.jpeg" alt="최종합격1">
+                <img src="img/KakaoTalk_Photo_2024-04-11-01-27-55 002.jpeg" alt="최종합격2">
+            </div>
+            <ul class="likeAndReply_write">
+                <li style="color:#F91F15"><img alt="공감" src="img/like.png"/>71</li>
+                <li style="color: #05BCBC;"><img alt="reply" src="img/reply.png"/>10</li>
+                <li style="color: #FFC900;"><img alt="reply" src="img/container.articles.scrap.png"/>5</li>
+            </ul>
+            <div class="butten_list">
+                <div class="butten">
+                    <img src="img/container.articles.buttons.posvote.png" alt="공감">
+                    <spqn>공감</spqn>
+                </div>
+                <div class="butten">
+                    <img src="img/container.articles.buttons.scrap.png" alt="공감">
+                    <spqn>스크랩</spqn>
+                </div>
+            </div>
+      </article> 
+      </div>
+      <div class="wrap bubbles">
+        <div class="itmes_2">
+          <img src="img/anonymous.profile.png" alt="익명">
+          <h2 class="profile_2">익명1</h2>
+          <div class="good_delete">
+            <p>대댓글</p><p>공감</p><p>삭제</p>
           </div>
         </div>
-        <div class="bubble hot"><img src="img/hotImg.png" alt="핫게"/>
-          <div class="items">
-            <div class="item"><span>오늘 수유동에서</span></div>
-          </div>
+        <div class="wow">
+          <span style="color: #292929; font-size: 15px;">우와</span>
+          <time style="color: #d6d6d6; font-size: 12px;">방금</time>
+        </div>
       </div>
+      
+      <form class="wrap bubbles_2">
+          <input name="text" type="text" placeholder="댓글을 입력하세요." class="text">
+          <label class="check">
+            <input type="checkbox" style="margin-right: 5px;"><input type="hidden" name="keep" value="false">익명
+          </label>
+          <img src="img/container.articles.write.submit.png" alt="제출">
+      </form>
+    <div class="left_footer">
+      <img src="img/container.articles.pagination.list.png" alt="글목록">
+      <a>글 목록</a>
     </div>
-      <div class="newWrite"><span style="display: inline-block;">새 글을 작성해주세요!</span><img alt="pen" src="img/pen.png" style="width: 20px; height: 20px; float: right;"></div>
-      <article class="list">
-        <div class="article">
-        <p class="bold">이거 답이 뭐임?</p> 
-        <p class="medium">닝닝하고 지젤만 정답인줄 알았늗데 아니야?</p>
-        <div class="slist">
-          <p>방금 | 익명</p>
-        </div>
-      </div>
-    </article>
-    <article class="list" style="margin-top: 0%;">
-      <div class="article">
-        <p class="bold">덕다</p>
-        <p class="medium">11시까지 맞지??</p>
-        <div class="slist">
-          <p>방금 | 익명</p>
-        </div>
-    </article> 
-    <article class="list" style="margin-top: 0%;">
-      <div class="article">
-        <p class="bold">프친</p>
-        <p class="medium">프친과제 개망한 것같은데 제출한 덕우 있어? 문제부터 뭐라는 건지 모르겠음;;</p>
-        <div class="slist">
-          <p>방금 | 익명</p>
-        </div>
-    </article> 
-
     <div class="rightside">
       <div class="card">
         <div class="board">
-          <h3>HOT 게시물</h3>
+          <div class="more_ul"><h3 style="display: inline-block;">HOT 게시물</h3><div>더 보기</div></div>
           <div class="list"><time>03/29 21:05</time><p>일락 김치찌개 7천원</p></div>
           <div class="list"><time>15분 전</time><p>우와 커피차 우리가 3위야</p></div>
           <div class="list"><time>03/09 16:16</time><p>모찌네 타코야끼.. 최고의 타코야끼.. ...</p></div>
@@ -231,6 +256,24 @@
     </div>
     </div>
   </div>
+  <div class="card">
+    <div class="board">
+      <h3>최근 강의평</h3>
+      <div id="article">
+        <div class="stars">
+            <p>★</p><p>★</p><p>★</p><p>★</p><p>★</p>
+        </div>
+        <div class="title">일반생물학Ⅱ : 김태훈</div>
+        <p>교수님 수업 너무 좋아요!! <br>문제도 막 어렵지 않고 적당한것 같아요</p>
+    </div>
+    <div id="article">
+        <div class="stars">
+            <p>★</p><p>★</p><p>★</p><p>★</p><p class="gray">★</p>
+        </div>
+        <div class="title">나의진로나의꿈 : 손재현,최주아</div>
+        <p>유익하고 들을만합니다<br>녹강임에도 기간도 충분하여 츙분히 패스 받으실 수 있습니다.</p>
+    </div>
+    </div>
   </div>
   </div>
   </body>
