@@ -157,115 +157,172 @@ nav ul li:hover {
 }
 
 .secret > div {
-  padding: 15px;
   border: 1px solid #d6d6d6;
   margin-top: 5px;
 }
 
 .title {
+  width: 750px;
   font-size: 22px;
   font-weight: bold;
   color: #000000;
-}
-
-.ask {
-  justify-content: center;
-  width: 700px;
   padding: 15px;
 }
 
-.ques img,
-.fire img {
-  align-items: center;
-  width: 22px;
-  height: 22px;
-  margin-right: 10px;
+.posting {
+  padding: 15px;
 }
 
-.ques {
+.pos_head {
   display: flex;
-  align-items: center;
   flex-direction: row;
-  margin-bottom: 8px;
+  justify-content: space-between;
 }
 
-.mint {
-  background-color: rgb(237, 255, 255);
-  font-size: 12px;
-  color: #666666;
-  padding: 12px;
-  border-radius: 13px;
-  margin-right: 10px;
-}
-
-.fire {
+.profile {
   display: flex;
-  align-items: center;
   flex-direction: row;
 }
 
-.redness {
-  display: flex;
-  background-color: rgb(255, 243, 243);
-  font-size: 12px;
-  color: #666666;
-  padding: 12px;
-  border-radius: 13px;
+.profile img {
+  width: 40px;
+  border-radius: 8px;
+  margin-right: 10px;
 }
 
-.good {
-  color: red;
-  padding-left: 7px;
-}
-
-.good img,
-.comment img {
-  width: 12px;
-  height: auto;
-  margin-right: 3px;
-}
-
-.comment {
-  color: rgb(0, 185, 185);
-}
-
-#border {
-  border: 2px solid #d6d6d6;
-  display: flex;
-  align-items: center;
-  padding: 3px 0px 3px 10px;
-  color: #b9b9b9;
+.nickname {
   font-size: 14px;
+  font-weight: bold;
+  color: #292929;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #b3b3b3;
+  letter-spacing: 0.1px;
+}
+
+.massage button {
+  font-size: 12px;
+  color: #b3b3b3;
+  background-color: white;
+  border: none;
+}
+
+.pos_title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0px 15px 0px;
+  letter-spacing: 0.1px;
+  color: #292929;
+}
+
+.pos_text {
+  font-size: 14px;
+  color: #454545;
+}
+
+a:link,
+a:visited {
+  color: #6d6d6d;
+  text-decoration: none;
+}
+
+.pos_img img {
+  width: 190px;
+  margin: 15px 15px 15px 0px;
+}
+
+.reaction {
+  display: flex;
+  flex-direction: row;
+  font-size: 11px;
+}
+
+.reaction > div {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.select img {
+  width: 11px;
+}
+
+.select button {
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #6d6d6d;
+  padding: 5px 15px 5px 15px;
   background-color: #f8f8f8;
 }
 
-#border img {
+.input_comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  height: 40px;
+}
+
+.typing {
+  border-top: 1px solid #d6d6d6;
+}
+
+.typing input[type="text"] {
+  padding-left: 10px;
+  border: none;
+  background-color: #f4f4f4;
+}
+
+.typing button {
+  border: none;
+  padding: 0;
+  background-color: red;
+}
+
+.typing img {
   width: 40px;
-  margin-left: 535px;
 }
 
-#posting {
-  padding: 0px;
-  font-size: 14px;
+.flex_end {
+  display: flex;
+  flex-direction: row;
 }
 
-#posting span {
+.check {
+  font-size: 12px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.check > div {
   font-weight: bold;
+  color: #adadad;
 }
 
-#posting div {
-  margin-top: 2px;
+#secret_list {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+  width: 65px;
+  padding: 8px;
+  margin-left: 5px;
 }
 
-#post_info {
-  font-size: 11px;
-  color: #b9b9b9;
-  padding-top: 4px;
-}
-
-.contents {
-  border-bottom: 1px solid #d6d6d6;
-  padding: 15px 25px 15px 25px;
+#secret_list img {
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
 }
 
 .aside {
@@ -337,4 +394,56 @@ nav ul li:hover {
 .time {
   font-size: 11px;
   color: #b9b9b9;
+}
+
+.good img,
+.comment img,
+.scrap img {
+  width: 11px;
+  height: auto;
+  margin-right: 3px;
+}
+
+.good {
+  color: red;
+  padding-left: 7px;
+}
+
+.comment {
+  color: rgb(0, 185, 185);
+}
+
+.scrap {
+  color: rgb(255, 213, 0);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_main ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+  margin: 50px 520px 10px 520px;
+  font-size: 12px;
+  color: #868686;
+}
+
+.footer_main ul:hover {
+  color: red;
+}
+
+.footer_main ul span {
+  font-weight: bold;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-bottom: 100px;
 }
