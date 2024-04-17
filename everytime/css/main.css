@@ -5,28 +5,33 @@ body {
 
 /*header*/
 header {
-  margin: 25px 150px 10px 150px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 20px 130px;
 }
 
 #logo img {
-  width: 210px;
+  width: 180px;
+  margin-right: 120px;
 }
 
 #menu {
   padding: 0;
   display: flex;
   list-style-type: none;
+  font-weight: bold;
 }
 
 #menu li {
-  margin: 0 10px;
-  font-weight: bold;
+  margin: 0 12px;
 }
 
 .board {
   color: red;
+}
+
+#account {
+  margin-left: 210px;
 }
 
 #account img {
@@ -40,6 +45,7 @@ nav {
   background-color: #efefef;
   padding: 10px 180px;
   border: 1px solid #d2d2d2;
+  justify-content: center;
 }
 
 .section {
@@ -53,7 +59,7 @@ nav {
 
 .section ul {
   list-style-type: none;
-  padding: 0px 20px 0px 10px;
+  padding: 0px 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -62,7 +68,7 @@ nav {
 
 .section ul li {
   list-style-type: none;
-  margin: 0px 25px 4px 0px;
+  margin: 0px 40px 4px 0px;
   font-size: 13px;
 }
 
@@ -74,15 +80,16 @@ nav {
 /*main-content(본문)*/
 .main-content {
   display: flex; /* flexbox를 활성화 */
+  justify-content: center;
 }
 
 .left-side {
-  margin: 0px 25px;
+  margin-right: 25px;
 }
 
 /*1) 게시판 제목*/
 .title-wrap {
-  margin: 25px 0px 0px 140px;
+  margin-top: 25px;
   width: 780px;
   height: auto;
   border: 1px solid #d2d2d2;
@@ -90,13 +97,13 @@ nav {
 
 .title {
   margin: 15px;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: bold;
 }
 
 /*2) 미리보기 bubble*/
 .bubbles-wrap {
-  margin: 5px 0px 0px 140px;
+  margin-top: 5px;
   width: 780px;
   height: auto;
   border: 1px solid #d2d2d2;
@@ -142,7 +149,7 @@ nav {
 
 /*3) 새 글 작성*/
 .new-article {
-  margin: 5px 0px 5px 140px;
+  margin-top: 5px;
   padding: 10px;
   width: 780px;
   height: auto;
@@ -157,7 +164,7 @@ nav {
 
 /*4) 다른 글들*/
 .one-article {
-  margin: 0px 0px 0px 140px;
+  margin-top: 5px;
   width: 780px;
   height: auto;
   border: 1px solid #d2d2d2;
