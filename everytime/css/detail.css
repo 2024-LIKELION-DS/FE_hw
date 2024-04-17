@@ -1,0 +1,239 @@
+#container .title {
+    width: 641px;
+    margin-bottom: -1px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.title > h3 {
+    display: block;
+    padding: 15px;
+    margin: 0px;
+}
+
+.item {
+    margin-bottom: -1px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+}
+
+.article {
+    display: block;
+    padding: 15px;
+}
+
+.status1 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    text-align: right;
+}
+
+.profile1 {
+    display: flex;
+    flex-direction: row;
+    color: #a6a6a6;
+    font-size: 12px;
+}
+
+.profile1 > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.profile2 {
+    margin-left: 10px;
+}
+
+.profile2 > h3 {
+    height: 20px;
+    max-width: 200px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.article .status2 {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    text-align: center;
+}
+
+.article .status2 > img{
+    width: 15px;
+    height: 15px;
+    margin-left: 6px;
+    margin-right: 3px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.buttons .posvote {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #f9f9f9;
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.posvote > img {
+    width: 15px;
+    height: 15px;
+    margin-left: 6px;
+    margin-right: 3px;
+}
+
+.buttons .posvote > p {
+    font-size: 12px;
+    color: #737373;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/*댓글*/
+
+.coments {
+    display: block;
+}
+
+.parent {
+    padding: 15px 15px 0 15px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.parent1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+}
+
+.parent1 > img {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.parent1 > h3 {
+    height: 20px;
+    max-width: 200px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    margin: 5px;
+}
+
+.parent1 > ul {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+.parent1 .status {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.parent1 > ul > li {
+    float: left;
+    margin-left: 8px;
+    padding: 0 2px;
+    height: 20px;
+    line-height: 20px;
+    color: #a6a6a6;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 11px 11px;
+    cursor: pointer;
+}
+
+div .parent2 > p{
+    color: #444444;
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+
+div .parent2 .now {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #a6a6a6;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.writecomment {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-top: 1px solid #e3e3e3;
+    background-color: #f8f8f8;
+}
+
+.writecomment input.text {
+    margin: 0;
+    padding: 10px 85px 10px 10px;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: #262626;
+    font-size: 13px;
+    overflow: hidden;
+    resize: none;
+    background-color: transparent;
+}
+
+#container > div > section > div.contents > div > article > div.coments > form > ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.writecomment > ul > p {
+    color: #929292;
+    margin-right: 5px;
+}
+
+
+#container > div > section > div.contents > div > article > div.coments > form > ul > li.submit {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40px 40px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #f91f15;
+    background-image: url(../everytime_img/container.articles.write.submit.png);
+}
