@@ -47,14 +47,12 @@
   color: white;
 
   justify-content: center;
-  margin-left: 150px;
   margin-top: 3px;
 }
 
 .top {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  margin-right: 100px;
 }
 
 .middleall {
@@ -65,12 +63,13 @@
 
 .bottom {
   display: flex;
-  justify-content: center;
   flex-direction: column;
 
   margin-top: 15px;
 }
 
 .all {
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
