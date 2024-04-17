@@ -28,22 +28,10 @@
 
 .redbox {
   background: rgb(222, 55, 55);
-  height: 35px;
-  width: 280px;
   border-radius: 10px;
   border: 2px solid rgb(222, 55, 55);
 
   margin-top: 5px;
-}
-
-.loginkor {
-  font-size: 17px;
-  font-weight: bold;
-  color: white;
-
-  justify-content: center;
-  margin-left: 70px;
-  margin-top: 3px;
 }
 
 .middleboxall {
@@ -55,14 +43,19 @@
 .bottom1 {
   font-size: 15px;
   margin: 90px;
+
+  display: flex;
+  justify-content: center;
 }
 
 .bottom2 {
   font-size: 12px;
+
+  display: flex;
+  justify-content: center;
 }
 
-.bottomall {
+.forcenter {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
