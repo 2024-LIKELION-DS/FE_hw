@@ -4,6 +4,7 @@
     <meta charset="UTF-">
     <title>everytime</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/detail.css">
 </head>
 <body>
 <nav>
@@ -113,62 +114,73 @@
 </div>
 <div id="container">
     <div class="wrap">
-        <div class ="left">
+        <section class ="left">
             <div class="title">
                 <h3><span class="name1">비밀게시판</span></h3>
             </div>
-            <div class="bubblespost">
-                <div class="bubbles">
-                    <img alt="아이콘1" class="bubble" src="./everytime_img/icn_mcr_board_question_light.png">
-                        <div class="item1">
-                                <span>배고프다</span>
-                        </div>
-                        <div class="item1">
-                            <span>덕성여대</span>
-                        </div>
-                        <div class="item1">
-                            <span>마라탕 먹고싶다</span>
-                        </div>
-                </div>
-                <div class="bubbles">
-                    <img alt="아이콘2" class="bubble" src="./everytime_img/icn_mcr_board_hotarticle_light.png">
-                    <div class="item2">
-                            <span>졸리다</span>
-                    </div>
-                </div>
-            </div>
-            <div class="new">
-                <p><span class="post1">새 글을 작성해주세요!</span></p>
-                <img alt="새글아이콘" class="bubble" src="./everytime_img/container.write.background.png">
-            </div>
-            <div class="text">
-                <div class="content">
-                <p><span class="post">내용</span></p>
-                <p>어쩌구 저쩌구</p>
-                </div>
-                <p><span class="postname">방금 | 익명</span></p>
-                <hr>
-                <div class="content">
-                    <p><span class="post">내용</span></p>
-                    <p>어쩌구 저쩌구</p>
-                    </div>
-                    <p><span class="postname">1분전 | 익명</span></p>
-                    <hr>
-                    <div class="content">
-                        <p><span class="post">내용</span></p>
-                        <p>어쩌구 저쩌구</p>
-                        </div>
-                        <p><span class="postname">4분전 | 익명</span></p>
-                        <hr>
-                        <div class="content">
-                            <p><span class="post">내용</span></p>
-                            <p>어쩌구 저쩌구</p>
+            <div class="contents">
+                <div class="wrap articles">
+                    <article class="item">
+                        <div class="article">
+                            <div class="profile1">
+                                <img src="https://cf-fpi.everytime.kr/0.png" class="profile-img">
+                                <div class="profile2">
+                                    <h3 class="large">익명</h3>
+                                    <time class="large">03/12 10:42</time>
+                                </div>
+                                <ul class="status1">
+                                    <li class="messagesend">쪽지</li>
+                                    <li class="abuse">신고</li>
+                                </ul>
                             </div>
-                            <p><span class="postname">10분전 | 익명</span></p>
-            </div>
-        </div>
+                            <h2 class="large">🦁멋쟁이사자처럼 아기사자 모집 완료🦁</h2>
+                            <p class="large">안녕하세요. 덕성여자대학교 멋쟁이사자처럼 12기 아기사자 선발이 완료되었습니다!<br>최종 선발 결과는 홈페이지에서 확인 가능합니다.<br>덕성여자대학교 멋쟁이사자처럼 12기 모집에 지원해 주신 모든 분들께 감사드립니다.<br>기타 문의사항은 ~로 문의 부탁드립니다.</p>
+                            <div class="status2">
+                                <img src="./everytime_img/container.articles.vote.png" alt="공감" class="vote"><sapn style="color: red;">9</sapn>
+                                <img src="./everytime_img/container.articles.comment.png" alt="댓글" class="comment"><sapn style="color: #05BCBC;">1</sapn>
+                                <img src="./everytime_img/container.articles.scrap.png" alt="스크랩" class="scrap"><sapn style="color: #FFC900;">0</sapn>
+                            </div>
+                            <div class="buttons">
+                                <div class="posvote">
+                                    <img src="./everytime_img/container.articles.buttons.posvote.png" alt="공감" class="vote"><p>공감</p>
+                                </div>
+                                <div class="posvote">
+                                    <img src="./everytime_img/container.articles.buttons.scrap.png" alt="스크랩" class="scrap"><p>스크랩</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coments">
+                            <article class="parent">
+                                <div class="parent1">
+                                    <img src="https://cf-fpi.everytime.kr/0.png" class="picture medium">
+                                    <h3 class="medium">익명1</h3>
+                                    <ul class="status">
+                                        <li class="childcomment">대댓글</li>
+                                        <li class="commentvote">공감</li>
+                                        <li class="messagesend">쪽지</li>
+                                        <li class="abuse">신고</li>
+                                    </ul>
+                                </div>             
+                                <div class="parent2">
+                                    <p class="large">우와</p>
+                                    <p class="now">방금</p>
+                                </div>                  
+                            </article>
+                            <form class="writecomment">
+                                <input type="text" name="text" maxlength="300" autocomplete="off" placeholder="댓글을 입력하세요." class="text">
+                                <ul class="option">
+                                    <input type="checkbox">
+                                    <p class="anonym">익명</p>
+                                    <li title="완료" class="submit"></li>
+                                </ul>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+            </div>    
+        </section>
         <div class="divider"></div>
-        <div class="rignt">
+        <aside class="rignt">
             <div class="board">
                 <div class="title2">
                     <h3><span class="name">실시간 인기 글</span></h3>
@@ -206,7 +218,7 @@
                     <p><span class="time">5시간 전</span></p>
                 </div>
             </div>
-        </div>
+        </aside>
     </div>
 </div>
 </body>
