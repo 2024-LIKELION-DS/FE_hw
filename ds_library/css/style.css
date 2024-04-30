@@ -2,7 +2,7 @@ body {
   color: #333333;
 }
 .container {
-  display: table;
+  display: flex;
   width: 100%;
   max-width: 1200px;
   padding: 0;
@@ -15,8 +15,8 @@ body {
   float: left;
   margin-right: 40px;
   padding: 0%;
-  width: 260px;
-  height: 59px;
+  width: 200px;
+  height: 100%;
   padding-top: 20px;
   line-height: 100%;
 }
@@ -60,6 +60,12 @@ display : inline-block 없애고, 차라리 list-style none으로 주기*/
   clip-path: polygon(50%, 100% 100%, 100% 0, 0 0);
 }
 
+@media all and (max-width: 768px) {
+  .selectbar {
+    flex-wrap: wrap;
+  }
+}
+
 .container2 {
   width: 100%;
   max-width: 100%;
@@ -71,18 +77,38 @@ display : inline-block 없애고, 차라리 list-style none으로 주기*/
 .container2 > .manubar {
   background-color: #f4f3f0;
   border-bottom: 1px solid #dfdedd;
-  display: flex;
+  display: table;
   box-sizing: border-box;
   color: #666;
   list-style: none;
   align-items: center;
+  width: 100%;
+}
+
+@media all and (max-width: 768px) {
+  .manubar {
+    width: 100%;
+    height: 45vh;
+  }
+
+  .selectbar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  ul.selectbar > li:nth-child(7),
+  ul.selectbar > li:nth-child(8) {
+    display: none;
+  }
 }
 
 div.container2 > div.manubar > ul.selectbar {
   display: flex;
   height: 150px;
   width: 100%;
-  max-width: 12000px;
+
   margin: 20px;
   padding: 20px 0;
   box-sizing: border-box;
@@ -101,6 +127,12 @@ ul.selectbar > li {
   margin-right: 40px;
 }
 
+@media all and (max-width: 768px) {
+  ul.selectbar > li {
+    margin-bottom: 20px;
+  }
+}
+
 ul.selectbar > li > span {
   color: #666;
   font-size: 0.9em;
@@ -112,6 +144,12 @@ ul.selectbar > li > span {
 .container3 {
   display: flex;
   justify-content: center;
+}
+
+@media all and (max-width: 768px) {
+  .container3 > .post_box {
+    display: none;
+  }
 }
 
 .post_box {
@@ -195,6 +233,7 @@ ul.selectbar > li > span {
   margin-top: 0;
   margin-bottom: 10px;
 }
+
 .banner {
   display: flex;
   box-sizing: border-box;
@@ -206,4 +245,45 @@ ul.selectbar > li > span {
   height: 430px;
   width: 546px;
   float: right;
+}
+@media all and (max-width: 768px) {
+  .container3 > .banner {
+    padding-left: 0;
+    margin-top: 10%;
+  }
+  .container3 > .banner > img {
+    height: 430px;
+    width: 100%;
+  }
+}
+/* 햄버거 아이콘 스타일 */
+.mobile-menu-toggle {
+  display: none; /* 기본적으로는 숨김 */
+}
+
+.burger-menu {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* 모바일에서 보여질 목록 */
+@media all and (max-width: 768px) {
+  .container > .ulClass {
+    display: none; /* 모바일에서는 목록 숨김 */
+  }
+  .container {
+    justify-content: space-between;
+  }
+
+  .mobile-menu-toggle {
+    display: flex; /* 햄버거 아이콘 보이기 */
+    align-items: center;
+  }
+  .mobile-menu-toggle > img {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+  }
 }
