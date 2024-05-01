@@ -9,79 +9,107 @@ a {
 }
 
 /*상단 바 (기본 세팅)*/
+@media all and (min-width: 1024px) {
+  .mobile_header {
+    display: none;
+  }
 
-.setting {
-  width: 100%;
-  height: 43px;
-  border-bottom: 1px solid #ccc;
+  .setting {
+    width: 100%;
+    height: 43px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .setting ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 100px 0 0; /*수정 필요*/
+  }
+
+  .setting li {
+    border-left: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 6px 15px;
+    text-align: center;
+  }
+
+  .full_menu {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+  }
+
+  .setting a:link,
+  .setting a:visited {
+    color: black;
+    font-size: 12px;
+  }
+
+  .korean {
+    font-size: 10px;
+  }
+
+  .DS_homepage span,
+  .full_menu span {
+    position: relative;
+    bottom: 5px;
+  }
+
+  /*메뉴 바*/
+  .menu {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu img {
+    margin: 50px 0 50px 150px;
+  }
+
+  .menu_bar {
+    display: flex;
+    margin: 50px 0 50px 40px;
+  }
+
+  .menu_bar li {
+    padding: 0 15px;
+  }
+
+  .menu_bar li a:hover {
+    color: #901e43;
+  }
+
+  .menu_bar a:link,
+  .menu_bar a:visited {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+  }
 }
 
-.setting ul {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 100px 0 0; /*수정 필요*/
-}
+@media all and (max-width: 902px) {
+  /*header*/
+  .pc_header {
+    display: none;
+  }
 
-.setting li {
-  border-left: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  padding: 6px 15px;
-  text-align: center;
-}
+  .mobile_header nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.full_menu {
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  background-color: #eee;
-}
+  .user_full {
+    display: flex;
+    align-items: center;
+  }
 
-.setting a:link,
-.setting a:visited {
-  color: black;
-  font-size: 12px;
-}
-
-.korean {
-  font-size: 10px;
-}
-
-.DS_homepage span,
-.full_menu span {
-  position: relative;
-  bottom: 5px;
-}
-
-/*메뉴 바*/
-.menu {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.menu img {
-  margin: 50px 0 50px 150px;
-}
-
-.menu_bar {
-  display: flex;
-  margin: 50px 0 50px 40px;
-}
-
-.menu_bar li {
-  padding: 0 15px;
-}
-
-.menu_bar li a:hover {
-  color: #901e43;
-}
-
-.menu_bar a:link,
-.menu_bar a:visited {
-  color: black;
-  font-size: 16px;
-  font-weight: 600;
+  .user_full li {
+    margin-right: 10px;
+  }
 }
 
 /*검색창*/
@@ -89,7 +117,7 @@ a {
   height: 275px;
   background-image: url(../img/main-img3.jpg);
   object-fit: cover;
-  background-size: 100%;
+  background-size: 100vw;
   background-position: bottom 0px right 0px;
   display: flex;
   align-items: center;
@@ -152,6 +180,27 @@ a {
   background-color: #ffffff;
 }
 
+@media all and (max-width: 902px) {
+  .search {
+    background-position: bottom 0px;
+    background-size: 125vw;
+    background-repeat: no-repeat;
+  }
+
+  .search_box {
+    width: 85vw;
+  }
+
+  .search_word,
+  .search_type {
+    width: 100%;
+  }
+
+  .search_type li {
+    width: 25%;
+  }
+}
+
 /*기능 바*/
 .function {
   display: flex;
@@ -160,7 +209,7 @@ a {
 }
 
 .function_bar {
-  width: 83%;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
@@ -173,8 +222,25 @@ a {
   text-align: center;
 }
 
-.function_bar li:hover {
-  color: #901e43;
+@media all and (max-width: 902px) {
+  .function_bar {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .function_bar li {
+    width: 120px;
+  }
+
+  .function_bar li.mobile_hide {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .function_bar li:hover {
+    color: #901e43;
+  }
 }
 
 /*공지&홍보*/
@@ -269,6 +335,25 @@ a {
   margin-top: 30px;
 }
 
+.ad img {
+  width: 570px;
+  height: 430px;
+}
+
+@media all and (max-width: 902px) {
+  /*공지*/
+  .notice {
+    display: none;
+  }
+  /*홍보배너*/
+  .ad {
+    margin: 0;
+  }
+  .ad img {
+    width: 100%;
+  }
+}
+
 /*저작권 표시*/
 .copyright {
   background-color: black;
@@ -290,4 +375,11 @@ a {
   position: fixed;
   right: 100px;
   bottom: 60px;
+}
+
+@media all and (max-width: 902px) {
+  .top_button {
+    right: 5vw;
+    bottom: 8vh;
+  }
 }

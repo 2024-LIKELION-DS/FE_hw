@@ -9,35 +9,46 @@
 </head>
 
 <body>
-    <nav class="setting" id="top">
-        <ul>
-            <li><a href="">Portal Login<br><span class="korean">(재학생, 재직자)</span></a></li>
-            <li><a href="">Library Login<br><span class="korean">(졸업생, 외래강사)</span></a></li>
-            <li><a href="">Help Desk</a></li>
-            <li class="DS_homepage"><a href="">
-                    <img src="img/duksung_symbol.png" alt="덕성여자대학교 로고" width="24" height="22">
-                    <span>덕성여자대학교</span>
-                </a></li>
-            <li><a href="">English</a></li>
-            <li class="full_menu"><a href="">
-                    <img src="img/tm-all.png" width="18" height="16">
-                    <span>전체메뉴</span>
-                </a></li>
-        </ul>
-    </nav>
-    <nav class="menu">
-        <a href=""><img src="img/ds-logo.jpg" alt="덕성여자대학교 도서관 로고" width="260" height="59"></a>
-        <ul class="menu_bar">
-            <li><a href="">e컨텐츠</a></li>
-            <li><a href="">이용자서비스</a></li>
-            <li><a href="">연구학습지원</a></li>
-            <li><a href="">도서관안내</a></li>
-            <li><a href="">컬렉션</a></li>
-            <li><a href="">게시판</a></li>
-            <li><a href="">Help Desk</a></li>
-            <li><a href="">My Library</a></li>
-        </ul>
-    </nav>
+    <div class="pc_header">
+        <nav class="setting" id="top">
+            <ul>
+                <li><a href="">Portal Login<br><span class="korean">(재학생, 재직자)</span></a></li>
+                <li><a href="">Library Login<br><span class="korean">(졸업생, 외래강사)</span></a></li>
+                <li><a href="">Help Desk</a></li>
+                <li class="DS_homepage"><a href="">
+                        <img src="img/duksung_symbol.png" alt="덕성여자대학교 로고" width="24" height="22">
+                        <span>덕성여자대학교</span>
+                    </a></li>
+                <li><a href="">English</a></li>
+                <li class="full_menu"><a href="">
+                        <img src="img/tm-all.png" width="18" height="16">
+                        <span>전체메뉴</span>
+                    </a></li>
+            </ul>
+        </nav>
+        <nav class="menu">
+            <a href=""><img src="img/ds-logo.jpg" alt="덕성여자대학교 도서관 로고" width="260" height="59"></a>
+            <ul class="menu_bar">
+                <li><a href="">e컨텐츠</a></li>
+                <li><a href="">이용자서비스</a></li>
+                <li><a href="">연구학습지원</a></li>
+                <li><a href="">도서관안내</a></li>
+                <li><a href="">컬렉션</a></li>
+                <li><a href="">게시판</a></li>
+                <li><a href="">Help Desk</a></li>
+                <li><a href="">My Library</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile_header">
+        <nav>
+            <a href="#"><img src="img/ds-logo.jpg" alt="덕성여자대학교 도서관 로고" width="180"></a>
+            <ul class="user_full">
+                <li><a href=""><img src="img/tm-all.png" alt="전체메뉴" width="25"></a></li>
+                <li><a href=""><img src="img/ds-btn-my.jpg" alt="회원정보" width="20" height="24"></a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="search">
         <div class="search_box">
             <ul class="search_type">
@@ -71,7 +82,7 @@
                 </a>
                 <p>서비스신청 현황</p>
             </li>
-            <li><a href="">
+            <li class="mobile_hide"><a href="">
                     <img src="img/main-q3.png" alt="책이 담긴 카트 그림" height="76" width="76">
                 </a>
                 <p>자료구입신청</p>
@@ -81,7 +92,7 @@
                 </a>
                 <p>원문복사신청</p>
             </li>
-            <li><a href="">
+            <li class="mobile_hide"><a href="">
                     <img src="img/main-q6.png" alt="핸드폰 그림" height="76" width="76">
                 </a>
                 <p>모바일이용증</p>
@@ -152,7 +163,7 @@
             </ul>
         </div>
         <div class="ad">
-            <a href=""><img src="img/banner.png" width="570" height="430"></a>
+            <a href=""><img src="img/banner.png"></a>
         </div>
     </section>
     <footer class="copyright">
