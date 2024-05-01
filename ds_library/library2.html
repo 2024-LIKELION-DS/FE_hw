@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>덕성여자대학교 도서관</title>
+    <link rel="stylesheet" href="./css/library2.css" />
+    <link rel="icon" href="./img/ds-icon.png" type="image/x-icon" />
+  </head>
+  <body ng-controller="GlobalController" style="">
+    <!---->
+    <div ui-view="" class="ikc-pyxis-wrap">
+      <div class="ikc-keyboard-accessibility">
+        <a href="" ng-click="tabToGo('goto-menu')">메뉴바로가기</a>
+        <a href="" ng-click="tabToGo('goto-content')">본문바로가기</a>
+      </div>
+      <!---->
+      <div ui-view="notification">
+        <div
+          class="ikc-notification ikc-hide"
+          ng-class="{'ikc-show' : showPopup, 'ikc-hide' : !showPopup}"
+        >
+          <div class="ikc-notification-content owl-carousel notification">
+            <!---->
+          </div>
+          <div class="ikc-notification-func">
+            <label for="ikc-check-today"
+              ><input
+                type="checkbox"
+                ng-model="hideAllDay"
+                id="ikc-check-today"
+                class="ng-pristine ng-untouched ng-valid ng-empty"
+              />
+              오늘하루닫기</label
+            ><a href="" ng-click="closePopup()" class="btn-block"
+              ><span>닫기</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="ikc-container-wrap">
+        <!---->
+        <div class="ikc-header-wrap" ui-view="header">
+          <div class="ikc-header">
+            <div id="uppermost" class="ikc-header-nav">
+              <ul class="ds-tm">
+                <!---->
+                <li ng-show="showLoginOutButton &amp;&amp; !isMember">
+                  <a ng-click="goNewPortalLogin()" class="ds-portal"
+                    >Portal Login<br /><span style="font-size: 0.7em"
+                      >(재학생,재직자)</span
+                    ></a
+                  >
+                </li>
+                <!---->
+                <li ng-if="showLoginOutButton">
+                  <!----><a
+                    ng-if="!isMember"
+                    href="#/librarylogin"
+                    class="ds-portal"
+                    >Library Login<br /><span style="font-size: 0.7em"
+                      >(졸업생,외래강사)</span
+                    ></a
+                  ><!---->
+                  <!---->
+                </li>
+                <!---->
+                <li>
+                  <a href="#/helpdesk/faq" ui-sref="root.helpdesk.faq"
+                    >Help Desk</a
+                  >
+                </li>
+                <li>
+                  <a href="http://www.duksung.ac.kr/" target="_blank"
+                    ><img
+                      src="./img/tm-ds-icon.jpg"
+                      class="ds-tm-icon"
+                    />덕성여자대학교</a
+                  >
+                </li>
+                <li><a href="javascript:alert('준비중입니다.')">English</a></li>
+                <li class="ds-tm-allmenu">
+                  <a href="" ng-click="isGnbShow = !isGnbShow"
+                    ><img
+                      src="./img/tm-all.png"
+                      class="ds-tm-icon"
+                      alt="전체메뉴 아이콘"
+                    />전체메뉴</a
+                  >
+                </li>
+              </ul>
+              <a
+                class="ikc-btn-overview hidden-lg hidden-md"
+                ng-click="toggleOverviewShow()"
+                ng-class="{'ikc-overview-show': isOverviewShow}"
+                ><span>Overview</span></a
+              >
+              <div>
+                <!----><a
+                  ng-if="!isMember"
+                  href="#/login"
+                  class="ds-btn-my hidden-lg hidden-md"
+                ></a
+                ><!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+            <div
+              class="ikc-gnb-wrap"
+              ui-view="gnb"
+              ng-class="{'ikc-gnb-show': isGnbShow}"
+            >
+              <h1 class="ds-logo">
+                <a href="#/" ui-sref="root.intro" class="ikc-bland-name"
+                  ><span>덕성여자대학교</span></a
+                >
+              </h1>
+              <ul class="ikc-gnb">
+                <li ui-sref-active="ikc-active">
+                  <a href="#/er/webdb" ui-sref="root.er.webdb" id="goto-menu"
+                    >e컨텐츠</a
+                  >
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a href="#/service/request" ui-sref="root.service.request"
+                    >이용자서비스</a
+                  >
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a href="#/service/education" ui-sref="root.service.education"
+                    >연구학습지원</a
+                  >
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a href="#/guide/facility" ui-sref="root.guide.facility"
+                    >도서관안내</a
+                  >
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a
+                    href="#/sc/recommend"
+                    ui-sref="root.sc.recommend({sort: 'date_received', order: 'desc'})"
+                    >컬렉션</a
+                  >
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a href="#/bbs/notice" ui-sref="root.bbs.notice">게시판</a>
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a href="#/helpdesk/faq" ui-sref="root.helpdesk.faq"
+                    >Help Desk</a
+                  >
+                </li>
+
+                <li ui-sref-active="ikc-active">
+                  <a
+                    href="#/mylibrary/dashboard"
+                    ui-sref="root.mylibrary.dashboard"
+                    >My Library</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!---->
+          <div class="ikc-imagezone-wrap" ui-view="imagezone">
+            <div class="ikc-imagezone-intro" id="goto-content" tabindex="0">
+              <div class="k-tabstrip-wrapper">
+                <div
+                  kendo-tab-strip=""
+                  ng-class="{'ds-search-opt' : !isSearchOpt, 'ds-search-opt1' : isSearchOpt == 1, 'ds-search-opt2' : isSearchOpt == 2, 'ds-search-opt3' : isSearchOpt == 3}"
+                  class="ikc-search-wrap ds-search-opt k-widget k-header k-tabstrip k-floatwrap k-tabstrip-top"
+                  data-role="tabstrip"
+                  tabindex="0"
+                  role="tablist"
+                >
+                  <ul class="k-tabstrip-items k-reset">
+                    <li
+                      class="k-state-active k-item k-tab-on-top k-state-default k-first"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="d77b0794-0b9b-4a8b-be21-d536eaa58c70-1"
+                    >
+                      <span class="k-loading k-complete"></span
+                      ><a
+                        href=""
+                        ng-class="{'ds-stab-active' : isSearchOpt==1 || !isSearchOpt }"
+                        ng-click="isSearchOpt = 1"
+                        class="k-link ds-stab-active"
+                        >통합검색</a
+                      >
+                    </li>
+                    <li
+                      class="k-item k-state-default"
+                      role="tab"
+                      aria-controls="d77b0794-0b9b-4a8b-be21-d536eaa58c70-2"
+                    >
+                      <span class="k-loading k-complete"></span
+                      ><a href="" class="k-link">e-컨텐츠</a>
+                    </li>
+                    <li
+                      class="k-item k-state-default k-last"
+                      role="tab"
+                      aria-controls="d77b0794-0b9b-4a8b-be21-d536eaa58c70-3"
+                    >
+                      <span class="k-loading k-complete"></span
+                      ><a
+                        href="#/search/ex"
+                        ui-sref="root.search.ex"
+                        class="k-link"
+                        >상세검색</a
+                      >
+                    </li>
+                  </ul>
+                  <div
+                    class="ikc-search k-content k-state-active"
+                    id="d77b0794-0b9b-4a8b-be21-d536eaa58c70-1"
+                    role="tabpanel"
+                    aria-expanded="true"
+                    style="display: block"
+                  >
+                    <div class="searchGroup">
+                      <div class="searchwrap1">
+                        <h3 class="swh1">통합검색</h3>
+                        <form
+                          name="searchForm"
+                          ng-submit="search(keyword)"
+                          class="ng-pristine ng-valid"
+                        >
+                          <div class="db-input-wrap">
+                            <span
+                              tabindex="-1"
+                              role="presentation"
+                              class="k-widget k-autocomplete k-header ikc-search-keyword ng-pristine ng-untouched ng-valid k-state-default"
+                              style=""
+                              ><input
+                                ik-auto-complete=""
+                                id="keyword"
+                                class="ikc-search-keyword ng-pristine ng-untouched ng-valid k-input ng-empty"
+                                placeholder="검색어를 입력하세요 (통합검색)"
+                                ng-model="keyword"
+                                data-role="autocomplete"
+                                type="text"
+                                autocomplete="off"
+                                role="textbox"
+                                aria-haspopup="true"
+                                aria-disabled="false"
+                                aria-readonly="false"
+                                aria-owns="keyword_listbox"
+                                aria-autocomplete="list"
+                                style="width: 100%" /><span
+                                class="k-icon k-loading"
+                                style="display: none"
+                              ></span
+                            ></span>
+                          </div>
+                          <button
+                            type="submit"
+                            class="ikc-btn-search"
+                            ng-click="search()"
+                          >
+                            <span>검색</span>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ikc-search k-content"
+                    style="display: none"
+                    id="d77b0794-0b9b-4a8b-be21-d536eaa58c70-2"
+                    role="tabpanel"
+                    aria-hidden="true"
+                    aria-expanded="false"
+                  >
+                    <div class="searchGroup">
+                      <form
+                        action="https://duksung.summon.serialssolutions.com/search/"
+                        target="_self"
+                        class="ng-pristine ng-valid"
+                      >
+                        <div class="db-input-wrap">
+                          <input type="hidden" name="ho" value="t" />
+                          <input type="hidden" name="l" value="ko-KO" />
+                          <input
+                            name="q"
+                            class="ikc-search-keyword"
+                            placeholder="검색어를 입력하세요 (e-컨텐츠)"
+                          />
+                        </div>
+                        <button type="submit" class="ikc-btn-search">
+                          <span>검색</span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div
+                    class="k-content"
+                    id="d77b0794-0b9b-4a8b-be21-d536eaa58c70-3"
+                    role="tabpanel"
+                    aria-hidden="true"
+                    aria-expanded="false"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div
+          ng-show="hgroupShow &amp;&amp; presentState != 'root.login'"
+          class="ikc-hgroup-wrap ng-hide"
+          ui-view="hgroup"
+        ></div>
+        <!---->
+        <div class="ikc-container" ui-view="container">
+          <ik-static code="INTRO-SERVICE"
+            ><div class="ds-quick-wrap">
+              <ul class="ds-quick">
+                <li>
+                  <a
+                    href="#/mylibrary/dashboard"
+                    ui-sref="root.mylibrary.dashboard"
+                    class="main-q1"
+                  ></a
+                  ><span>대출/연장/예약</span>
+                </li>
+                <!--
+        -->
+                <li>
+                  <a
+                    href="#/mylibrary/request-service-state"
+                    ui-sref="root.mylibrary.request-service-state"
+                    class="main-q2"
+                  ></a
+                  ><span>서비스신청 현황</span>
+                </li>
+                <!--
+        -->
+                <li class="hidden-xs">
+                  <a
+                    href="#/service/request"
+                    ui-sref="root.service.request"
+                    class="main-q3"
+                  ></a
+                  ><span>자료구입신청</span>
+                </li>
+                <!--
+        -->
+                <li>
+                  <a
+                    href="#/service/other-college/dds"
+                    ui-sref="root.service.other-college.dds"
+                    class="main-q4"
+                  ></a
+                  ><span>원문복사신청</span>
+                </li>
+                <!--
+        -->
+                <li class="hidden-xs">
+                  <a
+                    href="#/service/mobile"
+                    ui-sref="root.service.mobile"
+                    class="main-q5"
+                  ></a
+                  ><span>모바일이용증</span>
+                </li>
+                <!--
+        -->
+                <li>
+                  <a
+                    href="#/guide/use"
+                    ui-sref="root.guide.use"
+                    class="main-q6"
+                  ></a
+                  ><span>도서관이용안내</span>
+                </li>
+                <!--
+        -->
+                <li>
+                  <a
+                    href="#/guide/facility"
+                    ui-sref="root.guide.facility"
+                    class="main-q7"
+                  ></a
+                  ><span>PLAy N Create</span>
+                </li>
+                <li>
+                  <a
+                    ng-click="goStudyRoom()"
+                    target="_blank"
+                    class="main-q8"
+                  ></a
+                  ><span>스터디룸예약</span>
+                </li>
+              </ul>
+            </div></ik-static
+          >
+          <div class="ds-first-section row">
+            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+              <div class="k-tabstrip-wrapper">
+                <div
+                  kendo-tab-strip=""
+                  class="ds-notice-wrap k-widget k-header k-tabstrip k-floatwrap k-tabstrip-top"
+                  data-role="tabstrip"
+                  tabindex="0"
+                  role="tablist"
+                >
+                  <ul class="k-tabstrip-items k-reset">
+                    <li
+                      class="nh3 active k-state-active k-item k-tab-on-top k-state-default k-first"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="d2f72d46-6462-4e8d-b809-9977addb9935-1"
+                    >
+                      <span class="k-loading k-complete"></span
+                      ><a href="" class="k-link"
+                        ><span>공지</span>사항<span class="small"
+                          >/ Notice</span
+                        ></a
+                      >
+                    </li>
+                    <li
+                      class="nh3 k-item k-state-default k-last"
+                      role="tab"
+                      aria-controls="d2f72d46-6462-4e8d-b809-9977addb9935-2"
+                    >
+                      <span class="k-loading k-complete"></span
+                      ><a href="" class="k-link"
+                        ><span>문화</span>기획<span class="small"
+                          >/ Culture</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                  <div
+                    class="list k-content k-state-active"
+                    id="d2f72d46-6462-4e8d-b809-9977addb9935-1"
+                    role="tabpanel"
+                    aria-expanded="true"
+                    style="display: block"
+                  >
+                    <ul>
+                      <!---->
+                      <li ng-repeat="notice in notices">
+                        <a ng-href="#/bbs/notice/6156" href="#/bbs/notice/6156"
+                          >법률정보 학술DB 로앤비(LAWnB) 온라인 교육안내</a
+                        >
+                        <span class="day">2024.05.01</span>
+                      </li>
+                      <!---->
+                      <li ng-repeat="notice in notices">
+                        <a ng-href="#/bbs/notice/6155" href="#/bbs/notice/6155"
+                          >도서관&nbsp;CCTV 설치 공사에 따른 소음&nbsp;안내</a
+                        >
+                        <span class="day">2024.04.30</span>
+                      </li>
+                      <!---->
+                      <li ng-repeat="notice in notices">
+                        <a ng-href="#/bbs/notice/6148" href="#/bbs/notice/6148"
+                          >제7회 KSDC DB 퀴즈 이벤트 ｜4월 29일~5월 10일</a
+                        >
+                        <span class="day">2024.04.29</span>
+                      </li>
+                      <!---->
+                      <li ng-repeat="notice in notices">
+                        <a ng-href="#/bbs/notice/6147" href="#/bbs/notice/6147"
+                          >어린이날 대체공휴일&nbsp;휴관 안내</a
+                        >
+                        <span class="day">2024.04.29</span>
+                      </li>
+                      <!---->
+                      <li ng-repeat="notice in notices">
+                        <a ng-href="#/bbs/notice/6146" href="#/bbs/notice/6146"
+                          >DBpia 5월 온라인 이용교육 안내</a
+                        >
+                        <span class="day">2024.04.26</span>
+                      </li>
+                      <!---->
+                      <li ng-repeat="notice in notices">
+                        <a ng-href="#/bbs/notice/6145" href="#/bbs/notice/6145"
+                          >옥스포드 영어 대사전(OED) 웨비나 안내</a
+                        >
+                        <span class="day">2024.04.25</span>
+                      </li>
+                      <!---->
+                    </ul>
+                    <a
+                      href="#/bbs/notice"
+                      ui-sref="root.bbs.notice"
+                      class="more"
+                      ><span>더보기</span></a
+                    >
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="ds-banner-wrap col-lg-6 col-md-6 col-sm-6">
+              <div class="ds-banner">
+                <ul>
+                  <div
+                    class="owl-carousel banner owl-theme owl-loaded owl-drag"
+                  >
+                    <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                    <div class="owl-stage-outer">
+                      <div
+                        class="owl-stage"
+                        style="
+                          transform: translate3d(-4580px, 0px, 0px);
+                          transition: all 0.25s ease 0s;
+                          width: 7328px;
+                        "
+                      >
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6042"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/bed32ad3-7f00-41bb-8cbb-28872c597b89"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/bed32ad3-7f00-41bb-8cbb-28872c597b89"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6042"
+                                  >2024년 전자정보 이용안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5959?offset=0&amp;max=20"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/a467793f-333b-4f49-845b-cb1c5c8dbc02"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/a467793f-333b-4f49-845b-cb1c5c8dbc02"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5959?offset=0&amp;max=20"
+                                  >도서관 드론 투어 영상</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5924?offset=0&amp;max=20"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/de149d53-b65d-47b7-a927-61c8261ff68c"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/de149d53-b65d-47b7-a927-61c8261ff68c"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5924?offset=0&amp;max=20"
+                                  >2023 도서관 PLAy N Create 미디어랩 활용
+                                  가이드</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/5902"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/90c08f00-ef45-4b53-812b-3d0928fe1a7f"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/90c08f00-ef45-4b53-812b-3d0928fe1a7f"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/5902"
+                                  >덕성여대 학생 및 교직원 교보문고 10% 할인
+                                  안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5272?offset=0&amp;max=20"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/434940c2-e433-4a5e-9c36-f5943c45ef74"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/434940c2-e433-4a5e-9c36-f5943c45ef74"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5272?offset=0&amp;max=20"
+                                  >2024 도서관 이용안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6066"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/2b3fe7c2-41b7-4eec-a43b-8db10fac676e"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/2b3fe7c2-41b7-4eec-a43b-8db10fac676e"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6066"
+                                  >2024학년도 1학기 도서관 운영 안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6126"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/83a42ad0-770d-4569-95cb-f612d3f019f0"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/83a42ad0-770d-4569-95cb-f612d3f019f0"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6126"
+                                  >제10회 도서관 리베상 안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6074"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/419511a3-4749-40f2-bf3c-36b2b62e1ef0"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/419511a3-4749-40f2-bf3c-36b2b62e1ef0"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6074"
+                                  >책 읽는 덕성, 덕성여자대학교 권장도서 100</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6042"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/bed32ad3-7f00-41bb-8cbb-28872c597b89"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/bed32ad3-7f00-41bb-8cbb-28872c597b89"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6042"
+                                  >2024년 전자정보 이용안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5959?offset=0&amp;max=20"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/a467793f-333b-4f49-845b-cb1c5c8dbc02"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/a467793f-333b-4f49-845b-cb1c5c8dbc02"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5959?offset=0&amp;max=20"
+                                  >도서관 드론 투어 영상</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item active" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5924?offset=0&amp;max=20"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/de149d53-b65d-47b7-a927-61c8261ff68c"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/de149d53-b65d-47b7-a927-61c8261ff68c"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5924?offset=0&amp;max=20"
+                                  >2023 도서관 PLAy N Create 미디어랩 활용
+                                  가이드</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/5902"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/90c08f00-ef45-4b53-812b-3d0928fe1a7f"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/90c08f00-ef45-4b53-812b-3d0928fe1a7f"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/5902"
+                                  >덕성여대 학생 및 교직원 교보문고 10% 할인
+                                  안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5272?offset=0&amp;max=20"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/434940c2-e433-4a5e-9c36-f5943c45ef74"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/434940c2-e433-4a5e-9c36-f5943c45ef74"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/helpdesk/helpmovie/5272?offset=0&amp;max=20"
+                                  >2024 도서관 이용안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6066"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/2b3fe7c2-41b7-4eec-a43b-8db10fac676e"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/2b3fe7c2-41b7-4eec-a43b-8db10fac676e"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6066"
+                                  >2024학년도 1학기 도서관 운영 안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6126"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/83a42ad0-770d-4569-95cb-f612d3f019f0"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/83a42ad0-770d-4569-95cb-f612d3f019f0"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6126"
+                                  >제10회 도서관 리베상 안내</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="owl-item cloned" style="width: 458px">
+                          <li
+                            ng-repeat="banner in banners"
+                            ng-init="bannerCarousel($last, banner)"
+                          >
+                            <a
+                              href="https://discover.duksung.ac.kr/#/bbs/notice/6074"
+                              ><img
+                                ng-src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/419511a3-4749-40f2-bf3c-36b2b62e1ef0"
+                                style="
+                                  display: block;
+                                  width: 100%;
+                                  height: 430px;
+                                "
+                                src="https://discover.duksung.ac.kr/pyxis-api/attachments/banner/419511a3-4749-40f2-bf3c-36b2b62e1ef0"
+                            /></a>
+                            <div class="ds-banner-title">
+                              <p>
+                                <a
+                                  href="https://discover.duksung.ac.kr/#/bbs/notice/6074"
+                                  >책 읽는 덕성, 덕성여자대학교 권장도서 100</a
+                                >
+                              </p>
+                            </div>
+                          </li>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-nav disabled">
+                      <div class="owl-prev">prev</div>
+                      <div class="owl-next">next</div>
+                    </div>
+                    <div class="owl-dots">
+                      <div class="owl-dot"><span></span></div>
+                      <div class="owl-dot"><span></span></div>
+                      <div class="owl-dot"><span></span></div>
+                      <div class="owl-dot"><span></span></div>
+                      <div class="owl-dot"><span></span></div>
+                      <div class="owl-dot"><span></span></div>
+                      <div class="owl-dot active"><span></span></div>
+                      <div class="owl-dot"><span></span></div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+    <div class="ikc-footer-wrap" ui-view="footer">
+        <div class="ds-footer-bottom">
+          <p>
+            Copyright(c) 2015 Duksung Women’s University Library.<br
+              class="visible-xs"
+            />All rights Reserved.
+          </p>
+        </div>
+    </div>
+      <!---->
+    </div>
+
+    
+  </body>
+</html>
