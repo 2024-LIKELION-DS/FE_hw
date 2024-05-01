@@ -47,7 +47,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: white;
-  width: 360px;
+  width: 358px;
   height: 44px;
 }
 
@@ -64,6 +64,7 @@ body {
   list-style: none;
   padding: 0;
   margin-top: 60px;
+  justify-content: center;
 }
 
 .page_detail a {
@@ -72,10 +73,21 @@ body {
   margin-left: 15px;
 }
 
-.page_detail a:first {
+.detail_first a {
   margin: 0;
 }
 
 .bold {
   font-weight: 800;
+}
+
+@media all and (max-width: 780px) {
+  .login_information {
+    width: 90vw;
+  }
+
+  .login_submit {
+    padding-left: 15px;
+    width: 93.5vw; /*아이디, 비밀번호 입력창과 버튼 너비를 코드에서 같게 설정하면 실행했을 때 안 맞음*/
+  }
 }
