@@ -11,14 +11,31 @@ body {
 }
 
 #header-menu {
-  margin: 10px 40px;
+  margin: 1rem 3rem;
   display: flex;
   list-style-type: none;
+  white-space: nowrap;
 }
 
 #header-menu li {
   font-weight: bold;
-  margin: 10px 15px;
+  margin: 0.5rem 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.burger-menu {
+  display: flex;
+}
+
+.burger-menu img:first-child {
+  margin-right: 0.5em;
+}
+
+.burger-menu img {
+  width: 2em;
+  height: 2em;
+  object-fit: cover;
 }
 
 /*main*/
@@ -29,17 +46,20 @@ body {
 
 .main-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 0px 120px;
-  padding: 25px;
+  padding: 2rem;
 }
 
 .main-img img {
-  width: 100%; /* 이미지 너비를 부모 요소의 100%로 설정 */
-  object-fit: cover; /* 컨테이너를 채우도록 이미지를 조정하되, 필요에 따라 이미지를 자를 수 있음 */
+  width: auto;
+  height: auto;
+  max-width: 100%;
 }
 
 .item {
+  flex: 0 0 auto;
   text-align: center;
 }
 
@@ -138,4 +158,59 @@ body {
 
 .left-content {
   margin-right: 40px;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: 25%;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    align-items: center;
+  }
+
+  #header-menu li {
+    display: none;
+  }
+
+  .header-logo img {
+    width: 12rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1rem 0 0 1rem;
+  }
+
+  .burger-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem 1rem 0 0;
+  }
+
+  .item {
+    width: 33.333%;
+    margin: 0;
+  }
+
+  .item:nth-child(n + 7) {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left-content {
+    display: none;
+  }
 }
