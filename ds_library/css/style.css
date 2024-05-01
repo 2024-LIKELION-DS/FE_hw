@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
 /* 사진이 꽉 차도록 */
 body {
   margin: 0;
@@ -10,8 +18,9 @@ body {
 }
 
 .navbar ul li {
-  margin: 15px;
+  margin: 1vw;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .headerNav {
@@ -19,7 +28,15 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 100px;
+  height: 7vw;
+}
+
+.navbar2 {
+  display: none;
+}
+
+.navbar2 img {
+  margin: 0.5vw;
 }
 
 /* 사진 수정 */
@@ -36,12 +53,12 @@ body {
 
 .section2_img {
   text-align: center;
-  margin: 20px;
+  margin: 2vw;
 }
 
 .section2_img p {
   color: #5c6168;
-  font-size: 14.4px;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -50,7 +67,7 @@ body {
   flex-direction: row;
   justify-content: center;
   background-color: #f4f3f0;
-  margin-top: -4px;
+  margin-top: -0.3vw;
 }
 
 #notice {
@@ -63,20 +80,17 @@ body {
   color: #a0a0a0;
 }
 
-#_notice {
-  font-size: 13.6px;
-}
-
 #bold_p {
-  font-size: 22.4px;
+  font-size: 2.24rem;
 }
 
 #bold_p2 {
-  font-size: 22.4px;
+  font-size: 2.24rem;
 }
 
+#_notice,
 #_culture {
-  font-size: 11.2px;
+  font-size: 1.2rem;
 }
 
 .notice_culture {
@@ -87,8 +101,7 @@ body {
 }
 
 #section3_div2 {
-  margin-left: 80px;
-  margin-right: 100px;
+  margin-left: 6vw;
 }
 
 .section3 {
@@ -99,35 +112,122 @@ body {
 }
 
 .section3_div {
-  width: 570px;
-  margin-left: 130px;
+  width: 40vw;
+  margin-left: 8vw;
+}
+
+.text {
+  font-size: 1.6rem;
 }
 
 .date {
-  margin-left: 30px;
-  font-size: 16px;
+  margin-left: 2vw;
+  font-size: 1.6rem;
   color: #b5bbce;
 }
 
+/* .setion3_text {
+  display: block;
+  width: 40vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} */
+
 /* hr대신 border-bottom으로 수정함 */
 .section3_2 {
-  padding: 10px;
+  padding: 0.7vw;
   border-bottom: 1px solid #a0a0a0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .section3_2 span {
-  margin-left: 20px;
+  margin-left: 1.3vw;
 }
 
 .section3_4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 3.4vw;
+}
+
+.section4 {
+  width: 40vw;
+  /* height: 40vw; */
+  overflow: hidden;
+  margin: 0 auto;
+  margin-left: 5vw;
 }
 
 .section4 img {
-  width: 570px;
-  height: 430px;
-  margin-left: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 1103px) {
+  /* 화면 너비가 1103px 이하인 경우에만 적용되는 스타일 */
+  .head_div img {
+    width: 80%;
+  }
+  .navbar ul {
+    padding: 0;
+  }
+  .navbar ul li {
+    margin: 0.7vw;
+  }
+}
+
+@media all and (max-width: 992px) {
+  /* 화면 너비가 992px 이하인 경우에만 적용되는 스타일 */
+  .navbar {
+    visibility: hidden;
+  }
+  .section2_div {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section2_img {
+    width: 22vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2vw 1vw;
+    flex-wrap: nowrap;
+  }
+  .section2_img p {
+    margin-left: 0.5vw;
+  }
+  .navbar2 {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 833px) {
+  /* 화면 너비가 833px 이하인 경우에만 적용되는 스타일 */
+  #sec2_img1,
+  #sec2_img2 {
+    display: none;
+  }
+  .section2_img {
+    width: 30vw;
+  }
+}
+
+@media all and (max-width: 607px) {
+  /* 화면 너비가 607px 이하인 경우에만 적용되는 스타일 */
+  #sec2_img1,
+  #sec2_img2 {
+    display: none;
+  }
+  .section2_img {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+  }
 }

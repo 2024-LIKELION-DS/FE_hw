@@ -24,13 +24,13 @@ input[type="password"] {
   padding-left: 10px;
 }
 
-button {
+input[type="submit"] {
   width: 400px;
   height: 35px;
   border: 0;
   border-radius: 10px;
-  margin: 3px;
-  background-color: #bd4936;
+  margin: 15px 3px 3px 3px;
+  background-color: #f91f15;
   color: white;
 }
 
@@ -44,4 +44,13 @@ p {
 
 button {
   margin-top: 15px;
+}
+
+.text {
+  margin: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
