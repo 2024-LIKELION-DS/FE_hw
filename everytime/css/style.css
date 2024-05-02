@@ -297,3 +297,7 @@ nav .icon {
 #container > div > aside {
   margin-left: 10%;
 }
+
+@media all and (max-width:640px) {
+  
+}

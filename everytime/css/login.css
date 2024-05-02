@@ -3,12 +3,13 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    padding: 48px 24px;
 }
 
 .logo {
     width: 210px;
     height: 56px;
-    margin-top: 200px;
+    margin: 200px auto 40px;
     padding: 30px;
 }
 
@@ -54,6 +55,7 @@ input[type="password"] {
 }
 
 .register {
+    text-align: center;
     font-size: 14px;
     color: #737373;
     text-decoration-line: underline;
@@ -74,3 +76,22 @@ div.container footer[copyright] {
 .copyright2 {
     font-weight: bold;
 }
+
+/*780px 기준으로 전체적인 요소가 위 정렬, 입력창 크기 변경(화면에 꽉 차도록)*/
+@media all and (max-width : 780px) {
+    .input {
+        width: 90vw;
+    }
+
+    .logo {
+        margin: 0 auto 40px;
+    }
+    
+
+    input[type="text"],
+    input[type="password"], .lg {
+        width: 100%;
+    }
+    
+}
+
