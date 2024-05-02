@@ -1,0 +1,57 @@
+<div id="uppermost" class="ikc-header-nav">
+  <ul class="ds-tm">
+    <!---->
+    <li ng-show="showLoginOutButton &amp;&amp; !isMember">
+      <a ng-click="goNewPortalLogin()" class="ds-portal"
+        >Portal Login<br /><span style="font-size: 0.7em"
+          >(재학생,재직자)</span
+        ></a
+      >
+    </li>
+    <!---->
+    <li ng-if="showLoginOutButton">
+      <!----><a ng-if="!isMember" href="#/librarylogin" class="ds-portal"
+        >Library Login<br /><span style="font-size: 0.7em"
+          >(졸업생,외래강사)</span
+        ></a
+      ><!---->
+      <!---->
+    </li>
+    <!---->
+    <li><a href="#/helpdesk/faq" ui-sref="root.helpdesk.faq">Help Desk</a></li>
+    <li>
+      <a href="http://www.duksung.ac.kr/" target="_blank"
+        ><img
+          src="../assets/images/duksung/main/tm-ds-icon.jpg"
+          class="ds-tm-icon"
+          alt="덕성여자대학교"
+        />덕성여자대학교</a
+      >
+    </li>
+    <li><a href="javascript:alert('준비중입니다.')">English</a></li>
+    <li class="ds-tm-allmenu">
+      <a href="" ng-click="isGnbShow = !isGnbShow"
+        ><img
+          src="../assets/images/duksung/main/tm-all.png"
+          class="ds-tm-icon"
+          alt="전체메뉴 아이콘"
+        />전체메뉴</a
+      >
+    </li>
+  </ul>
+  <a
+    class="ikc-btn-overview hidden-lg hidden-md"
+    ng-click="toggleOverviewShow()"
+    ng-class="{'ikc-overview-show': isOverviewShow}"
+    ><span>Overview</span></a
+  >
+  <div>
+    <!----><a
+      ng-if="!isMember"
+      href="#/login"
+      class="ds-btn-my hidden-lg hidden-md"
+      ><span>로그인</span></a
+    ><!---->
+    <!---->
+  </div>
+</div>
