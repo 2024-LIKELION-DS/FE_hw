@@ -36,7 +36,7 @@ p.let {
   margin-top: 10px;
   display: flex;
   align-items: center;
-  padding-left: 200px;
+  padding-left: 10vw;
   margin-bottom: 15px;
 }
 
@@ -48,12 +48,12 @@ img {
 }
 
 img.everytime_logo {
-  width: 75px;
+  width: 80px;
   height: auto;
 }
 
 span.ev {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 0px;
 }
 
@@ -66,7 +66,7 @@ span.ev {
   display: flex;
   align-items: center;
   gap: 0px;
-  padding-right: 200px;
+  padding-right: 10vw;
 }
 
 .message {
@@ -84,13 +84,10 @@ span.ev {
 /* div에게 height 1px주면 줄 하나 생김 */
 
 /* 여기서부터 nav라인*/
-div.container {
-  display: flex;
-  background-color: rgb(235, 235, 235);
-  border-top: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
-  padding: 15px;
-  justify-content: center;
+
+div.container p:hover {
+  color: red;
+  font-weight: bold;
 }
 
 p.more,
@@ -150,8 +147,8 @@ div.text_6 {
 
 section {
   position: absolute;
-  left: 220px;
   width: 800px;
+  left: 10vw;
 }
 
 div.section_1 {
@@ -619,4 +616,343 @@ img.scrap {
   padding-left: 15px;
   font-weight: bold;
   font-size: 15px;
+}
+
+/* 반응형 */
+
+/* 1300px up */
+@media all and (min-width: 1300px) {
+  div.container {
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    padding: 15px;
+    justify-content: center;
+
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 25vw;
+  }
+
+  div.head_ham {
+    display: none;
+  }
+
+  div.moving_section_1,
+  div.moving_section_2 {
+    display: none;
+  }
+
+  section {
+    left: 15vw;
+  }
+}
+
+/* 1350px down */
+@media all and (max-width: 1350px) {
+  div.container {
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    padding: 15px;
+    justify-content: center;
+
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  div.text_5 {
+    border-right: 2px solid lightgray;
+  }
+
+  div.head_ham,
+  div.text_6,
+  p.head_p_5,
+  p.head_p_6 {
+    display: none;
+  }
+
+  /* aside */
+  .aside_all {
+    display: none;
+  }
+
+  div.moving_section_1,
+  div.moving_section_2 {
+    display: none;
+  }
+}
+
+/* 1200px down */
+@media all and (max-width: 1200px) {
+  div.container {
+    overflow: hidden;
+  }
+
+  div.text_5 {
+    display: none;
+  }
+
+  div.head_ham,
+  p.head_p_3,
+  p.head_p_4 {
+    display: none;
+  }
+}
+
+/* 1050px down */
+@media all and (max-width: 1050px) {
+  div.container {
+    overflow: hidden;
+  }
+
+  div.text_4 {
+    display: none;
+  }
+
+  div.img2,
+  p.link,
+  p.head_p_1,
+  p.head_p_2 {
+    display: none;
+  }
+
+  div.head_ham {
+    display: flex;
+    padding-right: 10vw;
+  }
+}
+
+/* 900px down */
+@media all and (max-width: 900px) {
+  div.container {
+    overflow: hidden;
+  }
+
+  div.text_3 {
+    display: none;
+  }
+
+  img.everytime_logo {
+    clear: both;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  div.img2 {
+    display: none;
+  }
+}
+
+/* 640px up */
+@media all and (min-width: 640px) {
+  div.ham_bar {
+    display: none;
+  }
+
+  .moving_section_1,
+  .moving_section_2,
+  .moving_section_3 {
+    display: none;
+  }
+}
+
+/* 640px down */
+@media all and (max-width: 640px) {
+  /* header */
+  .header {
+    display: none;
+  }
+
+  div.border {
+    border-top: 2px solid rgb(210, 210, 210);
+  }
+
+  div.ham_bar {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vw;
+  }
+
+  img.ham_img {
+    width: 6vw;
+    height: auto;
+    margin-left: 2vw;
+  }
+
+  span.ham_txt {
+    color: rgb(57, 57, 57);
+    font-size: 20px;
+    padding-top: 4vw;
+  }
+
+  /* nav */
+  div.container {
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    height: 50vw;
+    flex-wrap: wrap;
+    font-size: 12px;
+    overflow: hidden;
+  }
+
+  /* section */
+  section {
+    display: none;
+  }
+
+  div.moving_section_1,
+  div.moving_section_2 {
+    display: flex;
+    border: 1px solid lightgray;
+  }
+
+  div.moving_section_1 {
+    flex-direction: column;
+    margin-top: 2vw;
+  }
+
+  p.duksung,
+  p.num,
+  p.power {
+    display: flex;
+    background-color: rgb(221, 246, 246);
+    border-radius: 10px;
+    margin: 1vw;
+    padding: 2vw;
+  }
+
+  p.best,
+  p.grr {
+    background-color: rgb(249, 219, 219);
+    display: flex;
+    border-radius: 10px;
+    margin: 1vw;
+    padding: 2vw;
+  }
+
+  div.bluethings,
+  div.redthings {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+  }
+
+  div.bluethings {
+    border-bottom: 0px;
+    padding-top: 1vw;
+  }
+
+  div.redthings {
+    border-top: 0px;
+    padding-bottom: 1vw;
+  }
+
+  img.blue_ask,
+  img.red_fire {
+    margin-left: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  /* 새 글을 작성해주세요 */
+
+  div.moving_section_2 {
+    padding-left: 2vw;
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    background-color: rgb(243, 242, 242);
+    border: 2px solid rgb(187, 187, 187);
+    color: rgb(146, 146, 146);
+  }
+
+  div.gray_back {
+    margin: 0;
+    padding: 1vw;
+    background-color: rgb(243, 243, 243);
+  }
+
+  img.pen {
+    margin-left: 58vw;
+    margin-right: 0;
+    margin-bottom: 3vw;
+  }
+
+  /* 게시글 */
+
+  div.moving_section_3 {
+    display: flex;
+    border: 1px solid lightgray;
+    align-items: center;
+    margin: 0;
+  }
+
+  div.like {
+    padding-left: 5vw;
+  }
+
+  div.like span {
+    font-size: 2vw;
+  }
+
+  div.like p {
+    font-size: 3vw;
+  }
+
+  p.sorry {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  p.no {
+    margin: 0;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    width: 50vw;
+  }
+
+  span.ten {
+    color: red;
+  }
+
+  span.seventeen {
+    color: rgb(77, 183, 172);
+  }
+
+  span.min {
+    color: gray;
+  }
+
+  img.likes {
+    width: 2vw;
+    height: auto;
+    margin: 0;
+  }
+
+  img.comment {
+    width: 2vw;
+    height: auto;
+  }
+
+  div.lion {
+    float: right;
+  }
+
+  div.like_comment {
+    margin-bottom: 2vw;
+  }
+
+  img.lions {
+    width: 12vw;
+    height: auto;
+    margin-bottom: 2vw;
+    margin-left: 27vw;
+  }
 }

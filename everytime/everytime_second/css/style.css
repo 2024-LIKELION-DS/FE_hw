@@ -3,106 +3,211 @@ body {
   font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
-img.logoimg {
-  margin-top: 75px;
-  width: 500px;
-  padding-top: 0px;
+@media all and (min-width: 780px) {
+  input.idbox {
+    margin-top: 55px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 20px;
+    background-color: rgb(235, 235, 235);
+    width: 680px;
+    height: 70px;
+    font-size: 25px;
+    padding-left: 20px;
+    color: gray;
+    margin-bottom: 7px;
+  }
+
+  input.passwordbox {
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 20px;
+    background-color: rgb(235, 235, 235);
+    width: 680px;
+    height: 70px;
+    font-size: 25px;
+    padding-left: 20px;
+    color: gray;
+    margin-top: 0px;
+    margin-bottom: 7px;
+  }
+
+  input.signupbox {
+    border: 1px solid rgb(224, 62, 62);
+    border-radius: 20px;
+    background-color: rgb(224, 62, 62);
+    width: 705px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 500;
+    padding-right: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 7px;
+  }
+
+  img.logoimg {
+    margin-top: 75px;
+    width: 500px;
+    padding-top: 0px;
+  }
+
+  div.img {
+    display: flex;
+    justify-content: center;
+  }
+
+  div.clik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p.signup {
+    text-decoration: underline;
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 130px;
+  }
+
+  a:link {
+    color: gray;
+  }
+
+  a:visited {
+    color: gray;
+  }
+
+  div.spanclass {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 190px;
+    width: 705px;
+    margin: auto;
+  }
+
+  span.lightgraytxt {
+    color: rgb(182, 182, 182);
+  }
+
+  span.graytxt {
+    color: gray;
+  }
 }
 
-div.img {
-  display: flex;
-  justify-content: center;
-}
+@media all and (max-width: 780px) {
+  div.clik {
+    width: 80%;
+    margin: auto;
+  }
 
-input.idbox {
-  margin-top: 55px;
-  border: 1px solid rgb(235, 235, 235);
-  border-radius: 20px;
-  background-color: rgb(235, 235, 235);
-  width: 680px;
-  height: 70px;
-  font-size: 25px;
-  padding-left: 20px;
-  color: gray;
-  margin-bottom: 7px;
-}
+  input.idbox {
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 20px;
+    color: gray;
+    font-size: 25px;
+    padding-left: 20px;
+    margin-top: 55px;
+    margin-bottom: 7px;
+    width: 100%;
+    height: 70px;
+  }
 
-input.passwordbox {
-  border: 1px solid rgb(235, 235, 235);
-  border-radius: 20px;
-  background-color: rgb(235, 235, 235);
-  width: 680px;
-  height: 70px;
-  font-size: 25px;
-  padding-left: 20px;
-  color: gray;
-  margin-top: 0px;
-  margin-bottom: 7px;
-}
+  input.passwordbox {
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 20px;
+    color: gray;
+    font-size: 25px;
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    width: 100%;
+    height: 70px;
+  }
 
-input.signupbox {
-  border: 1px solid rgb(224, 62, 62);
-  border-radius: 20px;
-  background-color: rgb(224, 62, 62);
-  width: 705px;
-  height: 70px;
-  font-size: 30px;
-  font-weight: 500;
-  padding-right: 20px;
-  color: white;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 7px;
-}
+  input.signupbox {
+    background-color: rgb(224, 62, 62);
+    border: 1px solid rgb(224, 62, 62);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    width: 103%;
+    height: 70px;
+  }
 
-div.clik {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  img.logoimg {
+    margin-top: 75px;
+    width: 60vw;
+    padding-top: 0px;
+  }
 
-p.signup {
-  text-decoration: underline;
-  color: gray;
-  font-size: 20px;
-  text-align: center;
-  padding-top: 130px;
-}
+  div.img {
+    display: flex;
+    justify-content: center;
+  }
 
-a:link {
-  color: gray;
-}
+  div.clik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-a:visited {
-  color: gray;
-}
+  p.signup {
+    text-decoration: underline;
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 130px;
+  }
 
-div.spanclass {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 190px;
-  margin-left: 520px;
-  margin-right: 520px;
-}
+  a:link {
+    color: gray;
+  }
 
-span.lightgraytxt {
-  color: rgb(182, 182, 182);
-}
+  a:visited {
+    color: gray;
+  }
+  /*
+  div.spanclass {
+    display: none;
+  } */
 
-span.graytxt {
-  color: gray;
+  div.spanclass {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 190px;
+    width: 80%;
+    margin: auto;
+  }
+
+  span.lightgraytxt {
+    color: rgb(182, 182, 182);
+  }
+
+  span.graytxt {
+    color: gray;
+  }
 }
 
 /*에브리타임 회원가입 페이지*/
 
+@media all and (min-width: 1100px) {
+}
 div.everyborder {
   border: 2px solid lightgray;
   border-radius: 10px;
   width: 700px;
   height: 880px;
   margin-top: 40px;
-  margin-left: 510px;
+  margin-left: 30vw;
   padding-left: 30px;
 }
 
@@ -167,6 +272,94 @@ input.postbox {
   color: white;
   font-weight: 500;
   font-size: 20px;
+}
+
+@media all and (max-width: 1100px) {
+  div.everyborder {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-left: 10vw;
+    width: 80%;
+    height: 880px;
+    margin-top: 5vw;
+  }
+
+  div.boxes {
+    color: gray;
+  }
+
+  .graybox {
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 15px;
+    background-color: rgb(235, 235, 235);
+    width: 93%;
+    height: 47px;
+    margin-left: 3px;
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  input.postbox {
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(224, 62, 62);
+    border-radius: 15px;
+    background-color: rgb(224, 62, 62);
+    width: 97%;
+    height: 47px;
+    padding-left: 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  div.everyborder {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-left: 7vw;
+    width: 80%;
+    height: 880px;
+    margin-top: 5vw;
+  }
+
+  div.boxes {
+    color: gray;
+  }
+
+  .graybox {
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 15px;
+    background-color: rgb(235, 235, 235);
+    width: 90%;
+    height: 47px;
+    margin-left: 3px;
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  input.postbox {
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(224, 62, 62);
+    border-radius: 15px;
+    background-color: rgb(224, 62, 62);
+    width: 95%;
+    height: 47px;
+    padding-left: 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+  }
 }
 
 /*글 작성 페이지 구현*/
