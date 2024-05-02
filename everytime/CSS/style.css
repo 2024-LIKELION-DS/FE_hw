@@ -23,15 +23,21 @@ a:visited {
   border-bottom: 2px solid #d6d6d6;
   background-color: rgb(255, 255, 255);
   display: flex;
-  align-items: center;
   z-index: 999;
+  justify-content: center;
+}
+
+.topmenu_content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*로고*/
 .mainlogo {
   display: flex;
   align-items: center;
-  margin-left: 10%;
 }
 
 .mainlogo img {
@@ -55,8 +61,8 @@ a:visited {
 .category {
   display: flex;
   align-items: center;
-  padding-left: 182px;
   margin-top: 10px;
+  padding: 0;
 }
 
 .category li {
@@ -76,10 +82,6 @@ a:visited {
   border-bottom: 4px solid red;
 }
 
-.menu {
-  margin-left: 205px;
-}
-
 .menu a img {
   border: 1px solid rgb(175, 175, 175);
   border-radius: 10px;
@@ -87,20 +89,29 @@ a:visited {
 }
 
 /*다양한 게시판*/
-.messageboard {
+.messageboard_bg {
   clear: left;
   width: 100vw;
   height: 230px;
   background-color: #f2f2f2;
+  border: 1px solid #d6d6d6;
   margin-top: 80px;
   display: flex;
-  border: 1px solid #d6d6d6;
   justify-content: center;
-  overflow-x: scroll;
+}
+
+.messageboard {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .messageboard div {
   margin: 10px 5px;
+}
+
+.messageboard div {
   display: flex;
   justify-content: center;
 }
@@ -112,7 +123,6 @@ a:visited {
 .messageboard div:last-child {
   border-right: 1px solid #d6d6d6;
 }
-
 .messageboard div ul li {
   font-size: 13px;
   list-style: none;
@@ -478,10 +488,24 @@ a.more_content {
   }
 
   .main_post {
-    width: 100vw;
+    width: 98vw;
   }
 
   .website_detail ul {
     flex-wrap: wrap;
+  }
+
+  .messageboard {
+    overflow-x: scroll;
+  }
+
+  .messageboard div ul li {
+    width: 150px;
+  }
+}
+
+@media all and (min-width: 641px) {
+  .mobile_header {
+    display: none;
   }
 }

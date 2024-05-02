@@ -230,6 +230,7 @@ a {
 
   .function_bar li {
     width: 120px;
+    flex-wrap: wrap;
   }
 
   .function_bar li.mobile_hide {
@@ -363,6 +364,10 @@ a {
   margin-top: 100px;
 }
 
+.copyright p:nth-child(2) {
+  margin-left: 5px;
+}
+
 .copyright p {
   color: white;
   font-size: 13px;
@@ -378,6 +383,15 @@ a {
 }
 
 @media all and (max-width: 902px) {
+  .copyright {
+    flex-direction: column;
+    height: 100px;
+  }
+
+  .copyright p {
+    margin: 0;
+  }
+
   .top_button {
     right: 5vw;
     bottom: 8vh;
