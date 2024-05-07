@@ -71,7 +71,7 @@ p {
 }
 #menu {
   margin: 0 auto;
-  width: 600px;
+  width: 100%;
   height: 100%;
   font-size: 0;
   text-align: center;
@@ -79,6 +79,7 @@ p {
 
 #menu > li {
   display: inline-block;
+
   height: 76px;
   line-height: 76px;
   margin: 0px 12px;
@@ -91,6 +92,8 @@ p {
 #submenu {
   border-bottom: 1px solid #d6d6d6;
   background-color: #f2f2f2;
+  width: auto;
+  overflow: scroll;
 }
 
 #submenu > div.wrap {
@@ -138,6 +141,13 @@ div.divider {
   margin: 0 auto;
   width: 1180px;
   box-sizing: border-box;
+}
+/* 질문 : justify-content: space-around; 적용안됨*/
+@media (max-width: 640px) {
+  #container {
+    width: auto;
+    margin: 0 20px;
+  }
 }
 
 .secret {
@@ -209,7 +219,7 @@ div.divider {
 
 #container > div.bubbles > div.bubble > div.items > div.item > span {
   color: #666666;
-  padding: 14px;
+  padding: 10px;
   font-size: 12px;
   display: inline-block;
   line-height: 20px;
@@ -254,13 +264,25 @@ article.list {
   background-color: #fff;
   width: 780px;
 }
+.imgflex {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.preview > img {
+  width: 100px;
+  height: auto;
+  justify-items: end;
+  margin-right: 20px;
+  align-content: center;
+}
 
 div.article {
   padding: 16px 24px;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
 }
-
 div.article > p.bold {
   line-height: 20px;
   font-size: 14px;
@@ -278,17 +300,17 @@ div.article > p.medium {
   margin-bottom: 4px;
 }
 
-div.article > div.slist {
+div.article > div.slist > li {
   font-size: 12px;
   color: #666;
   letter-spacing: -0.5px;
+  list-style: none;
 }
 
 #container > div.rightside {
   position: absolute;
   right: 25px;
   top: 0;
-  width: 325px;
   height: 400px;
   display: block;
   float: right;
@@ -374,7 +396,51 @@ ul.likeAndReply > li > img {
 ul.likeAndReply {
   display: inline-flex;
   list-style: none;
-
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-size: 12px;
+}
+
+@media all and (max-width: 640px) {
+  #container > div.rightside {
+    display: none;
+  }
+  #container > *,
+  #container > div.bubbles,
+  #container > div.newWrite {
+    width: 100%;
+  }
+  #submenu #submenu > div.wrap {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 640px) {
+  #logo,
+  #account,
+  #menu,
+  .secret {
+    display: none;
+  }
+}
+
+/* 햄버거바 기본적으로는 숨김 */
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media all and (max-width: 640px) {
+  .mobile-menu-toggle {
+    display: flex;
+    margin: 20px;
+  }
+  .mobile-menu-toggle > img {
+    width: 30px;
+    height: auto;
+  }
+  .mobile-menu-toggle > p {
+    font-size: 17px;
+    align-content: center;
+    margin-left: 2%;
+  }
 }
