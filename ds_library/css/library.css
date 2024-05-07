@@ -6,6 +6,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  align-items: center;
 
   border-bottom: solid 1px rgb(200, 200, 200);
 }
@@ -119,6 +120,12 @@ nav {
   align-items: center;
 }
 
+.search img {
+  width: 100vw;
+  height: 280px;
+  overflow: hidden;
+}
+
 /* section3 */
 .sideset {
   margin-top: 50px;
@@ -128,8 +135,12 @@ nav {
   gap: 20px;
 }
 
+.sideset section {
+  margin-left: 5px;
+}
+
 .anounwidth {
-  width: 580px;
+  width: 48vw;
 }
 
 .announce {
@@ -175,7 +186,7 @@ nav {
   flex-direction: row;
 
   position: relative;
-  top: 2px;
+  top: 4px;
 }
 
 .culture1 {
@@ -211,6 +222,9 @@ nav {
   padding-bottom: 8px;
 
   border-bottom: solid 1px rgb(150, 150, 150);
+
+  white-space: nowrap;
+  overflow: hidden;
 }
 .let_title {
   font-size: 17px;
@@ -223,6 +237,11 @@ nav {
   color: rgb(180, 180, 180);
 
   margin-top: 2px;
+}
+
+.infoimg {
+  width: 48vw;
+  height: 48vw;
 }
 
 @media all and (min-width: 1024px) {
@@ -253,7 +272,10 @@ nav {
   }
 
   .service1,
-  .service3 {
+  .service3,
+  .service4,
+  .service5,
+  .service6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,6 +345,36 @@ nav {
     align-items: center;
   }
 
+  .service4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 3px;
+  }
+
+  .service5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 10px;
+  }
+
+  .service6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 15px;
+  }
+
   .serv_name {
     margin-left: 15px;
   }
@@ -338,6 +390,22 @@ nav {
     gap: 6vw;
   }
 
+  .service1,
+  .service5,
+  .service6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service5,
+  .service6 {
+    position: relative;
+    left: 0;
+    right: 15px;
+  }
+
   .serv_name {
     margin-left: 10px;
   }
@@ -345,13 +413,21 @@ nav {
   .sideset section {
     display: none;
   }
+
+  .infoimg {
+    width: 80vw;
+    height: 80vw;
+  }
 }
 
 @media all and (max-width: 570px) {
   .service3 {
     display: none;
   }
-  .service1 {
+  .service1,
+  .service4,
+  .service5,
+  .service6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -370,5 +446,10 @@ nav {
 
   .sideset section {
     display: none;
+  }
+
+  .infoimg {
+    width: 80vw;
+    height: 80vw;
   }
 }

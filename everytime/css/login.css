@@ -15,37 +15,11 @@ body {
   margin-bottom: 40px;
 }
 
-input[type="text"] {
-  border: 0;
-  border-radius: 10px;
-  outline: none;
-
-  width: 350px;
-  height: 45px;
-
-  padding-left: 10px;
-
-  background-color: rgb(245, 245, 245);
-}
-
 .id {
   display: flex;
   justify-content: center;
 
   margin-bottom: 5px;
-}
-
-input[type="password"] {
-  border: 0;
-  border-radius: 10px;
-  outline: none;
-
-  width: 350px;
-  height: 45px;
-
-  padding-left: 10px;
-
-  background-color: rgb(245, 245, 245);
 }
 
 .pw {
@@ -55,36 +29,11 @@ input[type="password"] {
   margin-bottom: 5px;
 }
 
-.serv_idpw {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 140px;
-
-  font-size: 14px;
-  color: gray;
-
-  margin-top: 10px;
-}
-
 .search_idpw {
   position: relative;
   top: 2px;
 }
 
-input[type="submit"] {
-  border: 0;
-  border-radius: 10px;
-
-  width: 360px;
-  height: 45px;
-
-  background-color: red;
-
-  color: white;
-  font-size: 15px;
-  font-weight: 700;
-}
 .login {
   display: flex;
   justify-content: center;
@@ -110,4 +59,115 @@ input[type="submit"] {
 
   font-size: 13px;
   color: gray;
+}
+
+@media all and (min-width: 780px) {
+  input[type="text"] {
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+
+    width: 350px;
+    height: 45px;
+
+    padding-left: 10px;
+
+    background-color: rgb(245, 245, 245);
+  }
+
+  input[type="password"] {
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+
+    width: 350px;
+    height: 45px;
+
+    padding-left: 10px;
+
+    background-color: rgb(245, 245, 245);
+  }
+
+  input[type="submit"] {
+    border: 0;
+    border-radius: 10px;
+
+    width: 360px;
+    height: 45px;
+
+    background-color: red;
+
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .serv_idpw {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 140px;
+
+    font-size: 14px;
+    color: gray;
+
+    margin-top: 10px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  input[type="text"] {
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+
+    width: 90vw;
+    height: 45px;
+
+    padding-left: 10px;
+
+    background-color: rgb(245, 245, 245);
+  }
+
+  input[type="password"] {
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+
+    width: 90vw;
+    height: 45px;
+
+    padding-left: 10px;
+
+    background-color: rgb(245, 245, 245);
+  }
+
+  input[type="submit"] {
+    border: 0;
+    border-radius: 10px;
+
+    width: calc(90vw + 10px);
+    height: 45px;
+    margin: 0;
+
+    background-color: red;
+
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .serv_idpw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+    color: gray;
+
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
