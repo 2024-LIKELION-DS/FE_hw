@@ -1,37 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
 .signup {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  align-items: flex-start;
   border: 1px solid gainsboro;
-  border-radius: 10px;
-  width: max-content;
+  border-radius: 0.7vw;
+  /* width: max-content; */
+  width: 35%;
   margin: auto;
-  margin-top: 20px;
-  padding: 5px 20px 20px 20px;
+  margin-top: 1.3vw;
+  padding: 0.3vw 1.3vw 1.3vw 1.3vw;
 }
 
 input[type="text"],
 input[type="password"] {
-  width: 400px;
+  width: 32vw;
   height: 35px;
   border: 0;
-  border-radius: 10px;
+  border-radius: 0.7vw;
   background-color: #f6f6f6;
   text-align: left;
-  margin-top: 0px;
+  margin-top: 0;
   outline: none;
-  padding-left: 10px;
+  padding-left: 0.7vw;
 }
 
 input[type="submit"] {
-  width: 400px;
+  width: 32vw;
   height: 35px;
   border: 0;
-  border-radius: 10px;
-  margin: 15px 3px 3px 3px;
+  border-radius: 0.7vw;
+  margin: 1vw 0.2vw 0.2vw 0.2vw;
   background-color: #f91f15;
   color: white;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 2.2rem;
 }
 
 .bold {
@@ -39,18 +53,25 @@ input[type="submit"] {
 }
 
 p {
-  font-size: 14px;
+  font-size: 1.3rem;
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 1vw;
 }
 
 .text {
-  margin: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pText {
+  margin: 0.1vw;
+  font-size: 1.3rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }

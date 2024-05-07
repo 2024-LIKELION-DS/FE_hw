@@ -1,8 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
 .section {
-  height: 80px;
+  height: 5.5vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 0.5vw;
 }
 
 .logo {
@@ -11,17 +20,53 @@
   align-items: flex-end;
 }
 
+.logo_img {
+  width: 2vw;
+  height: 2vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.logo_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo2 {
+  display: none;
+}
+
+.logo2 p {
+  margin-left: 2vw;
+  font-size: 1.4rem;
+}
+
+.logo_img2 {
+  width: 3vw;
+  height: 3vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.logo_img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .logo_text {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  margin-left: 0.7vw;
 }
 
 #logo_text1 {
-  font-size: smaller;
+  font-size: 0.8vw;
 }
+
 #logo_text2 {
-  font-size: x-large;
+  font-size: 2vw;
   font-weight: bold;
 }
 
@@ -31,9 +76,10 @@
 }
 
 .nav ul li {
-  margin: 0 10px;
+  margin: 0 0.7vw;
   list-style: none;
   font-weight: bold;
+  font-size: 1vw;
 }
 
 .profile {
@@ -44,9 +90,9 @@
 .profile div {
   border: 1px solid gainsboro;
   border-radius: 10px;
-  margin: 5px;
-  width: 30px;
-  height: 30px;
+  margin: 0.3vw;
+  width: 2vw;
+  height: 2vw;
 }
 
 .profile div img {
@@ -58,14 +104,19 @@
 .menu {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   background-color: #f9f9f9;
   border-top: 1px solid gainsboro;
   border-bottom: 1px solid gainsboro;
+
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .menu_ {
-  margin: 20px;
+  margin: 1.3vw;
 }
 
 .menu_ ul {
@@ -74,26 +125,26 @@
 
 #menu_ul {
   border-right: 1px solid gainsboro;
-  padding-right: 30px;
+  padding-right: 2vw;
 }
 
 .menu_ ul li {
   list-style: none;
-  font-size: 14px;
-  margin: 5px;
+  font-size: 1.4rem;
+  margin: 0.3vw;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 2vw;
 }
 
 .section1 {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 49vw;
 }
 
 .board,
@@ -106,25 +157,25 @@
 
 .board span,
 .new_post span {
-  margin-left: 10px;
+  margin-left: 0.7vw;
 }
 
 .board {
-  padding: 5px;
+  padding: 0.3vw;
 }
 
 .board span {
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .new_post {
   background-color: rgb(248, 248, 248);
-  padding: 5px;
+  padding: 0.3vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px;
+  padding: 0.3vw;
 }
 
 .new_post span {
@@ -133,13 +184,22 @@
 
 .span1 {
   font-weight: bold;
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-bottom: 0.2vw;
+}
+
+.span2 {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-bottom: 0.2vw;
 }
 
 .aside {
   display: flex;
   flex-direction: column;
-  width: 350px;
-  margin-left: 30px;
+  width: 24vw;
+  margin-left: 2vw;
 }
 
 .aside_live {
@@ -148,12 +208,12 @@
 
 .aside_hot {
   border: 1.6px solid gainsboro;
-  margin-top: 10px;
+  margin-top: 0.7vw;
 }
 
 .live_post,
 .hot_post {
-  margin: 10px 15px;
+  margin: 0.7vw 1vw;
 }
 
 .post_ {
@@ -164,32 +224,39 @@
 
 .div_ {
   flex: 8;
-  margin: 15px 12px;
+  margin: 1vw 0.8vw;
 }
 
 .live_title,
 .hot_title {
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1f50a3;
-  margin: 12px;
+  margin: 0.8vw;
 }
 
 .span3 {
-  font-size: 13px;
+  font-size: 1.2rem;
   color: #969696;
+  margin-right: 0.2vw;
+}
+
+.span4 {
+  font-size: 1.3rem;
 }
 
 .q_class {
   background-color: #f2fefe;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 0.7vw;
+  padding: 0.3vw;
+  font-size: 1.3rem;
 }
 
 .h_class {
   background-color: #fcf3f3;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 0.7vw;
+  padding: 0.3vw;
+  font-size: 1.3rem;
 }
 
 .question,
@@ -197,14 +264,54 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px;
+  padding: 0.3vw;
 }
 
 .keyword {
-  padding: 10px;
+  padding: 0.7vw;
 }
 
 .question img,
 .hot img {
-  margin-right: 10px;
+  margin-right: 0.7vw;
+}
+
+@media all and (min-width: 1024px) {
+  /* 화면 너비가 1024px 이상인 경우에만 적용되는 스타일 */
+  .menu {
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 640px) {
+  /* 화면 너비가 640px 이하인 경우에만 적용되는 스타일 */
+  .logo,
+  .nav,
+  .profile {
+    display: none;
+  }
+
+  .section {
+    justify-content: flex-start;
+    margin-left: 2vw;
+  }
+
+  .logo2 {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .board {
+    display: none;
+  }
+
+  .section1 {
+    width: 90vw;
+  }
 }

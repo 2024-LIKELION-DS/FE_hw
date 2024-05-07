@@ -2,40 +2,44 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; /* 10px */
+}
+
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 7vw;
 }
 
 img {
-  width: 300px;
-  margin-bottom: 30px;
+  width: 20vw;
+  margin-bottom: 2vw;
 }
 
 .idBox {
-  width: 400px;
+  width: 27vw;
   height: 35px;
   border: 0;
-  border-radius: 10px;
+  border-radius: 0.7vw;
   outline: none;
-  margin-bottom: 10px;
+  margin-bottom: 0.7vw;
 }
 
 input[type="text"],
 input[type="password"] {
   background-color: #f0f0f0;
   text-align: left;
-  padding-left: 15px;
+  padding-left: 1vw;
 }
 
 input[type="submit"] {
   background-color: #f91f15;
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 a {
@@ -44,7 +48,7 @@ a {
 }
 
 p {
-  margin: 80px;
+  margin: 5vw;
 }
 
 .list ul {
@@ -55,7 +59,7 @@ p {
 }
 
 .list ul li {
-  margin: 10px;
+  margin: 0.7vw;
 }
 
 .boldUl {
@@ -65,4 +69,11 @@ p {
 
 .ul {
   color: #a09e9e;
+}
+
+@media all and (min-width: 780px) {
+  /* 화면 너비가 780px 이상인 경우에만 적용되는 스타일 */
+  .idBox {
+    width: 80vw;
+  }
 }
