@@ -362,7 +362,7 @@ body {
     overflow-x: hidden;
     -ms-overflow-style: none;
     justify-content: space-between;
-    margin: 0px 25px 10px 25px;
+    padding: 0px 25px 10px 25px;
   }
   .nav_menu::-webkit-scrollbar {
     display: none;
