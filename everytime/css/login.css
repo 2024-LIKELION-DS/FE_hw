@@ -28,7 +28,7 @@ html {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  width: 340px;
+  width: 25rem;
   font-size: 14px;
 }
 
@@ -38,7 +38,7 @@ html {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  width: 360px;
+  width: 26rem;
   font-size: 14px;
 }
 
@@ -47,14 +47,38 @@ html {
   font-size: 14px;
 }
 
+.signup a {
+  color: gray;
+}
+
 .additional-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   font-size: 12px;
 }
 
-.terms,
-.contact {
+.text,
+.text-g {
+  margin-left: 2em;
+}
+
+.text-g {
   color: gray;
+}
+
+@media (max-width: 780px) {
+  body {
+    justify-content: flex-start;
+    margin: 48px 24px;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 40em;
+  }
+
+  .login-form button {
+    width: 41.5em;
+  }
 }
