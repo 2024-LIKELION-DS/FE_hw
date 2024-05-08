@@ -15,19 +15,21 @@ body {
 
 .header {
   box-sizing: border-box;
-  margin: 35px 60px;
+  margin: 30px 60px;
   width: 30;
-  justify-content: center;
 }
 
 img {
   height: 50px;
   margin: 0 auto;
-  padding-left: 42px;
+  display: flex;
+  justify-content: center;
 }
 
 .sec1 {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   vertical-align: middle;
   width: 400px;
 }
@@ -35,6 +37,8 @@ img {
 .id,
 .password,
 .login {
+  box-sizing: border-box;
+  width: 90%;
   border-radius: 10px;
   height: 50px;
   margin: 5px;
@@ -97,4 +101,15 @@ li {
 
 #bold {
   font-weight: bolder;
+}
+
+@media all and (max-width: 780px) {
+  .all {
+    vertical-align: top;
+    width: 100vw;
+  }
+
+  .sec1 {
+    width: 100vw;
+  }
 }
