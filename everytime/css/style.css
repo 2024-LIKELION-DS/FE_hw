@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: row;
   background-color: rgb(224, 224, 224);
+  justify-content: center;
 }
 
 .heading {
@@ -64,6 +65,7 @@
 .question {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .newwrite {
@@ -178,4 +180,50 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.ham_bar {
+  display: none;
+}
+
+/*media*/
+@media all and (max-width: 640px) {
+  .secret {
+    display: none;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .rightmenuall {
+    display: none;
+  }
+
+  .ham_bar {
+    display: flex;
+
+    width: 600px;
+    height: 40px;
+    border: 2px solid lightgray;
+    float: left;
+  }
+
+  .ham_bar_img {
+    margin-right: 10px;
+  }
+
+  .back {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .ham_bar_and_back {
+    display: flex;
+    flex-direction: column;
+  }
 }
