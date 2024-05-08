@@ -6,8 +6,11 @@ body {
 /*header*/
 header {
   display: flex;
-  justify-content: center;
   margin: 20px 130px;
+}
+
+#logo {
+  position: relative;
 }
 
 #logo img {
@@ -24,6 +27,7 @@ header {
 
 #menu li {
   margin: 0 12px;
+  white-space: nowrap;
 }
 
 .board {
@@ -32,10 +36,20 @@ header {
 
 #account {
   margin-left: 210px;
+  white-space: nowrap;
+  position: relative;
 }
 
 #account img {
   width: 40px;
+}
+
+.burger-bar {
+  display: flex;
+}
+
+.burger-bar img {
+  margin-right: 1em;
 }
 
 /*submenu(게시판 종류)*/
@@ -51,6 +65,7 @@ nav {
 .section {
   display: flex;
   border-right: 1px solid #d2d2d2;
+  white-space: nowrap;
 }
 
 .section:last-child {
@@ -70,11 +85,16 @@ nav {
   list-style-type: none;
   margin: 0px 40px 4px 0px;
   font-size: 13px;
+  white-space: nowrap;
 }
 
 .more {
   color: red;
   font-weight: bold;
+}
+
+.burger-bar img {
+  width: 2rem;
 }
 
 /*main-content(본문)*/
@@ -90,7 +110,7 @@ nav {
 /*1) 게시판 제목*/
 .title-wrap {
   margin-top: 25px;
-  width: 780px;
+  width: 50rem;
   height: auto;
   border: 1px solid #d2d2d2;
 }
@@ -104,7 +124,7 @@ nav {
 /*2) 미리보기 bubble*/
 .bubbles-wrap {
   margin-top: 5px;
-  width: 780px;
+  width: 50rem;
   height: auto;
   border: 1px solid #d2d2d2;
 }
@@ -151,7 +171,7 @@ nav {
 .new-article {
   margin-top: 5px;
   padding: 10px;
-  width: 780px;
+  width: 50rem;
   height: auto;
   border: 2px solid #d2d2d2;
   background-color: #f9f9f9;
@@ -165,7 +185,7 @@ nav {
 /*4) 다른 글들*/
 .one-article {
   margin-top: 5px;
-  width: 780px;
+  width: 50rem;
   height: auto;
   border: 1px solid #d2d2d2;
   display: flex;
@@ -301,4 +321,58 @@ nav {
   font-size: 12px;
   padding: 10px;
   color: #8f8f8f;
+}
+
+@media (min-width: 641px) {
+  header {
+    justify-content: center;
+  }
+
+  .burger-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    margin-left: 1rem;
+  }
+
+  .burger-bar p {
+    font-weight: bold;
+  }
+
+  #logo,
+  .nav,
+  #account,
+  .title-wrap,
+  .right-side {
+    display: none;
+  }
+
+  .left-side {
+    margin-top: 1em;
+    width: 90%;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto; /* 섹션들이 너비에 맞춰서 줄어들지 않고 원래 크기를 유지하게 설정 */
+  }
+
+  .section:first-child {
+    display: none;
+  }
+
+  nav {
+    overflow-x: auto;
+    min-width: 36em;
+    padding-left: 18em;
+    padding-right: 0;
+  }
 }
