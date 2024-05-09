@@ -2,7 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
     <link rel="icon" href="./img/logo.png" />
     <title>에브리타임</title>
     <link rel="stylesheet" href="./css/detail.css" />
@@ -13,7 +16,7 @@
     <nav>
       <div class="wrap">
         <div id="logo">
-          <a href="/"><img src="./img/logo.png" /></a>
+          <a href="/"><img src="./img/nav.logo.png" /></a>
           <p>
             <span class="name multiple" style="text-align: left"
               >에브리타임</span
@@ -41,6 +44,34 @@
       </div>
     </nav>
     <!-- 2. 게시판종류 -->
+    <!--<nav style="display: block">
+      <div class="wrap">
+        <div id="logo">
+          <a href="/"><img src="/img/nav.logo.png" /></a>
+          <p>
+            <span class="name multiple">에브리타임</span
+            ><span class="subname">덕성여대</span>
+          </p>
+        </div>
+        <div id="account">
+          <a href="/message" title="쪽지함" class="icon message">쪽지함</a>
+          <a href="/my" title="내 정보" class="icon my">내 정보</a>
+          <input type="hidden" id="userUserid" value="bms107012" />
+          <input type="hidden" id="userSchool" value="14" />
+          <input type="hidden" id="userCampus" value="27" />
+        </div>
+        <ul id="menu">
+          <li class="active"><a href="/">게시판</a></li>
+          <li><a href="/timetable">시간표</a></li>
+          <li><a href="/lecture">강의실</a></li>
+          <li><a href="/calculator">학점계산기</a></li>
+          <li><a href="/friend">친구</a></li>
+          <li><a href="https://bookstore.everytime.kr">책방</a></li>
+          <li><a href="https://www.campuspick.com/">캠퍼스픽</a></li>
+        </ul>
+      </div>
+      <div class="shadow"></div>
+    </nav>-->
     <div id="submenu">
       <div class="wrap">
         <div class="divider"></div>
@@ -239,6 +270,12 @@
     <!-- 3. 본문 -->
     <div id="container" class="article">
       <!-- 3-1. 본문1- 중앙 본문 -->
+      <aside class="none">
+        <div class="title">
+          <a class="hamburger"></a>
+          <h1><a href="/255745">비밀게시판</a></h1>
+        </div>
+      </aside>
       <div class="wrap title">
         <h1><a href="/255745">비밀게시판</a></h1>
       </div>
