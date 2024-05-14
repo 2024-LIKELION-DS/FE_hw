@@ -1,0 +1,66 @@
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+div.background {
+  background-color: rgb(211, 197, 179);
+  border-radius: 10px;
+  padding: 5vw;
+}
+
+div.border {
+  border: 2vw solid rgb(87, 75, 58);
+  border-radius: 10px;
+  padding-top: 7vw;
+}
+
+div.h2 {
+  background-color: rgb(251, 244, 239);
+  border-radius: 10px;
+  border: 1vw solid rgb(87, 75, 58);
+
+  width: 20vw;
+  height: 7vw;
+
+  font-size: 2.5vw;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 32vw;
+}
+
+div.runtime,
+div.countdown_background {
+  font-family: "Stylish", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+div.p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2vw;
+  padding-bottom: 0;
+
+  font-size: 7vw;
+  border-bottom: 2vw solid rgb(87, 75, 58);
+
+  margin-bottom: 7vw;
+}
+
+p.open {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+
+  font-size: 7vw;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
