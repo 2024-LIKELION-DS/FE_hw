@@ -16,26 +16,27 @@
         </div>
         <div>
             <label class="label" for="name">이름</label>
-            <input class="information" name="name" type="text" placeholder="이름을 입력하세요.">
+            <input class="information" name="name" type="text" id="user_name" placeholder="이름을 입력하세요.">
         </div>
         <div>
             <label class="label" for="nick">닉네임</label>
-            <input class="information" name="nick" type="text" placeholder="닉네임을 입력하세요.">
+            <input class="information" name="nick" type="text" id="user_nick" placeholder="닉네임을 입력하세요.">
         </div>
         <div>
             <label class="label" for="email">이메일</label>
-            <input class="information" name="email" type="email" placeholder="이메일을 입력하세요.">
+            <input class="information" name="email" type="email" id="user_email" placeholder="이메일을 입력하세요.">
         </div>
         <div>
             <label class="label" for="pw">비밀번호</label>
-            <input class="information" name="pw" type="password" placeholder="숫자/문자 조합, 최소 8자 이상">
+            <input class="information" name="pw" type="password" id="user_pw" placeholder="숫자/문자 조합, 최소 8자 이상">
         </div>
         <div>
             <label class="label" for="pw_re">비밀번호 재입력</label>
-            <input class="information" name="pw_re" type="password" placeholder="비밀번호를 재입력하세요.">
+            <input class="information" name="pw_re" type="password" id="re_user_pw" placeholder="비밀번호를 재입력하세요.">
         </div>
-        <input class="submit" type="submit" value="회원가입">
+        <input class="submit" type="submit" id="submit" value="회원가입">
     </form>
+    <script src="JS/script_signup.js"></script>
 </body>
 
 </html>

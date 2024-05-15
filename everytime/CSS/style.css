@@ -123,6 +123,12 @@ a:visited {
 .messageboard div:last-child {
   border-right: 1px solid #d6d6d6;
 }
+
+.messageboard div ul {
+  padding: 0;
+  padding-left: 3vw;
+}
+
 .messageboard div ul li {
   font-size: 13px;
   list-style: none;
@@ -456,6 +462,17 @@ a.more_content {
 .review {
   padding-bottom: 10px;
 }
+@media all and ((min-width: 641px) and (max-width: 920px)) {
+  .category li {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (min-width: 641px) {
+  .mobile_header {
+    display: none;
+  }
+}
 
 @media all and (max-width: 640px) {
   #topmenu,
@@ -501,11 +518,5 @@ a.more_content {
 
   .messageboard div ul li {
     width: 150px;
-  }
-}
-
-@media all and (min-width: 641px) {
-  .mobile_header {
-    display: none;
   }
 }
