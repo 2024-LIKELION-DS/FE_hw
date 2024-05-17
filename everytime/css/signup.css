@@ -56,6 +56,6 @@ input[type="text"], input[type="password"] {
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
-    background-color: #F91F15;
-    border: 1px solid #F91F15
+    background-color: #c2c2c2;
+    border: none;
 }
