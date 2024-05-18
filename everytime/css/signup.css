@@ -84,7 +84,7 @@ input[type="submit"] {
   width: 350px;
   height: 35px;
 
-  background-color: red;
+  background-color: rgb(210, 210, 210);
 
   color: white;
   font-size: 15px;

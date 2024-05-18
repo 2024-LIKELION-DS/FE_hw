@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown</title>
+</head>
+
+<body>
+    <h3>운영시간</h3>
+    <p>PM 4:00 ~ PM 11:00</p>
+
+    <h3>카운트다운</h3>
+
+    <script>
+        const open = new Date("2024/05/18 16:00:00")
+        const close = new Date("2024/05/18 23:00:00")
+        const tod = new Date();
+        var openT = open.getTime();
+        var closeT = close.getTime();
+        var todT = tod.getTime();
+
+        if (tod < open) {
+            document.write("오픈까지 남은 시간  ");
+            let diff = openT - todT;
+            h = Math.floor(diff / (60 * 60 * 1000));
+            m = Math.floor(diff % (60 * 60 * 1000) / (60 * 1000));
+            s = Math.floor(diff % (60 * 1000) / (1000));
+            document.write(h + ":" + m + ":" + s);
+        } else if (tod < close) {
+            document.write("마감까지 남은 시간  ");
+            let diff = closeT - todT;
+            h = Math.floor(diff / (60 * 60 * 1000));
+            m = Math.floor(diff % (60 * 60 * 1000) / (60 * 1000));
+            s = Math.floor(diff % (60 * 1000) / (1000));
+            document.write(h + ":" + m + ":" + s);
+        } else {
+            document.write("금일 마감");
+        }
+    </script>
+
+</body>
+
+</html>
