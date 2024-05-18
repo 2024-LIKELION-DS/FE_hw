@@ -95,7 +95,7 @@ body {
     width: 360px;
     height: 45px;
 
-    background-color: red;
+    background-color: rgb(210, 210, 210);
 
     color: white;
     font-size: 15px;
@@ -150,7 +150,7 @@ body {
     height: 45px;
     margin: 0;
 
-    background-color: red;
+    background-color: rgb(210, 210, 210);
 
     color: white;
     font-size: 15px;

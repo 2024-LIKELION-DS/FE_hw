@@ -36,6 +36,24 @@
             <div>&copy; 에브리타임</div>
         </div>
     </footer>
+
+    <script>
+        var id = document.querySelector(".id input");
+        var pw = document.querySelector(".pw input");
+        let submit = document.querySelector(".login input[type='submit']");
+
+        var buttonColor = function () {
+            if (id.value === "" || pw.value === "") {
+                submit.style.backgroundColor = "rgb(210,210,210)";
+            } else {
+                submit.style.backgroundColor = "red";
+            }
+        }
+
+        id.addEventListener("input", buttonColor);
+        pw.addEventListener("input", buttonColor);
+
+    </script>
 </body>
 
 </html>

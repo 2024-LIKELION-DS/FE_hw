@@ -40,6 +40,31 @@
             <input type="submit" value="회원가입">
         </form>
     </div>
+
+    <script>
+        var inputData = document.querySelectorAll(".input_info input");
+        let submit = document.querySelector("input[type='submit']");
+
+        function buttonColor() {
+            var allfilled = true;
+            inputData.forEach(function (input) {
+                if (input.value === "") {
+                    allfilled = false;
+                }
+            });
+
+            if (allfilled) {
+                submit.style.backgroundColor = "red";
+            } else {
+                submit.style.backgroundColor = "rgb(210,210,210)";
+            }
+        }
+
+        inputData.forEach(function (input) {
+            input.addEventListener("input", buttonColor);
+        });
+
+    </script>
 </body>
 
 </html>
