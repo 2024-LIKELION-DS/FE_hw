@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+  </head>
+
+  <body>
+    <script>
+      {
+        let startTime = new Date();
+        startTime.setHours(1, 0, 0, 0);
+
+        let endTime = new Date();
+        endTime.setHours(22, 0, 0, 0);
+
+        function timer() {
+          let now = new Date();
+
+          if (now < startTime) {
+            let opentime = startTime - now;
+            document.write(
+              "금일 오픈까지 남은 시간: " + "<hr>" + UpdateTime(opentime)
+            );
+          } else if (now >= startTime && now < endTime) {
+            let toClose = endTime - now;
+            document.write(
+              "금일 마감까지 남은 시간: " + "<hr>" + UpdateTime(toClose)
+            );
+          } else {
+            document.write("금일 마감");
+          }
+
+          if (now < endTime) {
+            setTimeout(timer);
+          }
+        }
+
+        function UpdateTime(nowtime) {
+          let tSeconds = Math.floor(nowtime / 1000);
+          let hours = Math.floor(tSeconds / 3600);
+          let minutes = Math.floor((tSeconds % 3600) / 60);
+          let seconds = tSeconds % 60;
+
+          return hours + " : " + minutes + " : " + seconds + " : ";
+        }
+
+        updateTimer();
+      }
+    </script>
+  </body>
+</html>
