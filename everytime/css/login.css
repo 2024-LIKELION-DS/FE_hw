@@ -19,7 +19,9 @@ img {
   margin-bottom: 2vw;
 }
 
-.idBox {
+#id,
+#password,
+#loginBtn {
   width: 27vw;
   height: 35px;
   border: 0;
@@ -36,7 +38,8 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  background-color: #f91f15;
+  /* background-color: #f91f15; */
+  background-color: #8e8b8b;
   color: white;
   font-weight: bold;
   font-size: 1vw;
@@ -73,7 +76,9 @@ p {
 
 @media all and (min-width: 780px) {
   /* 화면 너비가 780px 이상인 경우에만 적용되는 스타일 */
-  .idBox {
-    width: 80vw;
+  #id,
+  #password,
+  #loginBtn {
+    width: 50vw;
   }
 }
