@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>countdown</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="board">
@@ -11,18 +16,62 @@
         <p>PM 13시 00분 ~ PM 20시 30분</p>
         <button class="btn2">카운트다운</button>
         <div class="open">
-            <p>금일 오픈까지 남은 시간<br>00:00:00</p>
+            <p>금일 오픈까지 남은 시간</p>
+            <P class="open_time">00:00:00</P>
         </div>
         <div class="close">
-            <p>금일 마감까지 남은 시간<br>00:00:00</p>
+            <p>금일 마감까지 남은 시간</p>
+            <P class="close_time">00:00:00</P>
         </div>
         <div class="dead">
             <p>금일 마감</p>
         </div>
     </div>
     <script>
-        const date = new Date();
-        console.log(date);
+        function updateCountdown() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const day = now.getDate();
+            const startTime = new Date(year, month, day, 13, 0, 0);  // 오픈 시간
+            const endTime = new Date(year, month, day, 20, 30, 0);  // 마감 시간
+            
+            const openDiv = document.querySelector('.open');
+            const closeDiv = document.querySelector('.close');
+            const deadDiv = document.querySelector('.dead');
+            const openTimeDisplay = document.querySelector('.open_time');
+            const closeTimeDisplay = document.querySelector('.close_time');
+            
+            if (now < startTime) {
+                // 운영 시간 전
+                openDiv.classList.remove('hidden');
+                closeDiv.classList.add('hidden');
+                deadDiv.classList.add('hidden');
+                const timeLeft = (startTime - now) / 1000;
+                openTimeDisplay.textContent = formatTime(timeLeft);
+            } else if (now >= startTime && now <= endTime) {
+                // 운영 시간 중
+                openDiv.classList.add('hidden');
+                closeDiv.classList.remove('hidden');
+                deadDiv.classList.add('hidden');
+                const timeLeft = (endTime - now) / 1000;
+                closeTimeDisplay.textContent = formatTime(timeLeft);
+            } else {
+                // 운영 시간 후
+                openDiv.classList.add('hidden');
+                closeDiv.classList.add('hidden');
+                deadDiv.classList.remove('hidden');
+            }
+        }
+
+        function formatTime(seconds) {
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor(seconds % 3600 / 60);
+            const s = Math.floor(seconds % 60);
+            return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
