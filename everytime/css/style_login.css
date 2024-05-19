@@ -40,8 +40,8 @@
   border-style: none;
   width: 100%;
 }
-.form > input.login {
-  background-color: #f91f15;
+.form > input#login {
+  background-color: #a6a6a6;
   font-weight: bold;
   color: #fff;
   font-size: 16px;
