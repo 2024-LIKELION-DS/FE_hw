@@ -1,0 +1,19 @@
+.title {
+  width: 130px;
+  padding: 5px;
+  background-color: #c5c5c5;
+
+  text-align: center;
+}
+
+.p {
+  margin: 15px;
+  padding: 5px;
+}
+
+.time .hours,
+.time .minutes,
+.time .seconds {
+  display: inline-block;
+  margin: 0 5px;
+}
