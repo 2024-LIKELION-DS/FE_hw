@@ -10,13 +10,13 @@
     <form class="login-form">
       <img src="img/logo.png" />
       <div class="input-section">
-        <input type="text" placeholder="아이디" />
+        <input type="text" id="userId" placeholder="아이디" />
       </div>
       <div class="input-section">
-        <input type="password" placeholder="비밀번호" />
+        <input type="password" id="password" placeholder="비밀번호" />
       </div>
       <div class="login">
-        <button type="submit">에브리타임 로그인</button>
+        <button type="submit" id="submitButton">에브리타임 로그인</button>
       </div>
     </form>
     <div class="signup">
@@ -28,5 +28,22 @@
       <div class="text-g">문의하기</div>
       <div class="text">ⓒ에브리타임</div>
     </div>
+
+    <script>
+      const userId = document.getElementById('userId');
+      const password = document.getElementById('password');
+      const submitButton = document.getElementById('submitButton');
+      
+      userId.addEventListener('input', toggleButton);
+      password.addEventListener('input', toggleButton);
+      
+      function toggleButton() {
+          if (userId.value && password.value) {
+              submitButton.style.backgroundColor = 'rgb(174, 41, 41)';
+          } else {
+              submitButton.style.backgroundColor = 'gray';
+          }
+      }
+  </script>
   </body>
 </html>
