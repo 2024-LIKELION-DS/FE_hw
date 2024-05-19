@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var str = "duksunglikelionfrontend";
+      var search = "o";
+      var count = 0;
+      var idx = str.indexOf(search);
+      console.log(idx);
+      while (idx != -1) {
+        count++;
+        idx = str.indexOf(search, idx + 1);
+      }
+      console.log("발생횟수: ", count);
+    </script>
+  </head>
+  <body></body>
+</html>
