@@ -33,10 +33,22 @@
 
 .redbox {
   background: rgb(222, 55, 55);
+  color: white;
   height: 30px;
   width: 380px;
   border-radius: 10px;
   border: 2px solid rgb(222, 55, 55);
+
+  margin-top: 5px;
+}
+
+.greybox {
+  background: rgb(197, 197, 197);
+  color: white;
+  height: 30px;
+  width: 380px;
+  border-radius: 10px;
+  border: 2px solid rgb(197, 197, 197);
 
   margin-top: 5px;
 }
