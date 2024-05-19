@@ -26,6 +26,24 @@ address {
   font-family: "Apple SD Gothic Neo", "맑은 고딕", "돋움", sans-serif;
 }
 
+div.container .login_btn {
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 12px;
+  width: 100%;
+  line-height: 24px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+div.container .login_btn.on {
+  background-color: #f91f15;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 779px) {
   div.container[data-v-c80e0668] {
     box-sizing: border-box;
@@ -132,26 +150,6 @@ div.container form div.input input[type="text"] {
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 24px 24px;
-}
-
-div.container form input[type="submit"] {
-  margin-top: 4px;
-  padding: 10px;
-  border-radius: 12px;
-  width: 100%;
-  line-height: 24px;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #f91f15;
-  cursor: pointer;
-}
-
-input[type="submit"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  letter-spacing: -0.5px;
 }
 
 div.container form div.options label.keep {

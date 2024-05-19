@@ -13,15 +13,29 @@
         <h1 class="logo"></h1>
         <form>
           <div class="input">
-            <input name="id" type="text" maxlength="20" placeholder="아이디" />
             <input
+              id="id_input"
+              name="id"
+              type="text"
+              maxlength="20"
+              placeholder="아이디"
+              class="id_input"
+            />
+            <input
+              id="pw_input"
               name="password"
               type="password"
               maxlength="20"
               placeholder="비밀번호"
+              class="pw_input"
             />
           </div>
-          <input type="submit" value="에브리타임 로그인" />
+          <input
+            id="login_btn"
+            type="submit"
+            class="login_btn"
+            value="에브리타임 로그인"
+          />
           <div class="options">
             <label class="keep">
               <input type="checkbox" />
@@ -37,24 +51,23 @@
           >
         </p>
         <footer>
-          <a href="https://everytime.kr/page/serviceagreement"> 이용약관 </a>
+          <a href="https://everytime.kr/page/serviceagreement">이용약관</a>
           <a
             href="https://everytime.kr/page/privacy"
             class="privacy"
             style="font-weight: bold"
+            >개인정보처리방침</a
           >
-            개인정보처리방침
-          </a>
-          <a href="https://everytime.kr/page/faq"> 문의하기 </a>
+          <a href="https://everytime.kr/page/faq">문의하기</a>
           <a
             href="https://everytime.kr"
             class="copyright"
             style="font-weight: bold"
+            >© 에브리타임</a
           >
-            © 에브리타임
-          </a>
         </footer>
       </div>
     </div>
+    <script src="js/login.js"></script>
   </body>
 </html>

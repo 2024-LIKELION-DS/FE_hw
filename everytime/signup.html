@@ -24,6 +24,7 @@
             <label>이름</label>
           </div>
           <input
+            id="name_input"
             name="name"
             maxlength="10"
             placeholder="이름을 입력하세요."
@@ -37,6 +38,7 @@
             <label>닉네임</label>
           </div>
           <input
+            id="nickname_input"
             name="nickname"
             maxlength="10"
             placeholder="닉네임을 입력하세요"
@@ -50,6 +52,7 @@
             <label>이메일</label>
           </div>
           <input
+            id="email_input"
             name="email"
             maxlength="30"
             placeholder="이메일을 입력하세요"
@@ -63,6 +66,7 @@
             <label>비밀번호</label>
           </div>
           <input
+            id="pw_input"
             name="password"
             maxlength="20"
             placeholder="숫자/문자 조합, 최소 8자 이상"
@@ -76,6 +80,7 @@
             <label>비밀번호 재입력</label>
           </div>
           <input
+            id="pw_re_input"
             name="password-re"
             maxlength="20"
             placeholder="비밀번호를 재입력하세요."
@@ -84,8 +89,9 @@
             data-gtm-form-interact-field-id="1"
           />
         </div>
-        <input type="submit" value="회원가입" />
+        <input type="submit" id="signup_btn" value="회원가입" />
       </div>
     </div>
+    <script src="js/signup.js"></script>
   </body>
 </html>
