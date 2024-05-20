@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>운영시간</title>
+<style>
+    h1 {
+      font-size: 1em;
+      background-color: lightgrey;
+      padding: 5px;
+      display: inline-block;
+    }
+</style>
+</head>
+<body>
+<h1>운영시간</h1>
+<p>PM 13시 00분 ~ PM 14시 00분</p>
+<h1>카운트다운</h1>
+<div id="countdownDisplay"></div>
+
+<script>
+  function updateCountdown() {
+    const openHour = 13;
+    const closeHour = 14;
+    const currentTime = new Date();
+    const openTime = new Date();
+    openTime.setHours(openHour, 0, 0); // 오픈 시간 설정
+    const closeTime = new Date();
+    closeTime.setHours(closeHour, 0, 0); // 마감 시간 설정
+
+    const countdownDisplay = document.getElementById('countdownDisplay');
+
+    if (currentTime < openTime) {
+        // 영업 전
+        const timeToOpen = new Date(openTime - currentTime);
+        countdownDisplay.innerText = `금일 오픈까지 남은 시간 ${timeToOpen.getUTCHours()}시간 ${timeToOpen.getMinutes()}분 ${timeToOpen.getSeconds()}초`;
+    } else if (currentTime >= openTime && currentTime <= closeTime) {
+        // 영업 중
+        const timeToClose = new Date(closeTime - currentTime);
+        countdownDisplay.innerText = `금일 마감까지 남은 시간 ${timeToClose.getUTCHours()}시간 ${timeToClose.getMinutes()}분 ${timeToClose.getSeconds()}초`;
+    } else {
+        // 마감 후
+        countdownDisplay.innerText = '금일 마감';
+    }
+}
+
+// 1초마다 updateCountdown 함수를 호출하여 시간 업데이트
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
