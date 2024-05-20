@@ -1,0 +1,8 @@
+#time,
+#countDown,
+#current {
+  display: inline-block;
+  background-color: #ffffb5;
+  padding: 10px 20px;
+  font-weight: bold;
+}
