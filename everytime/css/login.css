@@ -62,6 +62,26 @@
 .loginkor > input {
   width: 280px;
 }
+
+#login {
+  background-color: rgb(207, 207, 207);
+  height: 35px;
+
+  border-radius: 10px;
+  border: 2px solid rgb(207, 207, 207);
+  color: white;
+}
+
+#login.done {
+  background: rgb(222, 55, 55);
+  height: 35px;
+
+  border-radius: 10px;
+  border: 2px solid rgb(222, 55, 55);
+  /* margin-top: 5px; */
+  color: white;
+}
+
 /*media*/
 @media all and (min-width: 780px) {
   .middleboxall {
