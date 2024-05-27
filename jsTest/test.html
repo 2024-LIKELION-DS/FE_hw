@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Alert 창</h1>
+    <button onclick="showPrompt()">Alert 창</button>
+  </body>
+  <script>
+    function showPrompt() {
+      let str = prompt("문자열을 입력하세요.");
+      console.log(str.indexOf("k", 3));
+    }
+  </script>
+</html>
