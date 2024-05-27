@@ -4,7 +4,6 @@ let submit = document.querySelector("#submit");
 
 function submitColor() {
   if (user_id.value !== "" && user_pw.value !== "") {
-    //trim():
     submit.style.backgroundColor = "#ff0000";
   } else {
     submit.style.backgroundColor = "#989898";
