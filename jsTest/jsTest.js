@@ -9,8 +9,8 @@ let input = prompt("숫자를 입력하세요!!");
 let number = parseInt(input, 10);
 
 number % 2 == 0
-  ? alert(number + "는 짝수입니다")
-  : alert(number + "는 홀수입니다");
+    ? alert(number + "는 짝수입니다")
+    : alert(number + "는 홀수입니다");
 
 //Q3(오답)
 let num1;
@@ -40,19 +40,19 @@ alert(totalSec);
 
 //Q7(정답)
 function randomNum() {
-  let num1 = Math.floor(Math.random() * 101);
-  let num2 = Math.floor(Math.random() * 101);
-  let num3 = Math.floor(Math.random() * 101);
+    let num1 = Math.floor(Math.random() * 101);
+    let num2 = Math.floor(Math.random() * 101);
+    let num3 = Math.floor(Math.random() * 101);
 
-  document.write("첫번째 랜덤 난수 : " + num1 + "<br>");
-  document.write("두번째 랜덤 난수 : " + num2 + "<br>");
-  document.write("세번째 랜덤 난수 : " + num3 + "<br>");
+    document.write("첫번째 랜덤 난수 : " + num1 + "<br>");
+    document.write("두번째 랜덤 난수 : " + num2 + "<br>");
+    document.write("세번째 랜덤 난수 : " + num3 + "<br>");
 }
 
 //Q8(정답)
 let num = 1;
 function change() {
-  let el = document.getElementById("name");
-  num++;
-  el.innerHTML = el.innerHTML.replace(`${num - 1}`, `${num}`);
+    let el = document.getElementById("name");
+    num++;
+    el.innerHTML = el.innerHTML.replace(`${num - 1}`, `${num}`);
 }
