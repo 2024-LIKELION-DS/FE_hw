@@ -1,4 +1,4 @@
-// 총 점수 : 5/8
+// 총 점수 : 5/8 🥲🥲
 
 // # 1 (O)
 /*
@@ -7,19 +7,15 @@ lion = () => {
 };
 */
 
-// # 2 (X) -> 삼항 연산자를 사용해주세요.
+// # 2 (X)🥲🥲
 /*
 let input = prompt("숫자를 입력해주세요!");
 
 let number = parseInt(input, 10);
 
-if (number % 2 == 0) {
-  alert(`${number}는 짝수입니다.`);
-} else if (number % 2 == 1) {
-  alert(`${number}는 홀수입니다.`);
-} else {
-  alert(`숫자를 작성해주세요.`);
-}
+let result = alert(
+  number % 2 ? `${number}는 홀수입니다.` : `${number}는 짝수입니다.`
+);
 */
 
 // # 3 (O)
@@ -43,11 +39,13 @@ let dateQ5 = new Date("May 27, 2022 12:30:00");
 alert(dateQ5);
 */
 
-// # 6 (X)
+// # 6 (X)🥲🥲
 /*
 function getSecondsToday() {
-  const now = new Date();
-  return alert(now.getSeconds);
+  const dateNow = new Date();
+  const dateToday = new Date();
+  dateToday.setHours(0, 0, 0, 0);
+  return alert(Math.floor((dateNow - dateToday) / 1000));
 }
 getSecondsToday();
 */
@@ -62,10 +60,9 @@ function randomNum() {
 randomNum();
 */
 
-// # 8(X)
-
+// # 8 (X)🥲🥲
 function change() {
-  const name = document.getElementById("name");
-  let num = 1;
-  name.classList(`likelion_${num + 1}`);
+  const strName = document.getElementById("name");
+  strName.innerText = strName.innerText.replace("2", "3");
+  strName.innerText = strName.innerText.replace("1", "2");
 }
