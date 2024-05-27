@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q8</title>
     <script>
+        let num = 1;
         function change() {
-            cheClick = document.getElementById("#name");
+
+            let ch = document.getElementById("name");
+            num++;
+            ch.innerHTML = "likelion_" + num;
+
+            if (num == 3) {
+                num = 0;
+            }
+
         }
     </script>
 </head>
