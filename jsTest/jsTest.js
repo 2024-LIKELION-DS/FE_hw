@@ -15,9 +15,10 @@ number % 2 == 0
 //Q3(오답)
 let num1;
 do {
-    num1 = prompt("100을 초과하는 숫자를 입력해주세요.");
-    num1 = parseInt(num1, 10);
-} while (num1 <= 100);
+  num1 = prompt("100을 초과하는 숫자를 입력해주세요.");
+  if (num1 != null && num1 != "") num1 = parseInt(num1, 10);
+} while (num1 == null || num1 == "" || num1 <= 100);
+//오답 정리 했습니다!!!
 
 //Q4(정답)
 let str = prompt("문자열을 입력하세요:");

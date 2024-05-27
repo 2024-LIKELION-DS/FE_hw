@@ -6,16 +6,21 @@
         <title>Document</title>
     </head>
 
-    <body>
-        <script>
-            let num = 1;
-            function change() {
-                let el = document.getElementById("name");
-                num++;
-                el.innerHTML = el.innerHTML.replace(`${num - 1}`, `${num}`);
-            }
-        </script>
-        <span id="name">likelion_1</span><br />
-        <input type="button" value="클릭" onclick="change()" />
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1;
+        do {
+            num1 = prompt("100을 초과하는 숫자를 입력해주세요.");
+            if (num1 != null && num1 != "") num1 = parseInt(num1, 10);
+        } while (num1 == null || num1 == "" || num1 <= 100);
+    </script>
+</body>
+
 </html>
