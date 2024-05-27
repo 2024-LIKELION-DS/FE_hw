@@ -1,7 +1,9 @@
-/*
-#1
+// 채점 결과 1점/8점
+
+// #1 (O)
 let lion = () => "Hello LikeLion12";
-*/
+
+// #2 (X)
 let input = prompt();
 let number = parseInt(input, 10);
 
