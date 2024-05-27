@@ -43,4 +43,22 @@ console.log("likelion");
 
 
 
+#06
+
+
+
+#07
+random.
+
+
+#08
+function change() {
+    
+
+    getElementById
+}
+
+
+
+
 
