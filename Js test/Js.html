@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <script>
-      function getSecondsToday() {
-        const date = getTime(2024, 05, 27);
-        alert(date);
-      }
-      getSecondsToday();
+  <script>
+let currentStep = 1; 
+
+function change() {
+    let span = document.getElementById('name'); 
+    if (currentStep === 1) {
+        span.innerText = 'likelion_2';
+        currentStep = 2;
+    } else if (currentStep === 2) {
+        span.innerText = 'likelion_3';
+        currentStep = 3;
+    } else if (currentStep === 3) {
+        span.innerText = 'likelion_1';
+        currentStep = 1;
+    }
+}
     </script>
-  </body>
+    <body>
+      <span id="name">likelion_1</span><br>
+    <input type="button" value="변경" onClick="change()">
+    </body>
 </html>
