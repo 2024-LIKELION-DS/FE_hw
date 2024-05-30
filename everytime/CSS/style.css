@@ -228,9 +228,10 @@ a:visited {
   margin-top: 8px;
 }
 
-.new a {
+.new div {
   display: flex;
   margin-left: 10px;
+
   font-size: 14px;
   color: #8f8f8f;
   background-color: #f5f5f5;
@@ -238,7 +239,7 @@ a:visited {
   justify-content: space-between;
 }
 
-.new a p {
+.new div p {
   margin-top: 15px;
 }
 
@@ -519,4 +520,58 @@ a.more_content {
   .messageboard div ul li {
     width: 150px;
   }
+}
+
+/*글 쓰기*/
+.post_form {
+  width: 780px;
+  display: none;
+}
+
+.newpost {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ccc;
+}
+
+.newpost_title {
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0 15px 15px;
+}
+
+.newpost_content {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+  padding: 15px 0 15px 15px;
+}
+
+.file_submit {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.anonymity {
+  margin-left: 595px;
+}
+
+.submit {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border: none;
+  margin-left: 15px;
+}
+
+.ko_anonymity {
+  color: #737373;
+  font-size: 12px;
+  font-weight: 800;
 }

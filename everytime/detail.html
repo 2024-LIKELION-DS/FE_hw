@@ -116,7 +116,7 @@
             <section class="post">
                 <div class="post_main">
                     <div class="user_detail">
-                        <img src="img/anonymous.profile.png" alt="프로필" width="40" height="40">
+                        <img id="anonymity_img" src="img/anonymous.profile.png" alt="프로필" width="40" height="40">
                         <div class="user_time">
                             <p class="user_name">익명</p>
                             <p class="post_time">5분 전</p>
@@ -133,23 +133,25 @@
                             <div class="post_response">
                                 <div class="post_count">
                                     <div class="like">
-                                        <img src="img/좋아요.png" alt="공감 수" width="10" height="10"> 12
+                                        <img src="img/좋아요.png" alt="공감 수" width="10" height="10"> <span
+                                            id="like">0</span>
                                     </div>
                                     <div class="comment">
-                                        <img src="img/댓글.png" alt="댓글 수" width="10" height="10"> 2
+                                        <img src="img/댓글.png" alt="댓글 수" width="10" height="10"> <span
+                                            id="comment">1</span>
                                     </div>
                                     <div class="scrap">
                                         <img src="img/container.articles.scrap.png" alt="스크랩 수" width="10" height="10">
-                                        10
+                                        <span id="scrap">0</span>
                                     </div>
                                 </div>
                                 <form class="post_button" method="" action="">
-                                    <button type="button" name="like">
+                                    <button type="button" name="like" id="likeBtn">
                                         <img src="img/container.articles.buttons.posvote.png" alt="공감" width="11"
                                             height="12">
                                         공감
                                     </button>
-                                    <button type="button" name="scrap">
+                                    <button type="button" name="scrap" id="scrapBtn">
                                         <img src="img/container.articles.buttons.scrap.png" alt="스크랩" width=11"
                                             height="12">
                                         스크랩
@@ -162,21 +164,38 @@
                 <div class="post_comment">
                     <div class="comment_content">
                         <div class="comment_user">
-                            <img src="img/anonymous.profile.png" alt="프로필" width="20" height="20">
+                            <img src="img/anonymous.profile.png" alt="프로필" width="20" height="20" id="comment_img">
                             <p class="comment_name">익명 1</p>
                             <div class="user_function">
-                                <a href="">대댓글</a>
+                                <span id="subcomment_btn">대댓글</span>
                                 <a href="">공감</a>
                                 <a href="">신고</a>
                             </div>
                         </div>
                         <p class="comment_word">댓글입니다</p>
                         <p class="comment_time">5분 전</p>
+                        <div id="subcomment_input">
+                            <form class="subcomment_write" id="subcomment_write" method="" action="">
+                                <input class="subcomment_text" type="text" name="subcomment_text"
+                                    placeholder="대댓글을 입력하세요.">
+                                <div class="subcomment_anonymity">
+                                    <input type="checkbox" name="subcomment_anonymity" id="subcomment_anonymity"
+                                        onclick="changeColor(this)">
+                                    <label for="subcomment_anonymity">익명</label>
+                                </div>
+                                <button type="button" class="subcomment_submit" name="subcomment_submit"><img
+                                        src="img/container.articles.write.submit.png" alt="댓글 제출 버튼" width="40"
+                                        height="40">
+                                </button>
+                        </div>
+                        </form>
                     </div>
+
                     <form class="comment_write" method="" action="">
-                        <input class="comment_text" type="text" name="comment_text" placeholder="댓글을 입력하세요.">
+                        <input class="comment_text" id="comment_text" type="text" name="comment_text"
+                            placeholder="댓글을 입력하세요.">
                         <div class="anonymity">
-                            <input type="checkbox" name="anonymity">
+                            <input type="checkbox" name="anonymity" id="comment_anonymity" onclick="changeColor(this)">
                             <label for="anonymity">익명</label>
                         </div>
                         <button type="button" class="comment_submit" name="comment_submit"><img
@@ -288,6 +307,7 @@
             </div>
         </div>
     </footer>
+    <script src="JS/script_detail.js"></script>
 </body>
 
 </html>
