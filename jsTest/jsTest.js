@@ -1,8 +1,10 @@
-//Q1
+// 채점 결과 1점/8점
+
+// #1 (O)
 let lion = () => "Hello LikeLion12";
 
-//Q2
-let input = prompt("숫자를 입력하세요!!");
+// #2 (X)
+let input = prompt();
 let number = parseInt(input, 10);
 
 let result =
