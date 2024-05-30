@@ -233,7 +233,10 @@ h4 {
   color: #ffc900;
 }
 
-.icon {
+.icon,
+.icon1,
+.icon2,
+.icon3 {
   width: 12px;
   height: 12px;
   margin-top: 2px;
@@ -259,13 +262,19 @@ h4 {
   margin-right: 5px;
 }
 
-.icon-button > div > p {
+.icon-button > div > input {
   font-size: 11px;
   margin: 0;
   color: #737373;
   font-weight: bold;
   font-size: 12px;
   margin: 5px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: #f9f9f9;
 }
 
 .sec3 {
@@ -324,11 +333,15 @@ h4 {
   background-color: #f8f8f8;
 }
 
+form {
+  display: flex;
+}
+
 .comment-input {
   color: #262626;
   font-size: 13px;
   border: none;
-  padding: 0px 10px;
+  padding: 0px 0px 0px 10px;
   background-color: #f8f8f8;
   width: 700px;
   height: 40px;
@@ -336,22 +349,26 @@ h4 {
 
 .checkbox {
   display: flex;
-
   width: 50px;
+  accent-color: #d94423;
 }
 
-.checkbox > p {
+.check1 {
   font-size: 11px;
   font-weight: bolder;
   margin-top: 12px;
   color: #959494;
 }
 
+.check1.active {
+  color: #d94423;
+}
+
 .pencil {
   background-color: #d94423;
 }
 
-.sec4 > img {
+.sec4 > form > img {
   margin: 0;
 }
 

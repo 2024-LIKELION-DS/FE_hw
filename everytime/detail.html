@@ -160,15 +160,15 @@
 
             <div class="icon-bar">
               <div class="vote-icon">
-              <img class="icon" src="./img/everytime_img/container.articles.vote.png" alt="좋아요">
-              <p class="vote-number">9</p>
+              <img class="icon1" src="./img/everytime_img/container.articles.vote.png" alt="좋아요">
+              <p class="vote-number">0</p>
               </div>
               <div class="comment-icon">
-              <img class="icon" src="./img/everytime_img/container.articles.comment.png" alt="댓글">
+              <img class="icon2" src="./img/everytime_img/container.articles.comment.png" alt="댓글">
               <p class="comment-number">1</p>
               </div>
               <div class="scrap-icon">
-              <img class="icon" src="./img/container.articles.scrap.png" alt="스크랩">
+              <img class="icon3" src="./img/container.articles.scrap.png" alt="스크랩">
               <p class="scrap-number">0</p>
               </div>
             </div>
@@ -176,11 +176,11 @@
             <div class="icon-button">
               <div class="vote-button">
                 <img src="./img/container.articles.buttons.posvote.png" alt="공감 버튼">
-                <p>공감</p>
+                <input type="button" value="공감" id="voteBtn"></input>
               </div>
               <div class="scrap-button">
                 <img src="./img/container.articles.buttons.scrap.png" alt="스크랩 버튼">
-                <p>스크랩</p>
+                <input type="button" onclick="change()" value="스크랩" id="scrapBtn">스크랩</input>
               </div>
             </div>
           </section>
@@ -206,13 +206,15 @@
           </section>
 
           <section class="sec4">
+            <form action="./post.html" method="post">
             <input type="text" class="comment-input" placeholder="댓글을 입력하세요."></input>
             <div class="checkbox">
-              <input type="checkbox"></input>
-              <p>익명</p>
+              <input type="checkbox" id="check"></input>
+              <p class="check1">익명</p>
             </div>
             <img class="pencil" src="./img/container.articles.write.submit.png" alt="글작성" />
-          </section>
+          </form>
+        </section>
 
         <section class="sec5">
           <img src="./img/container.articles.pagination.list.png" alt="글목록">
@@ -307,5 +309,6 @@
             
     </aside>
   </div>
+  <script src="./js/detail.js"></script>
   </body>
 </html>
