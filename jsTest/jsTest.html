@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      //Q8
+      function change() {
+        const btn = document.getElementById("name");
+        if (btn.innerText === "likelion_1") {
+          btn.innerText = "likelion_2";
+        } else if (btn.innerText === "likelion_2") {
+          btn.innerText = "likelion_3";
+        }
+      }
+    </script>
   </head>
   <body>
-    <p>숫자를 입력하세요</p>
-    <button onclick="prompt()"></button>
+    <p onclick="prompt('숫자를 입력하세요!!');"></p>
+    <span id="name">likelion_1</span><br />
+    <input type="button" value="클릭" onclick="change()" />
     <script src="./jsTest.js"></script>
   </body>
 </html>
