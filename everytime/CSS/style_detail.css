@@ -190,8 +190,9 @@ a:visited {
 
 .post_time,
 .user_function a,
+#subcomment_btn,
 .comment_time,
-.anonymity label {
+.anonymity {
   color: #a6a6a6;
   font-size: 12px;
 }
@@ -271,6 +272,60 @@ a:visited {
 
 .comment_time {
   margin: 0 0 10px 15px;
+}
+/*대댓글 작성*/
+
+#subcomment_input {
+  display: none;
+}
+
+#subcomment_write {
+  width: 730px;
+  margin: 4px 3px 4px 47px;
+  background-color: #f9f9f9;
+  height: 40px;
+  border: 1px solid #d6d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.subcomment_text {
+  border: none;
+  background-color: #f9f9f9;
+  padding-left: 15px;
+  width: 610px;
+  height: 38px;
+}
+
+.subcomment_anonymity {
+  margin-right: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
+#subcomment_anonymity,
+#comment_anonymity {
+  accent-color: red;
+}
+
+.subcomment_submit {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #f91f15;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.subcomment_submit img {
+  position: relative;
+  right: 5px;
 }
 
 /*댓글 작성*/

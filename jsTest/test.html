@@ -1,19 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML 요소 추가 및 스타일 부여 예제</title>
+    <style>
+        .custom-style {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="container"></div>
+
     <script>
-        let num1;
-        do {
-            num1 = prompt("100을 초과하는 숫자를 입력해주세요.");
-            if (num1 != null && num1 != "") num1 = parseInt(num1, 10);
-        } while (num1 == null || num1 == "" || num1 <= 100);
+        // 새로운 div 요소 생성
+        var newDiv = document.createElement("div");
+
+        // div에 텍스트 노드 추가
+        var newContent = document.createTextNode("안녕하세요! 저는 새로 추가된 요소입니다.");
+        newDiv.appendChild(newContent);
+
+        // CSS 클래스 부여
+        newDiv.classList.add("custom-style");
+
+        // 생성된 요소를 기존 요소에 추가
+        var container = document.getElementById("container");
+        container.appendChild(newDiv);
     </script>
 </body>
 

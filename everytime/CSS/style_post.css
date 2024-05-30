@@ -12,19 +12,19 @@ form {
   flex-direction: column;
 }
 
-.post {
+.newpost {
   width: 900px;
   border: 2px solid #ccc;
 }
 
-.post_title {
+.newpost_title {
   border: none;
   font-size: 16px;
   font-weight: bold;
   padding: 15px 0 15px 15px;
 }
 
-.post_content {
+.newpost_content {
   border: none;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
