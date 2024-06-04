@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/detail_style.css" />
-    <title>에브리타임</title>
+    <title>에브리타임 detail</title>
   </head>
 
   <body>
@@ -33,29 +33,34 @@
         <div class="icons">
           <div class="img_icon">
             <img
+              class="img_icon"
               src="./img/icn_m_chat_gray800_light.png"
-              width="24px"
-              height="24px"
               alt="아이콘 로고"
             />
           </div>
           <div class="img_icon">
             <img
+              class="img_icon"
               src="./img/icn_m_account_gray800_light.png"
-              width="24px"
-              height="24px"
               alt="아이콘 로고"
             />
           </div>
         </div>
       </header>
     </header>
+    <!-- header 640px -->
+    <header class="media_640px">
+      <div>
+        <img src="./img/aside.title.hamburger.png" alt="아이콘" />
+      </div>
+      <h1>비밀게시판</h1>
+    </header>
     <!-- navigation -->
     <nav class="outside">
       <nav class="inside">
         <div class="sub_menus_left">
           <p class="sub_menu">자유게시판</p>
-          <p class="sub_menu_picked">비밀게시판</p>
+          <p class="sub_menu_red">비밀게시판</p>
           <p class="sub_menu">질문게시판</p>
           <p class="sub_menu">졸업생게시판</p>
           <p class="sub_menu">새내기게시판</p>
@@ -76,7 +81,7 @@
         <div class="sub_menus_left">
           <p class="sub_menu">취업·진로</p>
           <p class="sub_menu">교직이수</p>
-          <p class="sub_menu">덕성 예비공무원들</p>
+          <p class="sub_menu">덕성 예비공무원들원들</p>
           <p class="sub_menu">대학원 뿌숭뿌숭</p>
           <p class="sub_menu">미래의 회계사</p>
           <p class="sub_menu">덕성로스쿨러들</p>
@@ -91,7 +96,7 @@
           <p class="sub_menu">대학일자리본부</p>
           <p class="sub_menu">교직편집위원회</p>
           <p class="sub_menu">동아리연합회</p>
-          <p class="sub_menu_more">더 보기</p>
+          <p class="sub_menu_red">더 보기</p>
         </div>
         <div class="sub_menus_left">
           <p class="sub_menu">자유게시판</p>
@@ -101,7 +106,7 @@
           <p class="sub_menu">자유게시판</p>
           <p class="sub_menu">자유게시판</p>
           <p class="sub_menu">자유게시판</p>
-          <p class="sub_menu_more">더 보기</p>
+          <p class="sub_menu_red">더 보기</p>
         </div>
         <div class="sub_menus_left">
           <p class="sub_menu">자유게시판</p>
@@ -121,7 +126,7 @@
           <p class="sub_menu">자유게시판</p>
           <p class="sub_menu">자유게시판</p>
           <p class="sub_menu">자유게시판</p>
-          <p class="sub_menu_more">더 보기</p>
+          <p class="sub_menu_red">더 보기</p>
         </div>
         <!-- x8개 -->
       </nav>
@@ -203,7 +208,7 @@
                       alt="아이콘"
                     />
                   </div>
-                  <p class="icon01">9</p>
+                  <p id="article_likes_count" class="icon01">8</p>
                   <div class="imgBox_icons">
                     <img
                       class="img_icons"
@@ -219,12 +224,12 @@
                       alt="아이콘"
                     />
                   </div>
-                  <p class="icon03">0</p>
+                  <p id="article_scrabs_count" class="icon03">0</p>
                 </div>
               </div>
               <!-- article_buttons -->
               <div class="artc_buttons_container">
-                <div class="artc_buttons">
+                <button id="article_like_button" class="artc_buttons">
                   <div class="imgBox_icons">
                     <img
                       class="img_icons"
@@ -233,8 +238,8 @@
                     />
                   </div>
                   <p class="icon01">공감</p>
-                </div>
-                <div class="artc_buttons">
+                </button>
+                <button id="article_scrab_button" class="artc_buttons">
                   <div class="imgBox_icons">
                     <img
                       class="img_icons"
@@ -242,55 +247,174 @@
                       alt="아이콘"
                     />
                   </div>
-                  <p class="icon01">스크랩</p>
-                </div>
+                  <p id="scrap_text" class="icon01">스크랩</p>
+                </button>
               </div>
             </div>
             <!-- comment01 -->
             <div class="artc">
               <div class="artc_comment_container">
-                <div class="artc_comment_profile">
-                  <div class="imgBox_comment_profile">
-                    <img
-                      class="img_comment_profile"
-                      src="./img/anonymous.profile.png"
-                      alt="이미지"
-                    />
+                <div class="artc_comment_top">
+                  <div class="artc_comment_profile">
+                    <div class="imgBox_comment_profile">
+                      <img
+                        class="img_comment_profile"
+                        src="./img/anonymous.profile.png"
+                        alt="이미지"
+                      />
+                    </div>
+                    <h4>익명1</h4>
                   </div>
-                  <h4>익명1</h4>
+                  <div class="artc_comment_right">
+                    <button class="comments_comment">대댓글</button>
+                    <button>공감</button>
+                    <button>쪽지</button>
+                    <button>신고</button>
+                  </div>
                 </div>
                 <p>우와</p>
                 <p class="text_info">30분 전</p>
               </div>
+
+              <!-- 대댓글 -->
+              <div class="artc_comments_comment">
+                <div class="artc_comment_container">
+                  <div class="artc_comment_top">
+                    <div class="artc_comment_profile">
+                      <div class="imgBox_comment_profile">
+                        <img
+                          class="img_comment_profile"
+                          src="./img/anonymous.profile.png"
+                          alt="이미지"
+                        />
+                      </div>
+                      <h4>익명(글쓴이)</h4>
+                    </div>
+                    <div class="artc_comment_right">
+                      <button>공감</button>
+                      <button>쪽지</button>
+                      <button>신고</button>
+                    </div>
+                  </div>
+                  <p>스터디 파이팅</p>
+                  <p class="text_info">30분 전</p>
+                </div>
+              </div>
+
+              <!-- write comment -->
+              <form
+                class="artc_writing comments_comment_writing"
+                style="display: none"
+              >
+                <div>
+                  <input
+                    class="input_write_comment"
+                    type="text"
+                    placeholder="댓글을 입력하세요."
+                  />
+                  <button id="comment_anonymity">
+                    <input
+                      type="checkbox"
+                      id="comment_anonymity_check01"
+                      class="comment_anonymity_check"
+                    />
+                    <label
+                      for="comment_anonymity_check01"
+                      id="comment_anonymity_label"
+                      >익명</label
+                    >
+                  </button>
+                  <button
+                    class="img_writing_button"
+                    type="submit"
+                    value=""
+                  ></button>
+                </div>
+              </form>
             </div>
             <!-- comment02 -->
             <div class="artc">
               <div class="artc_comment_container">
-                <div class="artc_comment_profile">
-                  <div class="imgBox_comment_profile">
-                    <img
-                      class="img_comment_profile"
-                      src="./img/anonymous.profile.png"
-                      alt="이미지"
-                    />
+                <div class="artc_comment_top">
+                  <div class="artc_comment_profile">
+                    <div class="imgBox_comment_profile">
+                      <img
+                        class="img_comment_profile"
+                        src="./img/anonymous.profile.png"
+                        alt="이미지"
+                      />
+                    </div>
+                    <h4>익명2</h4>
                   </div>
-                  <h4>익명2</h4>
+                  <div class="artc_comment_right">
+                    <button class="comments_comment">대댓글</button>
+                    <button>공감</button>
+                    <button>쪽지</button>
+                    <button>신고</button>
+                  </div>
                 </div>
                 <p>와우</p>
                 <p class="text_info">방금</p>
               </div>
+
+              <!-- write comment -->
+              <form
+                class="artc_writing comments_comment_writing"
+                style="display: none"
+              >
+                <div>
+                  <input
+                    class="input_write_comment"
+                    type="text"
+                    placeholder="댓글을 입력하세요."
+                  />
+                  <button id="comment_anonymity">
+                    <input
+                      type="checkbox"
+                      id="comment_anonymity_check02"
+                      class="comment_anonymity_check"
+                    />
+                    <label
+                      for="comment_anonymity_check02"
+                      id="comment_anonymity_label"
+                      >익명</label
+                    >
+                  </button>
+                  <button
+                    class="img_writing_button"
+                    type="submit"
+                    value=""
+                  ></button>
+                </div>
+              </form>
             </div>
             <!-- write comment -->
-            <div class="artc_writing">
-              <form>
+            <form class="artc_writing">
+              <div>
                 <input
                   class="input_write_comment"
                   type="text"
                   placeholder="댓글을 입력하세요."
                 />
-                <input class="img_writing_button" type="submit" value="" />
-              </form>
-            </div>
+                <button id="comment_anonymity">
+                  <input
+                    type="checkbox"
+                    id="comment_anonymity_check03"
+                    class="comment_anonymity_check"
+                  />
+                  <label
+                    for="comment_anonymity_check03"
+                    id="comment_anonymity_label"
+                    >익명</label
+                  >
+                </button>
+                <button
+                  class="img_writing_button"
+                  type="submit"
+                  value=""
+                ></button>
+              </div>
+            </form>
           </article>
           <!-- go back page -->
           <div class="button_back">
@@ -463,5 +587,8 @@
       </p>
       <p class="footer">직업정보제공사업 신고번호 : J1234567890</p>
     </footer>
+
+    <!-- script -->
+    <script src="./js/detail.js"></script>
   </body>
 </html>

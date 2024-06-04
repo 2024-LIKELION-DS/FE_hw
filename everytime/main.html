@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main_style.css" />
-    <title>에브리타임</title>
+    <title>에브리타임 main</title>
   </head>
 
   <body>
@@ -187,7 +187,7 @@
             </div>
           </section>
           <!-- whiting -->
-          <section class="board_background_color">
+          <section id="loadPostButton" class="board_background_color">
             <p class="text_writing">새 글을 작성해주세요!</p>
             <div class="img_icon_board">
               <!-- <div class="box_margin"></div> -->
@@ -196,6 +196,85 @@
                 class="img_icon_board"
                 alt="아이콘"
               />
+            </div>
+          </section>
+          <!-- post -->
+          <section id="postContainer">
+            <div class="box_container_writing">
+              <!-- title -->
+              <div>
+                <input
+                  class="input_writing_title"
+                  type="text"
+                  placeholder="글 제목"
+                />
+              </div>
+              <!-- content -->
+              <div>
+                <textarea
+                  class="input_writing_content"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="네가 깃아 미안해 했잖아? 그럼 깃 충돌 이딴거 안생겼어"
+                ></textarea>
+              </div>
+              <!-- question alarm -->
+              <div class="question_alarm">
+                <p>
+                  질문 글을 작성하면 게시판 상단에 일정 기간 동안 노출되어, 더욱
+                  빠르게 답변을 얻을 수 있게 됩니다. <br />
+                  또한, 다른 학우들이 정성껏 작성한 답변을 유지하기 위해, 댓글이
+                  달린 이후에는 글을 수정 및 삭제할 수 없습니다.
+                </p>
+              </div>
+              <div class="input_writing_submit">
+                <!-- left -->
+                <div class="box_evenly">
+                  <div class="box_img_icon40">
+                    <img
+                      class="img_icon40"
+                      src="./img/container.articles.write.hashtag.png"
+                      alt="아이콘"
+                    />
+                  </div>
+                  <div class="box_img_icon40">
+                    <img
+                      class="img_icon40"
+                      src="./img/container.articles.write.attach.png"
+                      alt="아이콘"
+                    />
+                  </div>
+                </div>
+                <!-- right -->
+                <div class="box_evenly">
+                  <div class="box_check_anonymity">
+                    <input
+                      class="box_check_anonymity"
+                      type="checkbox"
+                      id="question"
+                    />
+                    <label for="question">질문</label>
+                  </div>
+                  <div class="box_check_anonymity">
+                    <input
+                      class="box_check_anonymity"
+                      type="checkbox"
+                      id="username"
+                      checked
+                    />
+                    <label for="username">익명</label>
+                  </div>
+                  <div class="box_img_icon40">
+                    <img
+                      class="img_icon40 img_back_red"
+                      src="./img/container.articles.write.submit.png"
+                      alt="아이콘"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <!-- articles -->
@@ -421,5 +500,8 @@
       </p>
       <p class="footer">직업정보제공사업 신고번호 : J1234567890</p>
     </footer>
+
+    <!-- script -->
+    <script src="./js/main_post.js"></script>
   </body>
 </html>
