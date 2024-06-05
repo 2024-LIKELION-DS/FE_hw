@@ -105,11 +105,11 @@ nav {
 
 .left-side {
   margin-right: 25px;
+  margin-top: 25px;
 }
 
 /*1) 게시판 제목*/
 .title-wrap {
-  margin-top: 25px;
   width: 50rem;
   height: auto;
   border: 1px solid #d2d2d2;
@@ -152,7 +152,7 @@ nav {
   height: 44px;
   border-radius: 10px;
   font-size: 11px;
-  color: #5a5a5a;
+  color: #666;
 }
 
 .bubble-question > .items > .item {
@@ -173,13 +173,45 @@ nav {
   padding: 10px;
   width: 50rem;
   height: auto;
-  border: 2px solid #d2d2d2;
+  border: 1px solid #d2d2d2;
   background-color: #f9f9f9;
-  color: #8f8f8f;
+  color: #acacac;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   font-size: 13px;
+  cursor: pointer;
+}
+
+.new-article-form{
+  display: none;
+}
+
+.checkbox {
+  font-size: 13px;
+  color: rgb(152, 152, 152);
+  font-weight: bold;
+}
+
+input[type='checkbox']:checked {
+  accent-color: red;
+}
+
+.anonymous-info-box {
+  width: 760px;
+  display: none;
+  padding:8px;
+  margin: 10px;
+  color: #05BCBC;
+  background-color: #EDFFFE;
+  border-radius: 8px; 
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.form-control{
+  border-top:  1px solid #d2d2d2;
+  padding-top: 5px;
 }
 
 /*4) 다른 글들*/
@@ -262,9 +294,9 @@ nav {
 }
 
 .realtime-img {
-  display: flex; /* 이미지와 숫자를 가로로 나란히 배열 */
-  align-items: center; /* 세로 중앙 정렬 */
-  margin: 0px 0px 10px 5px; /* 이미지 사이의 간격 조정 */
+  display: flex; 
+  align-items: center; 
+  margin: 0px 0px 10px 5px; 
 }
 
 .realtime-like-num {

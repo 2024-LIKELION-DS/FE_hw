@@ -24,10 +24,10 @@
 
 // // # 6
 // function getSecondsToday() {
-//     let now = new Date(); // 현재 날짜 및 시간
-//     let todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // 오늘 시작 시간 (0시 0분 0초)
-//     let diff = now - todayStart; // 현재 시간과 오늘 시작 시간의 차이 (밀리초 단위)
-//     return Math.floor(diff / 1000); // 밀리초를 초로 변환
+//     let now = new Date();
+//     let todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+//     let diff = now - todayStart;
+//     return Math.floor(diff / 1000);
 // }
 // console.log(getSecondsToday());
 
@@ -40,16 +40,19 @@
 // document.write("세 번째 랜덤 난수: " + randomNum() + "<br>");
 
 
-// # 8
-function change() {
-    var spanElement = document.getElementById("name"); // ID가 'name'인 요소를 찾음
-    var currentValue = spanElement.innerHTML; // 현재 텍스트 값
-    switch(currentValue) {
-        case "likelion_1":
-            spanElement.innerHTML = "likelion_2";
-            break;
-        case "likelion_2":
-            spanElement.innerHTML = "likelion_3";
-            break;
-    }
-}
+// // # 8
+// function change() {
+//     var spanElement = document.getElementById("name"); 
+//     var currentValue = spanElement.innerHTML;
+//     switch(currentValue) {
+//         case "likelion_1":
+//             spanElement.innerHTML = "likelion_2";
+//             break;
+//         case "likelion_2":
+//             spanElement.innerHTML = "likelion_3";
+//             break;
+//         case "likelion_3":
+//             spanElement.innerHTML = "likelion_1";
+//             break;
+//     }
+// }
