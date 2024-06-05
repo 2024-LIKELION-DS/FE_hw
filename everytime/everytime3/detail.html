@@ -164,22 +164,22 @@
 
         <div class="section2_img_3">
             <img class="good_1" src="./img/container.articles.vote.png" alt="사진 로딩 중">
-            <span class="redcolor">9</span>
+            <span id="likeCount" class="redcolor">9</span>
             <img class="comment" src="./img/container.articles.comment.png" alt="사진 로딩 중">
             <span class="greencolor">1</span>
             <img class="scrap" src="./img/container.articles.scrap.png" alt="사진 로딩 중">
-            <span class="yellowcolor">0</span>
+            <span id="scrapCount" class="yellowcolor">0</span>
         </div>
 
         <div class="section2_img_4">
             <div class="gray_good_text">
                 <img class="gray_good" src="./img/container.articles.buttons.posvote.png" alt="사진 로딩 중">
-                <span class="darkgraycolor_1">공감</span>
+                <input class="button_input" id="likeButton" type="button" value="공감" onclick="change_good()">
             </div>
 
             <div class="gray_scrap_text">
-                <img class="gray_scrap" src="./img/container.articles.buttons.scrap.png" alt="사진 로딩 중">
-                <span class="darkgraycolor_2">스크랩</span>
+                <img id="scrapImage" class="gray_scrap" src="./img/container.articles.buttons.scrap.png" alt="사진 로딩 중">
+                <input class="button_input" id="scrapButton" type="button" value="스크랩" onclick="change_scrap()">
             </div>
         </div>
     </div>
@@ -191,17 +191,32 @@
                 <span class="anonymous">익명1</span>
 
                 <div class="section3_text_2">
-                    <span class="graycolor_1">대댓글</span>
+                    <input class="graycolor_1" id="co-coment-toggle" type="button" value="대댓글" onclick="toggleDisplay()">
                     <span class="graycolor_1">공감</span>
                     <span class="graycolor">삭제</span>
                 </div>
 
             </div>
             
+            <div class="section_3_1">
+
             <div class="section3_text_1">
                 <p>우와</p>
                 <p class="graycolor_small">방금</p>
             </div>
+            
+            </div>
+
+
+                <div id="background" class="backgroud">
+                <input id="co-coment" type="text" placeholder="댓글을 입력하세요." class="section_box_2">
+                <input id="checkbox_red_2" type="checkbox" class="checkbox_1" onclick="checkbox_1()" />
+                <span id="for_red_2" class="graycolor"> 익명 </span>
+                
+                <div class="section4_img_1">
+                    <img class="pencil" src="./img/container.write.background.png" alt="사진 로딩 중" onclick="showComment_1()">
+                </div>
+                </div>
     
 
 
@@ -209,12 +224,12 @@
         </div>
 
             <div class="section_4">
-                <input type="text" placeholder="댓글을 입력하세요." class="section_box">
-                <input type="checkbox" class="checkbox_1" />
-                <span class="graycolor"> 익명 </span>
+                <input id="commentInput" type="text" placeholder="댓글을 입력하세요." class="section_box">
+                <input id="checkbox_red" type="checkbox" class="checkbox_1" onclick="checkbox()" />
+                <span id="for_red" class="graycolor"> 익명 </span>
                 
                 <div class="section4_img_1">
-                    <img class="pencil" src="./img/container.write.background.png" alt="사진 로딩 중">
+                    <img class="pencil" src="./img/container.write.background.png" alt="사진 로딩 중" onclick="showComment()">
                 </div>
             
             </div>
@@ -243,7 +258,7 @@
 </div>
 <div class="gray_back">
     <div class="moving_section_2">
-        <span class="new"><p>새 글을 작성해주세요!</p></span>
+        <span class="new"><p><a href="./everytime_second/post.html">새 글을 작성해주세요!</a></p></span>
         <img class="pen" src="./img/container.write.background.png" alt="이미지 로딩 중">
     </div>
 </div>
@@ -427,6 +442,7 @@
         
 </aside>
 
+<script src="./everytime3.js"></script>
 
 
 </body>
