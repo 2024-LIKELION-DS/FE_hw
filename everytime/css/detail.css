@@ -689,7 +689,7 @@ div.container form div.input input[type="text"][data-v-c80e0668] {
 }
 
 #container > div.articles > article.item p.large {
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   line-height: 20px;
   color: #444444;
   font-size: 14px;
@@ -868,6 +868,120 @@ div.container form div.input input[type="text"][data-v-c80e0668] {
   font-size: 12px;
 }
 
+#container > div.articles > form.write {
+  position: relative;
+  margin-bottom: 5px;
+  border: 2px solid #d6d6d6;
+  box-sizing: border-box;
+}
+
+#container > div.articles > form.write p {
+  padding: 15px;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #fff;
+}
+
+#container > div.articles > form.write input.file {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#container > div.articles > form.write ol.thumbnails {
+  display: none;
+  padding: 16px 12px 12px 16px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+#container > div.articles > form.write ol.thumbnails > li.new {
+  background: transparent
+    url(../img/container.articles.write.thumbnails.new.png) no-repeat center
+    center;
+  background-size: 24px 24px;
+}
+
+#container > div.articles > form.write ul.option li.hashtag {
+  float: left;
+  background-image: url(../img/post_hash.png);
+}
+
+#container > div.articles > form.write ul.option li {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px 40px;
+  cursor: pointer;
+}
+
+#container > div.articles > form.write input.title {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  border: 0;
+  color: #292929;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#container > div.articles > form.write textarea {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  color: #292929;
+
+  resize: none;
+}
+
+#container > div.articles > form.write p.question {
+  padding: 8px;
+  border-radius: 8px;
+  line-height: 18px;
+  color: #05bcbc;
+  font-size: 12px;
+  background-color: #edfffe;
+}
+#container > div.articles > form.write input.title {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  border: 0;
+  color: #292929;
+  font-size: 16px;
+  font-weight: bold;
+}
+#container > div.articles > form.write ul.option li.attach {
+  float: left;
+  background-image: url(../img/post_attach.png);
+}
+#container > div.articles > form.write ul.option li.submit {
+  float: right;
+  background-color: #f91f15;
+  background-image: url(../img/container.articles.write.submit.png);
+}
+
+#container > div.articles > form.write ul.option li.anonym.active {
+  background-image: url(../img/container.articles.write.anonym.active.png);
+}
+
+#container > div.articles > form.write ul.option li.anonym {
+  float: right;
+  margin-right: 15px;
+  background-image: url(../img/post_anony.png);
+}
+
+#container > div.articles > form.write ul.option li.question {
+  float: right;
+  margin-right: 15px;
+  background-image: url(../img/post_ques.png);
+}
+
+#container > div.articles > form.write ul.option li.question.active {
+  background-image: url(../img/container.articles.write.question.active.png);
+}
+
 #container > div.articles > article time {
   color: #a6a6a6;
   letter-spacing: 0;
@@ -876,6 +990,16 @@ div.container form div.input input[type="text"][data-v-c80e0668] {
 #container > div.articles > article.item form.writecomment ul.option li.anonym {
   margin-right: 5px;
   background-image: url(../img/post_anony.png);
+}
+
+#container
+  > div.articles
+  > article.item
+  form.writecomment
+  ul.option
+  li.anonym.active {
+  margin-right: 5px;
+  background-image: url(../img/container.articles.write.anonym.active.png);
 }
 
 #container > div.articles > article.item form.writecomment ul.option li.submit {
@@ -1112,6 +1236,11 @@ div.container form div.input input[type="text"][data-v-c80e0668] {
   box-sizing: border-box;
   border: 1px solid #e3e3e3;
   background-color: #fff;
+}
+
+#container > div.articles > article.item form.writecomment.child {
+  margin: 0 4px 4px 35px;
+  border: 1px solid #e3e3e3;
 }
 
 #container > div.articles > article.list > a.article {
