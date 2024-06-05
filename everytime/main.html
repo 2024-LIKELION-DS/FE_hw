@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>에브리타임 메인</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/post.css"/>
   </head>
 
   <body>
@@ -53,11 +54,11 @@
       <div class="section">
         <ul>
           <li>취업·진로</li>
-          <li>교직이수</li>
+          <li>⭐👩‍🏫교직이수👩‍🏫⭐</li>
           <li>덕성 예비공무원들♡</li>
-          <li>대학원 뿌숭뿌슝...</li>
+          <li>대학원 뿌숭뿌슝🔥🔥</li>
           <li>미래의 회계사(CPA)...</li>
-          <li>덕성 로스쿨러들</li>
+          <li>덕성 로스쿨러들📚</li>
         </ul>
       </div>
       <div class="section">
@@ -74,28 +75,28 @@
       </div>
       <div class="section">
         <ul>
-          <li>덕성여대 경영학과</li>
-          <li>두드리는 회계학과</li>
+          <li>📑덕성여대 경영학...</li>
           <li>국제통상학과</li>
-          <li>디지털소프트웨어학부</li>
-          <li>예대의 밤은 깊어...</li>
-          <li>프리팜/바이오공학과...</li>
-          <li>심리학과 자게...</li>
+          <li>💰두드리는 회계학...</li>
+          <li>👩‍💻디지털소프트웨어...</li>
+          <li>🌕예대의 밤은 깊어...</li>
+          <li>🧠심리학과 자게🧠</li>
+          <li>🌚덕성 법학도🌚</li>
           <li class="more">더보기</li>
         </ul>
       </div>
       <div class="section">
         <ul>
-          <li>덕성여대 장터</li>
+          <li>🌺덕성여대 장터🌺</li>
           <li>♡덕성여대 기숙사♡</li>
-          <li>뻔선뻔후 찾기 프...</li>
+          <li>🌺뻔선뻔후 찾기 프...</li>
           <li>덕성 연애방</li>
           <li>덕성여대 자취생 모임</li>
           <li>주의 없는 게시판</li>
           <li>퀴어이기 전에 여성</li>
           <li>덕성여대~수유역 맛...</li>
-          <li>덕성 파견학생</li>
-          <li>덕성의 아이돌</li>
+          <li>💘덕성 파견학생💘</li>
+          <li>덕성의 아이돌❤</li>
           <li>다이어덕</li>
           <li>미팅 모집방</li>
           <li>덕친소 : 내 덕친은 누...</li>
@@ -148,6 +149,30 @@
             <!--새 글 작성 칸-->
             새 글을 작성해주세요!
             <div class="write-img"><img src="img/pen.png" width="20px" /></div>
+          </div>
+          <div class="new-article-form">
+            <form class="post-form">
+              <input type="text" id="title" placeholder="제목" required />
+              <input type="text" id="text" placeholder="글을 작성해주세요." required />
+                  <div class="anonymous-info-box" id="anonymousInfoBox">
+                    질문 글을 작성하면 게시판 상단에 일정 기간 동안 노출되어, 더욱 빠르게 답변을 얻을 수 있게 됩니다.<br>
+                    또한, 다른 학우들이 정성껏 작성한 답변을 유지하기 위해, 댓글이 달린 이후에는 <strong>글을 수정 및 삭제할 수 없습니다.</strong>
+                  </div>
+
+              <div class="form-control">
+                <div class="attachment-section">
+                  <img src="img/container.articles.write.hashtag.png" />
+                  <img src="img/container.articles.write.attach.png" />
+                </div>
+                <div class="submit-section">
+                  <input type="checkbox" id="anonymousCheckbox"/>
+                  <span class="checkbox" id="anonymousText">익명</span>
+                  <button type="submit">
+                    <img src="img/container.articles.write.submit.png" />
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
           <article class="article-list">
             <!--게시글들-->
@@ -236,5 +261,6 @@
         </div>
       </div>
     </div>
+    <script src="/js/main.js"></script>
   </body>
 </html>

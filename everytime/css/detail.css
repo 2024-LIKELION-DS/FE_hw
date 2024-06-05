@@ -6,8 +6,11 @@ body {
 /*header*/
 header {
   display: flex;
-  justify-content: center;
   margin: 20px 130px;
+}
+
+#logo {
+  position: relative;
 }
 
 #logo img {
@@ -24,6 +27,7 @@ header {
 
 #menu li {
   margin: 0 12px;
+  white-space: nowrap;
 }
 
 .board {
@@ -32,10 +36,20 @@ header {
 
 #account {
   margin-left: 210px;
+  white-space: nowrap;
+  position: relative;
 }
 
 #account img {
   width: 40px;
+}
+
+.burger-bar {
+  display: flex;
+}
+
+.burger-bar img {
+  margin-right: 1em;
 }
 
 /*submenu(게시판 종류)*/
@@ -70,11 +84,16 @@ nav {
   list-style-type: none;
   margin: 0px 40px 4px 0px;
   font-size: 13px;
+  white-space: nowrap;
 }
 
 .more {
   color: red;
   font-weight: bold;
+}
+
+.burger-bar img {
+  width: 2rem;
 }
 
 /*본문 main-content*/
@@ -207,6 +226,7 @@ nav {
   border-radius: 5px;
   align-items: center;
   margin: 0px 0px 15px 8px;
+  cursor: pointer;
 }
 
 .select img {
@@ -272,7 +292,7 @@ nav {
 .comment-text-content > .time {
   font-size: 14px;
   color: gray;
-  margin: 8px 0px 15px 0px;
+  margin: 5px 0 8px 0;
 }
 
 /*4. 댓글 작성 container*/
@@ -290,7 +310,7 @@ nav {
   background-color: rgba(240, 240, 240, 0.5);
 }
 
-.comment-input {
+#comment-input {
   flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
   padding-left: 8px;
   font-size: 14px;
@@ -298,7 +318,7 @@ nav {
   background-color: transparent;
 }
 
-.comment-input:focus {
+#comment-input:focus {
   outline: none;
 }
 
@@ -308,9 +328,13 @@ nav {
   font-weight: bold;
 }
 
+input[type='checkbox']:checked {
+  accent-color: red;
+}
+
 .submit-section img {
   width: 100%;
-  background-color: brown;
+  background-color: red;
 }
 
 .submit-section button {
@@ -319,6 +343,27 @@ nav {
   border: none;
   padding: 0;
   margin-left: 10px;
+}
+
+/*대댓글*/
+.add-comment-writing-wrap{
+  display: none;
+}
+
+.add-comment-text-wrap {
+  width: 740px;
+  height: auto;
+  border: 1px solid #d2d2d2;
+  margin-left: 30px;
+  margin-bottom: 3px;
+  background-color: rgba(240, 240, 240, 0.5);
+}
+
+.add-comment-writing-wrap{
+  width: 740px;
+  margin-left: 30px;
+  border: 1px solid #d2d2d2;
+  margin-bottom: 10px;
 }
 
 /* 5. 글 목록*/
@@ -460,4 +505,58 @@ nav {
 .points {
   padding: 0px 0px 0px 8px;
   color: rgb(255, 179, 0);
+}
+
+@media (min-width: 641px) {
+  header {
+    justify-content: center;
+  }
+
+  .burger-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    margin-left: 1rem;
+  }
+
+  .burger-bar p {
+    font-weight: bold;
+  }
+
+  #logo,
+  .nav,
+  #account,
+  .title-wrap,
+  .right-side {
+    display: none;
+  }
+
+  .left-side {
+    margin-top: 1em;
+    width: 90%;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto; /* 섹션들이 너비에 맞춰서 줄어들지 않고 원래 크기를 유지하게 설정 */
+  }
+
+  .section:first-child {
+    display: none;
+  }
+
+  nav {
+    overflow-x: auto;
+    min-width: 36em;
+    padding-left: 18em;
+    padding-right: 0;
+  }
 }
