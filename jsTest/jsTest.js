@@ -37,7 +37,7 @@ function getSecondsToday() {
 let secondsToday = getSecondsToday();
 alert(secondsToday);
 
-//Q7 (X)
+//Q7 (X) - 오답 수정 완
 
 function randomNum() {
   return Math.floor(Math.random() * 101);
@@ -50,7 +50,7 @@ document.write("첫번째 랜덤 난수 : " + firstRandomNum);
 document.write("두번째 랜덤 난수 : " + secondRandomNum);
 document.write("세번째 랜덤 난수 : " + thirdRandomNum);
 
-//Q8 (X)
+//Q8 (X) - 오답 수정 완
 function change() {
   var elem = document.getElementById("name");
   if (elem.innerHTML === "likelion_1") {

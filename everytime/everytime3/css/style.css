@@ -268,6 +268,14 @@ img.gray_scrap {
   margin-top: 0px;
 }
 
+input.button_input {
+  border: 1px solid rgb(243, 242, 242);
+  background-color: rgb(243, 242, 242);
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(125, 125, 125);
+}
+
 .darkgraycolor_1,
 .darkgraycolor_2 {
   color: rgb(89, 89, 89);
@@ -312,9 +320,25 @@ div.section3_text_2 {
   padding-right: 10px;
 }
 
+div.section_3_1 {
+  border-bottom: 1px solid rgb(163, 163, 163);
+}
+
+div.backgroud {
+  height: 40px;
+  background-color: rgb(243, 243, 243);
+  margin-left: 5vw;
+  border: 1px solid rgb(163, 163, 163);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: none;
+}
+
 div.section_4 {
   height: 40px;
   background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(163, 163, 163);
+  border-top: 0px;
 }
 
 .redcolor {
@@ -342,6 +366,7 @@ div.section_4 {
   color: rgb(162, 162, 162);
   padding-right: 10px;
   font-size: 13px;
+  padding-top: 2px;
 }
 
 .lightgraycolor {
@@ -362,6 +387,13 @@ div.section3_text_1 {
   color: rgb(162, 162, 162);
   padding-right: 10px;
   font-size: 13px;
+  padding-top: 2px;
+}
+
+input.graycolor_1 {
+  border: 1px solid white;
+  background-color: white;
+  padding-top: 0;
 }
 
 input.checkbox_1 {
@@ -375,6 +407,14 @@ input.section_box {
   margin-left: 15px;
 
   background-color: rgb(243, 243, 243);
+}
+
+input.section_box_2 {
+  border: 1px solid rgb(243, 243, 243);
+  background-color: rgb(243, 243, 243);
+  font-size: 15px;
+  width: 585px;
+  margin-left: 15px;
 }
 
 div.section4_img_1 {
@@ -413,10 +453,10 @@ input.button {
   float: right;
   padding-top: 10px;
   padding-left: 0px;
-  padding-right: 10px;
+  padding-right: 9px;
   border: 1px solid white;
   background-color: white;
-  font-size: 20px;
+  font-size: 18px;
   color: red;
 }
 
@@ -618,6 +658,11 @@ img.scrap {
   font-size: 15px;
 }
 
+a {
+  color: rgb(162, 162, 162);
+  text-decoration: none;
+}
+
 /* 반응형 */
 
 /* 1300px up */
@@ -688,6 +733,14 @@ img.scrap {
 
 /* 1200px down */
 @media all and (max-width: 1200px) {
+  input.section_box_2 {
+    border: 1px solid rgb(243, 243, 243);
+    background-color: rgb(243, 243, 243);
+    font-size: 15px;
+    width: 610px;
+    margin-left: 15px;
+  }
+
   div.container {
     overflow: hidden;
   }
@@ -705,6 +758,14 @@ img.scrap {
 
 /* 1050px down */
 @media all and (max-width: 1050px) {
+  input.section_box_2 {
+    border: 1px solid rgb(243, 243, 243);
+    background-color: rgb(243, 243, 243);
+    font-size: 15px;
+    width: 620px;
+    margin-left: 15px;
+  }
+
   div.container {
     overflow: hidden;
   }
@@ -728,6 +789,14 @@ img.scrap {
 
 /* 900px down */
 @media all and (max-width: 900px) {
+  input.section_box_2 {
+    border: 1px solid rgb(243, 243, 243);
+    background-color: rgb(243, 243, 243);
+    font-size: 15px;
+    width: 630px;
+    margin-left: 15px;
+  }
+
   div.container {
     overflow: hidden;
   }
@@ -880,7 +949,7 @@ img.scrap {
   }
 
   img.pen {
-    margin-left: 58vw;
+    margin-left: 60vw;
     margin-right: 0;
     margin-bottom: 3vw;
   }
