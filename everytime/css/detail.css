@@ -142,6 +142,7 @@ nav ul li:hover {
 
 .posted li:hover {
   color: red;
+  font-weight: bold;
 }
 
 .postText {
@@ -260,6 +261,77 @@ a:visited {
   background-color: #f8f8f8;
 }
 
+.B_anony_cmt {
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  width: 780px;
+}
+
+.anony_cmt {
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.anony_cmt .profile {
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.anony_cmt img {
+  width: 20px;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.anony_cmt .nickname {
+  font-size: 12px;
+  font-weight: bold;
+  color: #292929;
+}
+
+.anony_cmt .timestamp {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #b3b3b3;
+  letter-spacing: 0.1px;
+}
+
+.anony_cmt .anony_cmt {
+  padding: 10px 10px 0px 10px;
+  width: 720px;
+  border: 1px solid #d6d6d6;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  background-color: #f7f7f7;
+}
+
+.anony_cmt .anony_cmt .nickname {
+  color: #05bcbc;
+}
+
+.anony_cmt .anony_cmt .massage button {
+  background-color: #f7f7f7;
+}
+
+.anony_cmt .typing {
+  border: none;
+}
+
+#typing {
+  display: none;
+}
+
+.anony_cmt .typing .input_comment {
+  margin-bottom: 10px;
+  width: 740px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  border: 1px solid #d6d6d6;
+}
+
 .input_comment {
   display: flex;
   justify-content: space-between;
@@ -275,13 +347,16 @@ a:visited {
 .typing input[type="text"] {
   padding-left: 10px;
   border: none;
-  background-color: #f4f4f4;
+  outline: none;
+  background-color: #f7f7f7;
 }
 
 .typing button {
   border: none;
   padding: 0;
   background-color: red;
+  width: 40px;
+  height: 40px;
 }
 
 .typing img {

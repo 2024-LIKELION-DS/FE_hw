@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/post.css" />
-    <title>에브리타임 글 작성</title>
-  </head>
-  <body>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBox = document.getElementById("border");
+
+  searchBox.addEventListener("click", function () {
+    console.log("Search box clicked");
+
+    const postHTML = `
     <div class="box">
       <form class="post_form">
         <div class="title">
@@ -24,14 +22,6 @@
             placeholder="그럼 깃 충돌 이딴거 안생겼어"
           ></textarea>
         </div>
-        <div class="alert">
-          <div class="alert_mint">
-            질문 글을 작성하면 게시판 상단에 일정 기간 동안 노출되어, 더욱
-            빠르게 답변을 얻을 수 있게 됩니다.<br />또한 다른 학우들이 정성껏
-            작성한 답변을 유지하기 위해, 댓글이 달린 이후에는
-            <span>글을 수정 및 삭제할 수 없습니다.</span>
-          </div>
-        </div>
         <div class="post">
           <div class="data">
             <img
@@ -48,7 +38,7 @@
               <input type="checkbox" id="anony" />
               <div class="myCheckbox">익명</div>
             </div>
-            <button class="submit">
+            <button class="submit" type="submit">
               <img
                 alt="글쓰기"
                 src="img/everytime_other_img/container.articles.write.submit.png"
@@ -58,5 +48,21 @@
         </div>
       </form>
     </div>
-  </body>
-</html>
+    `;
+
+    searchBox.innerHTML = postHTML;
+    searchBox.style.height = "auto";
+    searchBox.style.padding = "0";
+
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = "css/post.css";
+    document.head.appendChild(link);
+
+    console.log("Post HTML injected and CSS applied");
+    attachFormHandlers();
+
+    console.log(searchBox.innerHTML);
+  });
+});
