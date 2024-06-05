@@ -186,6 +186,102 @@
   display: none;
 }
 
+.writingarticle {
+  flex-direction: row;
+  width: 600px;
+  height: 700px;
+  border: 2px solid lightgray;
+  float: left;
+}
+
+/*js추가사항*/
+.bigbox {
+  height: 95%;
+  width: 95%;
+  border: 2px solid gray;
+  justify-content: center;
+
+  margin: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+
+  margin: 5px;
+}
+
+.content {
+  font-size: 20px;
+
+  margin: 5px;
+  margin-bottom: 500px;
+}
+
+.div > div > hr {
+  border: 2px solid gray;
+}
+
+.bottomleft {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  margin: 5px;
+}
+
+.checkbox {
+  color: gray;
+  margin-top: 12px;
+  margin-right: 5px;
+}
+
+.bottomright {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+
+  margin-left: 350px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit {
+  background: rgb(222, 55, 55);
+  height: 45px;
+  width: 45px;
+  border: 1px solid rgb(222, 55, 55);
+
+  margin-left: 15px;
+}
+
+.alert-message {
+  width: 500px;
+  height: 50px;
+  border: 2px solid lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+.alert-message-context {
+  background: rgb(147, 236, 252);
+  height: 40px;
+  width: 500px;
+  border: 2px solid rgb(147, 236, 252);
+  display: flex;
+  justify-content: center;
+
+  color: rgb(53, 108, 118);
+  font-size: 9px;
+}
+
+.hidden {
+  display: none;
+}
+
 /*media*/
 @media all and (max-width: 640px) {
   .secret {

@@ -130,7 +130,9 @@
 
         <div class="postcontent_bottom1">
           <div class="bottom_show">
-          <img src="img/postmiddlebottom.png" width="80" height="15">
+          <img id="goodIcon" src="img/good_icon9.png" width="35" height="15" onclick="changeImage()">
+          <img src="img/comment_icon1.png" width="30" height="15">
+          <img src="img/container.articles.scrap.png" width="15" height="15"><div id="scrapNumber" class="scrap_number">1</div>
           </div>
         </div>
 
@@ -143,9 +145,9 @@
               </div>
             </div>
 
-            <div class="bottom_push_scrap">
+            <div class="bottom_push_scrap" onclick="increaseScrap()"">
               <img src="img/container.articles.buttons.scrap.png" width="15" height="15">
-              <div class="bottom_push_text">
+              <div id="scrapText" class="bottom_push_text">
               스크랩
               </div>
             </div>
@@ -254,7 +256,7 @@
 </div>
 
 
-
+<script src = detail.js></script>
 </body>
 </html>
 
