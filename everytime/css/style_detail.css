@@ -221,7 +221,7 @@ div.itmes > img {
   margin-right: 5px;
 }
 
-.likeAndReply_write {
+ul.likeAndReply_write {
   display: inline-flex;
   list-style: none;
   margin-inline-start: 0px;
@@ -230,14 +230,13 @@ div.itmes > img {
 }
 
 ul.likeAndReply_write > li {
-  margin-right: 8px;
   font-size: 12px;
 }
 
-ul.likeAndReply_write > li > img {
+ul.likeAndReply_write > li > img,
+ul.likeAndReply_write > li > span {
   float: left;
-  margin-right: 5px;
-  padding-left: 5px;
+  padding-right: 5px;
   height: 11px;
   width: 11px;
   list-style: none;
@@ -248,7 +247,8 @@ ul.likeAndReply_write > li > img {
   padding-top: 16px;
 }
 
-.butten_list > .butten {
+.butten_list > .butten1,
+.butten2 {
   box-sizing: border-box;
   border-radius: 8px;
   padding: 0 12px;
@@ -260,7 +260,8 @@ ul.likeAndReply_write > li > img {
   line-height: 30px;
 }
 
-.butten_list > .butten > img {
+.butten_list > .butten1 > img,
+.butten_list > .butten2 > img {
   width: 11px;
   height: 11px;
   margin-right: 5px;
@@ -284,12 +285,27 @@ ul.likeAndReply_write > li > img {
   border-bottom: none;
   box-sizing: border-box;
 }
+div.bubbles > form#writeComment {
+  width: 100%;
+  margin-top: 15px;
+}
 
-#container > form.bubbles_2 {
+form#writeComment > input {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  position: relative;
+  flex-direction: row; /* flex를 row 즉, 가로배치 */
+}
+
+#container > form.bubbles_2,
+form#writeComment {
   display: flex;
   width: 780px;
-  flex-direction: column;
-  padding: 10px;
+  /* padding: 10px; */
   border: 1px solid #d6d6d6;
   box-sizing: border-box;
   background-color: #f8f8f8;
@@ -298,12 +314,13 @@ ul.likeAndReply_write > li > img {
   align-items: center; /* 수직 가운데 정렬 */
 }
 
-form.bubbles_2 > input.text {
+form.bubbles_2 > input.text,
+form#writeComment > input.text2 {
   margin: 0;
   padding-left: 5px;
   border: 0;
   height: 30px;
-  width: 665px;
+  width: 100%;
   line-height: 20px;
   box-sizing: border-box;
   color: #262626;
@@ -313,20 +330,27 @@ form.bubbles_2 > input.text {
   display: flex;
 }
 
-Form.bubbles_2 > img {
+Form.bubbles_2 > img,
+form#writeComment > img {
   width: 50px;
   height: auto;
   background-color: #f91f15;
-  position: absolute;
+  /* position: absolute; */
   right: 0;
 }
 
-form.bubbles_2 > label.check {
+form.bubbles_2 > label#check,
+form#writeComment > label#check {
   color: #a6a6a6;
   font-size: 14px;
   line-height: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
   width: 50px;
+  display: flex;
+}
+label#check > span#text,
+label#check > span#text2 {
+  white-space: nowrap;
 }
 
 #container > div.bubbles > .itmes_2 {
@@ -341,7 +365,7 @@ form.bubbles_2 > label.check {
   float: left;
 }
 
-#container > div.bubbles > div.wow > span,
+#container > div.bubbles > div.wow > p,
 time {
   display: block;
   margin-top: 7px;
@@ -548,4 +572,22 @@ div#article > div.stars > p {
 
 div#article > div.stars > p.gray {
   color: #d6d6d6;
+}
+
+/* 체크박스 색상변경 */
+
+#writeRed,
+#checkRed {
+  -webkit-appearance: none; /* 웹킷 브라우저에서 기본 스타일링 제거 */
+  appearance: none; /* 다른 브라우저에서 기본 스타일링 제거 */
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+#writeRed:checked {
+  background-color: #f91f15;
 }
