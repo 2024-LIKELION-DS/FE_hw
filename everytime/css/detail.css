@@ -1,16 +1,20 @@
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 /* 헤더 css 코드 */
 header {
   border-color: gray;
   display: flex;
+
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  overflow-x: hidden;
   height: 75px;
-  border-bottom: solid 1px rgb(213, 213, 213);
+  gap: 10vw;
+
+  margin: 0 20px;
 }
 
 .check {
@@ -20,16 +24,14 @@ header {
 .logo {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-right: 220px;
+  width: 180px;
 }
 
 .appname {
   display: flex;
   flex-direction: column;
   align-items: start;
-
-  margin-left: 10px;
+  white-space: nowrap;
 }
 
 .everytime {
@@ -43,31 +45,36 @@ header {
 }
 
 .bigcate {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   gap: 20px;
-
   font-weight: 700;
+  white-space: nowrap;
 }
 
 li:hover {
   color: red;
+  overflow: hidden;
 }
 
 .anofunc {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
-  margin-left: 220px;
+  overflow-x: hidden;
 }
 
 .eachfunc {
   border: solid 1px rgb(205, 205, 205);
   border-radius: 25%;
   padding: 6px;
+}
 
-  margin-left: 3px;
+.headhid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10vw;
 }
 
 .boardcate {
@@ -79,10 +86,14 @@ li:hover {
   color: rgb(88, 88, 88);
   font-size: 14px;
 
+  overflow-x: auto;
+  white-space: nowrap;
   height: 200px;
 
+  border-top: solid 1px rgb(213, 213, 213);
   border-bottom: solid 1px rgb(213, 213, 213);
 }
+
 nav {
   margin-bottom: 10px;
 }
@@ -102,8 +113,8 @@ nav {
 }
 
 /* .kindofboard > div {
-    padding-top: 6px;
-  } */
+padding-top: 6px;
+} */
 
 .b0 {
   padding-right: 40px;
@@ -250,11 +261,6 @@ section {
   margin-bottom: 10px;
 }
 
-.let_img {
-  width: 15px;
-  height: 15px;
-}
-
 .let_sth {
   display: flex;
   flex-direction: row;
@@ -272,6 +278,11 @@ section {
 
   background-color: rgb(245, 245, 245);
   border-radius: 5px;
+}
+
+.let_good,
+.let_scrap:hover {
+  cursor: pointer;
 }
 
 .let_scrap {
@@ -293,6 +304,11 @@ section {
   font-weight: 700;
 
   margin-left: 3px;
+}
+
+.let_img {
+  width: 15px;
+  height: 15px;
 }
 
 .real_comment {
@@ -381,11 +397,13 @@ section {
 
 .ano_check {
   font-size: 14px;
-  color: rgb(139, 139, 139);
+  color: #8b8b8b;
 
   display: flex;
   align-items: center;
   margin-right: 5px;
+
+  accent-color: red;
 }
 
 .newcom button {
@@ -427,6 +445,9 @@ aside {
   width: 340px;
   display: flex;
   flex-direction: column;
+
+  white-space: nowrap;
+  overflow: hidden;
 
   margin-top: 10px;
   margin-left: 10px;

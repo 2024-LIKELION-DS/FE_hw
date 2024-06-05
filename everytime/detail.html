@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/detail.css">
+
     <title>에브리타임</title>
 </head>
 
@@ -130,18 +131,18 @@
                         <img src="./img/letimg2.png" width=130px height=130px>
                     </div>
                     <div class="interest">
-                        <div class="good"><img class="goodimg" src="./img/good.png" alt="좋아요"> 502 </div>
+                        <div class="good good1"><img class="goodimg" src="./img/good.png" alt="좋아요"> 502 </div>
                         <div class="comment"><img class="comimg" src="./img/comment.png" alt="댓글"> 1 </div>
-                        <div class="scrap"><img class="scrapimg" src="./img/star.png" alt="스크랩"> 0 </div>
+                        <div class="scrap scrap1"><img class="scrapimg" src="./img/star.png" alt="스크랩"> 0 </div>
                     </div>
                     <div class="let_sth">
-                        <div class="let_good">
+                        <div class="let_good" onclick="goodpl1()">
                             <div><img src="./img/grgood.png" alt="공감" class="let_img"></div>
                             <div class="let_let">공감</div>
                         </div>
-                        <div class="let_scrap">
+                        <div class="let_scrap" onclick="scrappl1()">
                             <div><img src="./img/grstar.png" alt="스크랩" class="let_img"></div>
-                            <div class="let_let">스크랩</div>
+                            <div class="let_let" id="let_letscrap">스크랩</div>
                         </div>
                     </div>
                 </div>
@@ -149,11 +150,11 @@
                 <div class="real_comment">
                     <div class="co_info">
                         <div class="co_wrinfo">
-                            <div><img src="./img/anperson.png" class="com_w_img"></div>
+                            <div onclick="co_alert()"><img src="./img/anperson.png" class="com_w_img"></div>
                             <div class="co_name">익명1</div>
                         </div>
                         <div class="co_sub">
-                            <div>대댓글</div>
+                            <div onclick="cocoment()">대댓글</div>
                             <div>공감</div>
                             <div>삭제</div>
                         </div>
@@ -165,7 +166,7 @@
                     <form class="newcom">
                         <div class="let_com"><input type="text" placeholder="댓글을 입력하세요."></div>
                         <div class="let_submit">
-                            <div class="ano_check"><input type="checkbox">익명</div>
+                            <div class="ano_check"><input type="checkbox" class="anocheckclass">익명</div>
                             <button type="submit"><img src="./img/whitepencil.png" width=40 height=40></button>
                         </div>
                     </form>
@@ -249,6 +250,8 @@
             <div>직업정보제공사업 신고번호 : J1204020230008</div>
         </div>
     </footer>
+
+    <script src="./detail.js"></script>
 </body>
 
 </html>
