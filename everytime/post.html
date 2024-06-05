@@ -7,12 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <form class="form">
+    <div class="post-write">
+        <div class="form">
             <input name="title" type="text" placeholder="글 제목" style="height:50px;" >
-            <input name="contents" type="text" placeholder="내용" style="height: 380px;">
-        </form>
-        <form class="footer">
+            <div class="contents">
+                <textarea name="contents-text" id="text-area">
+                    
+                </textarea>
+            </div>
+        </div>
+        <div class="footer">
             <ul>
                 <li><img src="./everytime_img/container.articles.write.hashtag.png" alt="#"></li>
                 <li><img src="./everytime_img/container.articles.write.attach.png" alt="클립"></li>
@@ -20,13 +24,14 @@
             <ul class="optoins">
                 <label class="check">
                     <input type="checkbox">
-                    <input type="hidden" name="keep" value="false">질문 
+                    <p>질문</p>
                     <input type="checkbox">
-                    <input type="hidden" name="keep" value="false">익명
+                    <p>익명</p>
                 </label>
                 <li class="submit"><img src="./everytime_img/container.articles.write.submit.png" alt="write"></li>
             </ul>
-        </form> 
+        </div> 
+    </div>
 </body>
 </html>
 

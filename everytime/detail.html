@@ -1,225 +1,277 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>everytime</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/detail.css">
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // 공감 버튼에 대한 클릭 이벤트 리스너 설정
+    const posVoteButton = document.querySelector('.posvote-btn');
+    posVoteButton.addEventListener('click', function() {
+        const voteCountSpan = document.querySelector('.vote-count');
+        let currentCount = parseInt(voteCountSpan.textContent);
+        voteCountSpan.textContent = currentCount + 1;
+    });
+
+    const newButton = document.querySelector('.childcomment'); 
+        const wc = document.querySelector('.writecomment-child');
+
+        newButton.addEventListener('click', function() {
+        wc.style.display = (wc.style.display === 'none' || wc.style.display === '') ? 'block' : 'none';
+    });
+
+    // 스크랩 버튼에 대한 클릭 이벤트 리스너 설정
+    const scrapButton = document.querySelector('.scrap-btn');
+    scrapButton.addEventListener('click', function() {
+        const scrapCountSpan = document.querySelector('.scrap-count');
+        let currentCount = parseInt(scrapCountSpan.textContent);
+        scrapCountSpan.textContent = currentCount + 1;
+
+        const scrapText = scrapButton.querySelector('p');
+        const scrapImage = scrapButton.querySelector('img');
+        if (scrapText.textContent === '스크랩') {
+            scrapImage.style.display = 'none'; 
+            scrapText.textContent = '스크랩 취소';
+        }
+    });
+    
+    //체크박스 클릭 이벤트(색 변경)
+    const anonymButton = document.querySelector('.check-box');
+    anonymButton.addEventListener('click', function() {
+        const anonymtext = document.querySelector('.anonym');
+        anonymtext.style.color = 'red';
+    })
+
+    const submitButton = document.querySelector('.submit');
+    submitButton.addEventListener('click', function(event) {
+        const commentInput = document.querySelector('.writecomment .text');
+        const commentText = commentInput.value;
+
+        alert(commentText);
+    });
+
+    });
+</script>
 <body>
-<nav>
-    <div class="wrap">
-        <div id="logo">
-            <img class ="me" src ="./everytime_img\nav.logo.png" alt="에브리타임 로고" >
-            <p><span class="name">에브리타임</span><br><span class="subname">덕성여대</span></p>
-        </div>
-        <ul id="menu">
-            <li>게시판</li>
-            <li>시간표</li>
-            <li>강의실</li>
-            <li>학점계산기</li>
-            <li>친구</li>
-            <li>책방</li>
-            <li>캠퍼스픽</li>
-        </ul>
-        <div id="account">
-            <img alt="쪽지함" class="icon" src="./everytime_img/icn_m_chat_gray800_light.png">
-            <img alt="내 정보" class="icon" src="./everytime_img/icn_m_account_gray800_light.png">
-        </div>
-    </div>
-</nav>
-<div id="submenu">
-    <div class="wrap">
-    <div class="divider"></div>
-        <div class="group">
-            <ul>
-            <li>자유게시판</li>
-            <li>비밀게시판</li>
-            <li>질문게시판</li>
-            <li>졸업생게시판</li>
-            <li>새내기게시판</li>
-            <li>시사·이슈 </li>
-            <li>정보게시판</li>
-            <li>홍보게시판</li>
+    <header>
+        <div class="wrap">
+            <div id="logo">
+                <img class ="me" src ="./everytime_img/nav.logo.png" alt="에브리타임 로고" >
+                <p><span class="name">에브리타임</span><br><span class="subname">덕성여대</span></p>
+            </div>
+            <ul id="menu">
+                <li>게시판</li>
+                <li>시간표</li>
+                <li>강의실</li>
+                <li>학점계산기</li>
+                <li>친구</li>
+                <li>책방</li>
+                <li>캠퍼스픽</li>
             </ul>
+            <div id="account">
+                <img alt="쪽지함" class="icon" src="./everytime_img/icn_m_chat_gray800_light.png">
+                <img alt="내 정보" class="icon" src="./everytime_img/icn_m_account_gray800_light.png">
+            </div>
         </div>
-        <div class="group">
-            <ul>
-            <li>동아리·학회</li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="group">
-            <ul>
-            <li>취업·진로</li>
-            <li>⭐️👩🏻‍🏫교직이수👩🏻‍🏫⭐️</li>
-            <li>덕성 예비공무원들♡</li>
-            <li>대학원 뿌숭뿌슝🔥🔥</li>
-            <li>미래의 회계사(CPA) 세무사(CTA)</li>
-            <li>덕성 로스쿨러들 📚</li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="group">
-            <ul>
-            <li>총학생회</li>
-            <li>신문사</li>
-            <li>영자신문사</li>
-            <li>운현방송국</li>
-            <li>대학일자리본부</li>
-            <li>동아리연합회</li>
-            <li>교지편집위원회</li>
-            <li><span class="more">더보기</span></li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="group">
-            <ul>
-            <li>📑덕성여대 경영학과📑</li>
-            <li>💰두드리는 회계학과💰</li>
-            <li>국제통상학과</li>
-            <li>👩‍💻디지털소프트웨어공학부 게시판👩‍💻</li>
-            <li>🌕 예대의 밤은 깊어만가고</li>
-            <li>프리팜/바이오공학과 게시판</li>
-            <li>🧠심리학과 자게🧠</li>
-            <li><span class="more">더보기</span></li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="group">
-            <ul>
-            <li>🌺덕성여대 장터🌺</li>
-            <li>♡덕성여대 기숙사♡</li>
-            <li>덕성 연애방</li>
-            <li>덕성여대 자취생 모임</li>
-            <li>주의 없는 게시판</li>
-            <li>퀴어이기 전에 여성</li>
-            <li>덕성의 국가근로동자</li>
-            <li>💘덕성 파견학생💘</li>
-            </ul>
-        </div>
-        <div class="group">
-            <ul>
-            <li>🌺23학번 게시판🌺</li>
-            <li>덕성의 아이돌❤️</li>
-            <li>덕성 사랑방</li>
-            <li>덕성여대 책 거래장터</li>
-            <li>다이어덕</li>
-            <li>덕친소 : 내 덕친은 누구인가</li>
-            <li>미팅 모집방</li>
-            <li><span class="more">더보기</span></li>
-            </ul>
-        </div>
-    <div class="divider"></div>
-</div>
-<div id="container">
-    <div class="wrap">
-        <section class ="left">
+    </header>
+    <nav>
+            <div id="submenu">
+                <div class="wrap">
+                <div class="divider"></div>
+                    <div class="group">
+                        <ul>
+                        <li>자유게시판</li>
+                        <li>비밀게시판</li>
+                        <li>질문게시판</li>
+                        <li>졸업생게시판</li>
+                        <li>새내기게시판</li>
+                        <li>시사·이슈 </li>
+                        <li>정보게시판</li>
+                        <li>홍보게시판</li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <ul>
+                        <li>동아리·학회</li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="group">
+                        <ul>
+                        <li>취업·진로</li>
+                        <li>⭐️👩🏻‍🏫교직이수👩🏻‍🏫⭐️</li>
+                        <li>덕성 예비공무원들♡</li>
+                        <li>대학원 뿌숭뿌슝🔥🔥</li>
+                        <li>미래의 회계사(CPA) 세무사(CTA)</li>
+                        <li>덕성 로스쿨러들 📚</li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="group">
+                        <ul>
+                        <li>총학생회</li>
+                        <li>신문사</li>
+                        <li>영자신문사</li>
+                        <li>운현방송국</li>
+                        <li>대학일자리본부</li>
+                        <li>동아리연합회</li>
+                        <li>교지편집위원회</li>
+                        <li><span class="more">더보기</span></li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="group">
+                        <ul>
+                        <li>📑덕성여대 경영학과📑</li>
+                        <li>💰두드리는 회계학과💰</li>
+                        <li>국제통상학과</li>
+                        <li>👩‍💻디지털소프트웨어공학부 게시판👩‍💻</li>
+                        <li>🌕 예대의 밤은 깊어만가고</li>
+                        <li>프리팜/바이오공학과 게시판</li>
+                        <li>🧠심리학과 자게🧠</li>
+                        <li><span class="more">더보기</span></li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="group">
+                        <ul>
+                        <li>🌺덕성여대 장터🌺</li>
+                        <li>♡덕성여대 기숙사♡</li>
+                        <li>덕성 연애방</li>
+                        <li>덕성여대 자취생 모임</li>
+                        <li>주의 없는 게시판</li>
+                        <li>퀴어이기 전에 여성</li>
+                        <li>덕성의 국가근로동자</li>
+                        <li>💘덕성 파견학생💘</li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <ul>
+                        <li>🌺23학번 게시판🌺</li>
+                        <li>덕성의 아이돌❤️</li>
+                        <li>덕성 사랑방</li>
+                        <li>덕성여대 책 거래장터</li>
+                        <li>다이어덕</li>
+                        <li>덕친소 : 내 덕친은 누구인가</li>
+                        <li>미팅 모집방</li>
+                        <li><span class="more">더보기</span></li>
+                        </ul>
+                    </div>
+                <div class="divider"></div>
+            </div>
+    </nav>
+    <div id="container">
+        <section>
             <div class="title">
-                <h3><span class="name1">비밀게시판</span></h3>
+                <h2><span class="name1">비밀게시판</span></h2>
             </div>
-            <div class="contents">
-                <div class="wrap articles">
-                    <article class="item">
-                        <div class="article">
-                            <div class="profile1">
-                                <img src="https://cf-fpi.everytime.kr/0.png" class="profile-img">
-                                <div class="profile2">
-                                    <h3 class="large">익명</h3>
-                                    <time class="large">03/12 10:42</time>
-                                </div>
-                                <ul class="status1">
-                                    <li class="messagesend">쪽지</li>
-                                    <li class="abuse">신고</li>
-                                </ul>
-                            </div>
-                            <h2 class="large">🦁멋쟁이사자처럼 아기사자 모집 완료🦁</h2>
-                            <p class="large">안녕하세요. 덕성여자대학교 멋쟁이사자처럼 12기 아기사자 선발이 완료되었습니다!<br>최종 선발 결과는 홈페이지에서 확인 가능합니다.<br>덕성여자대학교 멋쟁이사자처럼 12기 모집에 지원해 주신 모든 분들께 감사드립니다.<br>기타 문의사항은 ~로 문의 부탁드립니다.</p>
-                            <div class="status2">
-                                <img src="./everytime_img/container.articles.vote.png" alt="공감" class="vote"><sapn style="color: red;">9</sapn>
-                                <img src="./everytime_img/container.articles.comment.png" alt="댓글" class="comment"><sapn style="color: #05BCBC;">1</sapn>
-                                <img src="./everytime_img/container.articles.scrap.png" alt="스크랩" class="scrap"><sapn style="color: #FFC900;">0</sapn>
-                            </div>
-                            <div class="buttons">
-                                <div class="posvote">
-                                    <img src="./everytime_img/container.articles.buttons.posvote.png" alt="공감" class="vote"><p>공감</p>
-                                </div>
-                                <div class="posvote">
-                                    <img src="./everytime_img/container.articles.buttons.scrap.png" alt="스크랩" class="scrap"><p>스크랩</p>
-                                </div>
-                            </div>
+            <article class="item">
+                <div class="article">
+                    <div class="profile">
+                        <img src="https://cf-fpi.everytime.kr/0.png" class="profile-img">
+                        <div class="info">
+                            <h3 class="large">익명</h3>
+                            <time class="large">03/12 10:42</time>
                         </div>
-                        <div class="coments">
-                            <article class="parent">
-                                <div class="parent1">
-                                    <img src="https://cf-fpi.everytime.kr/0.png" class="picture medium">
-                                    <h3 class="medium">익명1</h3>
-                                    <ul class="status">
-                                        <li class="childcomment">대댓글</li>
-                                        <li class="commentvote">공감</li>
-                                        <li class="messagesend">쪽지</li>
-                                        <li class="abuse">신고</li>
-                                    </ul>
-                                </div>             
-                                <div class="parent2">
-                                    <p class="large">우와</p>
-                                    <p class="now">방금</p>
-                                </div>                  
-                            </article>
-                            <form class="writecomment">
-                                <input type="text" name="text" maxlength="300" autocomplete="off" placeholder="댓글을 입력하세요." class="text">
-                                <ul class="option">
-                                    <input type="checkbox">
-                                    <p class="anonym">익명</p>
-                                    <li title="완료" class="submit"></li>
-                                </ul>
-                            </form>
+                        <ul class="status">
+                            <li class="messagesend">쪽지</li>
+                            <li class="abuse">신고</li>
+                        </ul>
+                    </div>
+                    <h2 class="large">🦁멋쟁이사자처럼 아기사자 모집 완료🦁</h2>
+                    <p class="large">안녕하세요. 덕성여자대학교 멋쟁이사자처럼 12기 아기사자 선발이 완료되었습니다!<br>최종 선발 결과는 홈페이지에서 확인 가능합니다.<br>덕성여자대학교 멋쟁이사자처럼 12기 모집에 지원해 주신 모든 분들께 감사드립니다.<br>기타 문의사항은 ~로 문의 부탁드립니다.</p>
+                    <div class="status2">
+                        <img src="./everytime_img/container.articles.vote.png" alt="공감" class="vote"><sapn class="vote-count" style="color: red;">9</sapn>
+                        <img src="./everytime_img/container.articles.comment.png" alt="댓글" class="comment"><sapn style="color: #05BCBC;">1</sapn>
+                        <img src="./everytime_img/container.articles.scrap.png" alt="스크랩" class="scrap"><sapn class="scrap-count" style="color: #FFC900;">0</sapn>
+                    </div>
+                    <div class="buttons">
+                        <div class="posvote-btn">
+                            <img src="./everytime_img/container.articles.buttons.posvote.png" alt="공감" class="vote">
+                            <p>공감</p>
                         </div>
-                    </article>
+                        <div class="scrap-btn">
+                            <img src="./everytime_img/container.articles.buttons.scrap.png" alt="스크랩" class="scrap">
+                            <p>스크랩</p>
+                        </div>
+                    </div>
                 </div>
-            </div>    
+                <div class="coments">
+                    <div class="parent">
+                        <div class="parent1">
+                            <img src="./everytime_img/anonymous.profile.png" class="picture medium">
+                            <h3 class="medium">익명1</h3>
+                            <ul class="status">
+                                <li class="childcomment">대댓글</li>
+                                <li class="commentvote">공감</li>
+                                <li class="delete">삭제</li>
+                            </ul>
+                        </div>             
+                        <div class="parent2">
+                            <p class="large">우와</p>
+                            <p class="now">방금</p>
+                        </div>                  
+                    </div>
+                    <form class="writecomment-child">
+                        <input type="text" name="text" maxlength="300" autocomplete="off" placeholder="대댓글을 입력하세요." class="text-child">
+                        <ul class="option">
+                            <input type="checkbox" class="check-box">
+                            <p class="anonym">익명</p>
+                            <li title="완료" class="submit-child"></li>
+                        </ul>
+                    </form>
+                    <div class="writecomment">
+                        <input type="text" name="text" maxlength="300" autocomplete="off" placeholder="댓글을 입력하세요." class="text">
+                        <ul class="option">
+                            <input type="checkbox" class="check-box">
+                            <p class="anonym">익명</p>
+                            <li title="완료"><button class="submit"></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </section>
-        <div class="divider"></div>
-        <aside class="rignt">
-            <div class="board">
-                <div class="title2">
-                    <h3><span class="name">실시간 인기 글</span></h3>
-                    <hr>
-                </div>
-                <div class="article">
-                    <p class="post2">신기한 알바하는 덕우 있나</p>
-                    <p class="small">난 파중류샵 알바<br>사진은 맨날 나한테 밥달라고 쳐다보는 애</p>
-                    <p><span class="postname">비밀게시판</span></p>
-                </div>
-                <hr>
-                <div class="article">
-                    <p class="post2">anti-hero</p>
-                    <p class="small">it's me, hi<br>i'm the problem it's me</p>
-                    <p><span class="postname">비밀게시판</span></p>
+        <aside>
+            <div class="card">
+                <div class="board">
+                    <h3>실시간 인기 글</h3>
+                    <div class="article">
+                        <p class="post2">꽁꽁 얼어붙은 한강</p>
+                        <p class="small">유행 벌써 끝났어..?<br>누가 밈 모음집 만들어줘..</p>
+                        <h4>비밀게시판</h4>
+                    </div>
+                    <div class="article">
+                        <p class="post2">멋사 아기사자들 너무 대단한 것 같음</p>
+                        <p class="small">다들 어떻게 병행하는 거야??<br>정말 리스펙한다</p>
+                        <h4>비밀게시판</h4>
+                    </div>
                 </div>
             </div>
-            <div class="board">
-                <div class="title2">
-                    <h3><span class="name">HOT 게시물</span></h3>
-                </div>
-                <hr>
-                <div class="article2">
-                    <p>단호박 양갱</p>
-                    <p><span class="time">12분 전</span></p>
-                </div>
-                <hr>
-                <div class="article2">
-                    <p>꿀단밤 양갱</p>
-                    <p><span class="time">50분 전</span></p>
-                </div>
-                <hr>
-                <div class="article2">
-                    <p>고구마 양갱</p>
-                    <p><span class="time">5시간 전</span></p>
+            <div class="card">
+                <div class="board">
+                    <h3>HOT 게시물<span>더보기</span></h3>
+                    <a class="list">
+                        <time>40분 전</time>
+                        <p>덕성 멋사 모집 언제</p>
+                    </a>
+                    <a class="list">
+                        <time>20분 전</time>
+                        <p>왜 벌써 기말..?</p>
+                    </a>
+                    <a class="list">
+                        <time>20분 전</time>
+                        <p>축제 2주로 늘리자</p>
+                    </a>
+                    <a class="list">
+                        <time>20분 전</time>
+                        <p>킹받음</p>
+                    </a>
                 </div>
             </div>
         </aside>
-    </div>
 </div>
 </body>
 </html>
