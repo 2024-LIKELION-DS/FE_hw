@@ -356,7 +356,20 @@ html {
 }
 
 .post_detail2 {
-  padding: 3px 15px 10px 15px;
+  padding: 3px 15px 10px 12px;
+}
+
+.post_detail4 {
+  padding: 5px 5px 10px 10px;
+}
+
+.post_detail3 {
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* margin-left: 15px; */
+  padding: 5px 5px 10px 5px;
+  border: 1.6px solid gainsboro;
 }
 
 .comment {
@@ -383,12 +396,40 @@ html {
   font-size: 1.2rem;
 }
 
-.post_detail_write {
+.post_detail_write,
+.post_detail_write2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #f6f6f6;
   height: 40px;
+}
+
+.post_detail_write2 {
+  border: 1.6px solid gainsboro;
+}
+
+input {
+  outline: none;
+  text-align: left;
+  border: 2px solid #f6f6f6;
+  background-color: #f6f6f6;
+  border-bottom: 0;
+  padding: 0;
+}
+
+.formA {
+  width: 43px;
+  height: 18px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-right: 10px;
+}
+
+.formA img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .div_write {
