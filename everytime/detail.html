@@ -153,21 +153,21 @@
   
                   <div class="post_detail_icons">
                     <img src="img/container.articles.vote.png">
-                    <p style="color: #F91F15;">9</p>
+                    <p style="color: #F91F15;" id="like">9</p>
                     <img src="img/container.articles.comment.png">
-                    <p style="color: #05BCBC;">1</p>
+                    <p style="color: #05BCBC;" id="comments">1</p>
                     <img src="img/container.articles.scrap.png">
-                    <p style="color: #FBCE1E;">0</p>
+                    <p style="color: #FBCE1E;" id="scrap">0</p>
                   </div>
   
                   <div class="post_detail_buttons">
                     <div class="button1">
                       <img src="img/container.articles.buttons.posvote.png">
-                      <p>공감</p>
+                      <p id="button1Text">공감</p>
                     </div>
                     <div class="button2">
                       <img src="img/container.articles.buttons.scrap.png">
-                      <p>스크랩</p>
+                      <p id="button2Text">스크랩</p>
                     </div>
                   </div>
                 </div>
@@ -186,15 +186,64 @@
                   </div>
   
                   <div class="post_detail_comment_info2">
-                    <p class="light">대댓글  공감  삭제</p>
+                    <p class="light"><span id="reply">대댓글</span>  <span>공감</span> <span>삭제</span></p>
                   </div>
               </div>
 
               <div class="post_detail_comment2">
                 <p class="comment">우와</p>
                 <p class="light">방금</p>
+                
+                <!-- 댓글 -->
+                <div class="post_detail4">
+                  <div class="post_detail3">
+
+                    <div class="post_detail_comment">
+                      <div class="post_detail_comment_img">
+                        <img src="img/anonymous.profile.png">
+                      </div>
+      
+                      <div class="post_detail_comment_info">
+                        <p class="name">익명(글쓴이)</p>
+                      </div>
+      
+                      <div class="post_detail_comment_info2">
+                        <p class="light">공감  쪽지  신고</p>
+                      </div>
+                    </div>
+    
+                  <div class="post_detail_comment2">
+                    <p class="comment">댓글댓글댓글댓글</p>
+                    <p class="light">방금</p>
+                  </div>
+
+                </div>
+                <div class="post_detail_write2" style="display: none;">
+
+                    <div class="div_write">
+                      <input type="text" placeholder="대댓글을 입력하세요" id="replyText"><br>
+                    </div>
+  
+                  <form>
+                    <!-- <div class="div_check">
+                      <input type="checkbox"> 익명
+                    </div> -->
+                    <div class="formA">
+                      <img src="img/container.articles.write.anonym.png" id="formA_img">
+                      <!-- <input type="checkbox" id="a" name="a">
+                      <label for="a">익명</label> -->
+                    </div>
+                    
+                  </form>
+  
+                  <div class="post_detail_write_img">
+                    <img src="img/container.articles.write.submit.png" id="replyBtn">
+                  </div>
+                </div>
               </div>
-              </div>
+              
+            </div>
+          </div>
 
               <hr color="gainsboro" style="margin: 0;">
 
@@ -303,5 +352,6 @@
   </div>
 
   <footer class="footer"></footer>
+  <script src="js/detail.js"></script>
 </body>
 </html>

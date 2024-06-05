@@ -7,20 +7,38 @@ html {
 }
 
 .post {
-  width: 45vw;
+  width: 49vw;
   margin: auto;
-  margin-top: 5vw;
+  /* margin-top: 5vw; */
   display: flex;
   flex-direction: column;
 }
 
 .title input,
-textarea {
+textarea,
+#ques_txt {
   width: 100%;
   outline: none;
   text-align: left;
-  border: 1px solid gainsboro;
+  border: 2px solid gainsboro;
+  border-bottom: 0;
   padding: 0;
+}
+
+#ques_txt {
+  margin-top: -3px;
+  padding: 1vw;
+}
+
+#ques_txt_box {
+  background-color: #f2fefe;
+  border-radius: 0.7vw;
+  padding: 0.3vw;
+  font-size: 1.3rem;
+}
+
+#ques_txt_box p {
+  color: #65b0b6;
 }
 
 .title input {
@@ -32,7 +50,7 @@ textarea {
 textarea {
   height: 300px;
   resize: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .post1 {
@@ -42,7 +60,7 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid gainsboro;
+  border: 2px solid gainsboro;
   margin-top: -3px;
   padding: 0;
 }
@@ -80,6 +98,34 @@ textarea {
   margin: 0 auto;
 }
 
-.form {
+/* .form {
   margin-right: 20px;
+  display: inline;
+} */
+
+#form_input {
+  display: flex;
+  flex-direction: row;
+}
+
+.formQ,
+.formA {
+  width: 43px;
+  height: 18px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-right: 10px;
+}
+
+.formQ img,
+.formA img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media all and (max-width: 640px) {
+  .post {
+    width: 90vw;
+  }
 }
