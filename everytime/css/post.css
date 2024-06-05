@@ -4,15 +4,14 @@ body {
   justify-content: center;
 }
 
-
 .secBox {
   border: 3px solid #e7e7e7;
   width: 700px;
-  height: 500px;
 }
 
 .sec1 {
-  border-bottom: 1px solid #e7e7e7;
+  border: 1px solid #e7e7e7;
+  height: 45px;
 }
 
 .title {
@@ -22,7 +21,8 @@ body {
 
 .sec2 {
   height: 410px;
-  border-bottom: 1px solid #e7e7e7;
+  border: 1px solid #e7e7e7;
+  margin-top: -1px;
 }
 
 .title {
@@ -37,9 +37,36 @@ body {
   width: 650px;
 }
 
+#notice {
+  padding: 15px;
+  height: 35px;
+  border: 1px solid #e7e7e7;
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#notice > p {
+  font-size: 12px;
+  color: #1fb5b5;
+  background-color: #efffff;
+  border-radius: 10px;
+  padding: 10px;
+  width: 98%;
+  height: 85%;
+}
+
+span {
+  font-weight: bold;
+}
 .sec3 {
   display: flex;
   justify-content: space-between;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  margin-top: -1px;
 }
 
 .right {
@@ -47,37 +74,50 @@ body {
 }
 
 img {
-  height: 38px;
+  height: 40px;
 }
 
-.checkbox {
+.checkbox1 {
   display: flex;
-  margin-right: 10px;
+  width: 50px;
+  accent-color: #05a0a0;
 }
 
-.checkbox > p {
+#check_q:checked + .check1_q {
+  color: #05a0a0;
+}
+
+.checkbox2 {
+  display: flex;
+  width: 50px;
+  accent-color: #d94423;
+}
+.checkbox1 > p,
+.checkbox2 > p {
   font-size: 11px;
   font-weight: bolder;
   margin-top: 12px;
   color: #959494;
 }
 
+.check1,
+.check1_q {
+  font-size: 11px;
+  font-weight: bolder;
+  margin-top: 12px;
+  color: #959494;
+}
+
+#check:checked + .check1 {
+  color: #d94423;
+}
+
 .pencil {
   background-color: #d94423;
+  margin: 0;
 }
 
 input {
   border: none;
   outline: none;
 }
-
-
-input
-textarea
-텍스트아리아 패스워드로 설정 ->알아서 점으로 뜸
-submit
-checkbox
-content 박스 크기 설정
-submit 어디에 설정해야되는지 찾아보기
-체크박스 크기, 위치 설정하기
-빨간박스 만들고 연필이미지 옮기기

@@ -180,40 +180,106 @@
               </div>
               <div class="scrap-button">
                 <img src="./img/container.articles.buttons.scrap.png" alt="스크랩 버튼">
-                <input type="button" onclick="change()" value="스크랩" id="scrapBtn">스크랩</input>
+                <input type="button" onclick="change()" value="스크랩" id="scrapBtn"></input>
               </div>
             </div>
           </section>
 
           <section class="sec3">
+            <div class="comment-box">
             <div class="comment-top">
             <div class="nickname">
               <img src="./img/anonymous.profile.png" alt="프로필사진">
               <p>익명1</p>               
             </div>
             <div class="comment-side">
-              <p>대댓글</p>
+              <input type="button" value="대댓글" class="replybtn"/>
               <p>공감</p>
-              <p>삭제</p>
+              <p>쪽지</p>
             </div>
           </div>
             <div class="comment-content">
               <p>우와</p>             
             </div>
             <div class="comment-time">
-              <p>방금</p>
+              <p>20분 전</p>
             </div>
+            <div class="reply-box">
+              <div class="comment-top">
+                <div class="nickname">
+                  <img src="./img/anonymous.profile.png" alt="프로필사진">
+                  <p>익명(글쓴이)</p>               
+                </div>
+                <div class="comment-side">
+                  <p>공감</p>
+                  <p>쪽지</p>
+                </div>
+              </div>
+                <div class="comment-content">
+                  <p>답글...</p>             
+                </div>
+                <div class="comment-time">
+                  <p>2분 전</p>
+                </div>
+              </div>
+                <div class="input-box2">
+                  <form class="form">
+                  <input type="text" class="comment-input" placeholder="대댓글을 입력하세요."></input>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" onclick="change2()"></input>
+                    <label for="check" class="check1">익명</label>
+                </div>
+                  <button type="submit">
+                  <img class="pencil" src="./img/container.articles.write.submit.png" alt="글작성" />
+                </button>
+              </form>
+              </div>
+          </div>
+          <div class="comment-box">
+            <div class="comment-top">
+              <div class="nickname">
+                <img src="./img/anonymous.profile.png" alt="프로필사진">
+                <p>익명2</p>               
+              </div>
+              <div class="comment-side">
+                <input type="button" value="대댓글" class="replybtn"/>
+                <p>공감</p>
+                <p>쪽지</p>
+              </div>
+            </div>
+              <div class="comment-content">
+                <p>와!</p>             
+              </div>
+              <div class="comment-time">
+                <p>7분 전</p>
+              </div>
+              <div class="input-box2">
+                <form class="form">
+                <input type="text" class="comment-input" placeholder="대댓글을 입력하세요."></input>
+                <div class="checkbox">
+                  <input type="checkbox" id="check" onclick="change2()"></input>
+                  <label for="check" class="check1">익명</label>
+              </div>
+                <button type="submit">
+                <img class="pencil" src="./img/container.articles.write.submit.png" alt="글작성" />
+              </button>
+            </form>
+            </div>
+          </div>
           </section>
 
           <section class="sec4">
-            <form action="./post.html" method="post">
+            <div class="input-box">
+            <form class="form">
             <input type="text" class="comment-input" placeholder="댓글을 입력하세요."></input>
             <div class="checkbox">
-              <input type="checkbox" id="check"></input>
-              <p class="check1">익명</p>
-            </div>
+              <input type="checkbox" id="check" onclick="change2()"></input>
+              <label for="check" class="check1">익명</label>
+          </div>
+            <button type="submit">
             <img class="pencil" src="./img/container.articles.write.submit.png" alt="글작성" />
-          </form>
+          </button>
+        </form>
         </section>
 
         <section class="sec5">
