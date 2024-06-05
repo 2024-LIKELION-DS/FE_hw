@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+
     <title>덕성여대 에브리타임</title>
 </head>
 
@@ -132,10 +133,13 @@
                 </div>
             </div>
 
-            <div class="newletter">
-                <div>새 글을 작성해주세요!</div>
-                <img src="./img/pencil.png" alt="새 글 작성" width=40 height=40>
+            <div class="new_newwrite">
+                <div class="newletter" onclick="newletter_detail()">
+                    <div>새 글을 작성해주세요!</div>
+                    <img src="./img/pencil.png" alt="새 글 작성" width=40 height=40>
+                </div>
             </div>
+
             <div class="letter">
                 <div class="sec_letter">
                     <div class="sec_letter_content">
@@ -328,6 +332,7 @@
         </div>
     </footer>
 
+    <script src="./main.js"></script>
 </body>
 
 </html>
