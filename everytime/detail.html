@@ -151,18 +151,18 @@
                 <img src="img/KakaoTalk_Photo_2024-04-11-01-27-55 002.jpeg" alt="최종합격2">
             </div>
             <ul class="likeAndReply_write">
-                <li style="color:#F91F15"><img alt="공감" src="img/like.png"/>71</li>
-                <li style="color: #05BCBC;"><img alt="reply" src="img/reply.png"/>10</li>
-                <li style="color: #FFC900;"><img alt="reply" src="img/container.articles.scrap.png"/>5</li>
+                <li style="color:#F91F15"><img alt="공감" src="img/like.png"/><span  id="likeCount" >0</span></li>
+                <li style="color: #05BCBC;"><img alt="reply" src="img/reply.png"/><span>1</span></li>
+                <li style="color: #FFC900;"><img alt="reply" src="img/container.articles.scrap.png"/><span id="scrapCount">0</span></li>
             </ul>
             <div class="butten_list">
-                <div class="butten">
+                <div class="butten1" onclick="likeon()">
                     <img src="img/container.articles.buttons.posvote.png" alt="공감">
-                    <spqn>공감</spqn>
+                    <sqpn>공감</sqpn>
                 </div>
-                <div class="butten">
-                    <img src="img/container.articles.buttons.scrap.png" alt="공감">
-                    <spqn>스크랩</spqn>
+                <div class="butten2" onclick="scrapon()">
+                    <img src="img/container.articles.buttons.scrap.png" alt="스크랩">
+                    <sqpn id="scrapBtn">스크랩</sqpn>
                 </div>
             </div>
       </article> 
@@ -172,21 +172,29 @@
           <img src="img/anonymous.profile.png" alt="익명">
           <h2 class="profile_2">익명1</h2>
           <div class="good_delete">
-            <p>대댓글</p><p>공감</p><p>삭제</p>
+            <p onclick="show_cmt('writeComment')">대댓글</p><p>공감</p><p>삭제</p>
           </div>
         </div>
         <div class="wow">
-          <span style="color: #292929; font-size: 15px;">우와</span>
+          <p style="color: #292929; font-size: 15px;">우와</p>
           <time style="color: #d6d6d6; font-size: 12px;">방금</time>
         </div>
+        <form id="writeComment" style="display: none;">
+          <input id="show_art" name="text" type="text" placeholder="대댓글을 입력하세요." class="text2">
+          <label id="check">
+            <input type="checkbox" style="margin-right: 5px;" id = "checkRed" onchange="changeColor2()"><span id="text2">익명</span>
+          </label>
+          <img id="img_click" src="img/container.articles.write.submit.png" alt="제출" onclick="show_under_cnt(event)">
+      </form>
       </div>
+      
       
       <form class="wrap bubbles_2">
           <input name="text" type="text" placeholder="댓글을 입력하세요." class="text">
-          <label class="check">
-            <input type="checkbox" style="margin-right: 5px;"><input type="hidden" name="keep" value="false">익명
+          <label id="check">
+            <input type="checkbox" style="margin-right: 5px;" id="writeRed" onchange="changeColor()"><span id="text">익명</span>
           </label>
-          <img src="img/container.articles.write.submit.png" alt="제출">
+          <img src="img/container.articles.write.submit.png" alt="제출" onclick="show_Submit(event)">
       </form>
     <div class="left_footer">
       <img src="img/container.articles.pagination.list.png" alt="글목록">
@@ -276,5 +284,6 @@
     </div>
   </div>
   </div>
+  <script src="/Users/choeyun-yeong/Desktop/FE_hw/everytime/js/detail.js"></script>
   </body>
 </html>

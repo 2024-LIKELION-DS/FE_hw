@@ -1,10 +1,11 @@
-//1
+// 총점 : 1/8점
+//1 => 1점
 lion = function () {
   return "Hello LikeLion12";
 };
 let lion = () => "Hello LikeLion12";
 
-//2
+//2 => 0점
 let input = prompt("숫자를 입력하세요!!!");
 let number = parseInt(input, 10);
 let result = () => {
@@ -16,18 +17,23 @@ let result = () => {
 };
 result();
 
+<<<<<<< HEAD
 //3
+=======
+//3 ==> 0점
+>>>>>>> 최윤영
 let num;
 do {
   num = prompt("100을 초과하는 숫자를 입력해주세요.");
 } while (num !== null && (isNaN(num) || num <= 100));
 
-//4
+//4 => 0점
+// 피드백 : slice를 이용해서 풀어주세요!
 let str = prompt("문자열을 입력하세요 : ");
 let new_str = str.slice(2, 5);
 console.log(new_str);
 
-//5
+//5 => 0점
 let date = new Date();
 date.setFullYear(2022);
 date.setMonth(5);
@@ -51,7 +57,7 @@ let art = () => {
   );
 };
 
-//6
+//6 => 0점
 function getSecondsToday() {
   let now = new Date();
   let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -60,7 +66,7 @@ function getSecondsToday() {
 }
 getSecondsToday();
 
-//7
+//7 => 0점
 function randomNum() {
   for (let i = 1; i < 11; i++) {
     let random_num = Math.floor(Math.random() * 101);
@@ -69,16 +75,21 @@ function randomNum() {
 }
 randomNum();
 
-//8
+//8 => 0점
 function change() {
   const btn = document.getElementById("name");
   let count = 0;
   btn.onclick = function () {
     count++;
     if (count % 2 === 1) {
+<<<<<<< HEAD
       count++;
       btn.textContent = "likelion_2";
     } else if (btn.onclick) {
+=======
+      btn.textContent = "likelion_2";
+    } else {
+>>>>>>> 최윤영
       btn.textContent = "likelion_3";
     }
   };

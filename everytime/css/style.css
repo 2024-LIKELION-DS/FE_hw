@@ -230,7 +230,7 @@ div.divider {
   white-space: nowrap;
 }
 
-#container > div.newWrite {
+#container > div#newWrite {
   display: block;
   border: 2px solid #d6d6d6;
   box-sizing: border-box;
@@ -245,11 +245,11 @@ div.divider {
   background-size: 40px 40px;
   position: relative;
 }
-#container > div.newWrite > span {
+#container > div#newWrite > span {
   margin-top: 15px;
   display: inline-block;
 }
-#container > div.newWrite > img {
+#container > div#newWrite > img {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -407,7 +407,8 @@ ul.likeAndReply {
   }
   #container > *,
   #container > div.bubbles,
-  #container > div.newWrite {
+  #container > div#newWrite,
+  #container > div#container_post {
     width: 100%;
   }
   #submenu #submenu > div.wrap {
@@ -443,4 +444,116 @@ ul.likeAndReply {
     align-content: center;
     margin-left: 2%;
   }
+}
+
+/* post.css */
+#container > div#container_post {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid #a6a6a6;
+  color: #292929;
+  font-size: 20px;
+  width: 780px;
+  height: auto;
+}
+
+@media all and (max-width: 640px) {
+  #container > div#container_post {
+    width: 100%;
+  }
+}
+
+.form > input {
+  border-radius: 0px;
+  display: block;
+  box-sizing: border-box;
+  border-color: #fff;
+  border-bottom: 1px solid #a6a6a6;
+  border-left: 0;
+  border-top: 0;
+  width: 100%;
+  /*border-width: 0;*/
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+  padding-right: 5px;
+}
+
+.footer > ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.footer > ul > li > img {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+ul.optoins {
+  color: #292929;
+  display: flex;
+  box-sizing: border-box;
+  width: auto;
+  height: 50px;
+}
+.check {
+  color: #a6a6a6;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  float: right;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.optoins > .check > input {
+  font-size: 14px;
+  color: #737373;
+  margin-right: 7px;
+}
+
+.optoins > li.submit > img {
+  background-color: #f91f15;
+  height: 95%;
+  padding-top: 3px;
+}
+
+/* 자바스크립트 클릭 이벤트 시 변경 되는 사항 */
+/* #writeRed, */
+#writeRed2 {
+  -webkit-appearance: none; /* 웹킷 브라우저에서 기본 스타일링 제거 */
+  appearance: none; /* 다른 브라우저에서 기본 스타일링 제거 */
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+/* #writeRed:checked, */
+#writeRed2:checked {
+  background-color: #f91f15;
+}
+
+div#question > form {
+  padding: 15px;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #fff;
+}
+
+div#question > form > * {
+  padding: 8px;
+  border-radius: 8px;
+  color: #05bcbc;
+  font-size: 12px;
+  background-color: #edfffe;
 }
