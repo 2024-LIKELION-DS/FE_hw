@@ -313,14 +313,10 @@
             </p>
             <div class="attaches multiple">
               <figure class="attach">
-                <img
-                  src="https://cf-ea.everytime.kr/attach_thumbnail/648/65956530/everytime-web-1710207704258.jpg?Expires=1712827427&amp;Key-Pair-Id=APKAICU6XZKH23IGASFA&amp;Signature=Wk7gPQpY51UAHgrYIVdnNzhOY3yM4RFPbVcvIswi7jGPlYOnf2qsHxuaX9vW6gASaEDZ1xNoXZwrfpM-oeCwgcUej5xeRFbsTFQ8CgSLSt1o3~I13OdWTF0f6HCjJ7qDdn6l5pIOCcKcVQs4CsWBO0vg021RQ-Mhtu5HjdOyYhKo8dWTFRcmfijGWhBWS95FZwZWmmF4jYZxbngKRnBIqo-hpHL3WulWLujXlYO5r0eiCXzofJnZ6DWF3r6DkQhb49YDyysJXnENDwE9TS3TKI3a8Plk7BW9qI99EXe63xLliUcO6qKM0twaVB7ui4-CrgZGpguDnui7IT3ew8BD6g__"
-                />
+                <img src="./img/wow1.png" />
               </figure>
               <figure class="attach">
-                <img
-                  src="https://cf-ea.everytime.kr/attach_thumbnail/946/65956532/everytime-web-1710207708397.jpg?Expires=1712827427&amp;Key-Pair-Id=APKAICU6XZKH23IGASFA&amp;Signature=pao5A7a-gefiVfRvBG~WJeKNIM-hrfrZ~KZyNOKiNKgNiGwCe-P4liMsEy8fQOwmbgkkrdyTFYN2rZgv8x35vX4lo9eSngDGW0hfo~-6z2JYAJlmt-CLM8AXDl6L4rTH9j2SWMH--UVY3R9eUakvii5zBSSuGkVpTvf~CNteDCP7~3rNMvjnyLH5m0OacHZq7IRcP4zR3FO-0bl99RJZAeYzHwrAQXVay~U3~IRQ2uNgdFbIZ-lL7hXLT8DMIsXoqAedMw3HZIiPsxUEZrIoHGaQINPnC3jztrQXrdYVN2G5~eQzgWW3905UH8WYbe25-FAzy5g9LVA4bMvfvFvsrA__"
-                />
+                <img src="./img/wow2.png" />
               </figure>
             </div>
             <ul class="status left">
@@ -330,8 +326,8 @@
             </ul>
             <hr />
             <div class="buttons">
-              <span class="posvote">공감</span>
-              <span class="scrap">스크랩</span>
+              <span class="posvote" onclick="posvote()">공감</span>
+              <span class="scrap" onclick="scrap()">스크랩</span>
             </div>
             <input type="hidden" name="338977550_comment_anonym" value="0" />
           </a>
@@ -362,6 +358,7 @@
                 <li class="vote commentvote" style="display: none">0</li>
               </ul>
             </article>
+
             <form class="writecomment">
               <input
                 type="text"
@@ -372,7 +369,7 @@
                 class="text"
               />
               <ul class="option">
-                <li title="익명" class="anonym"></li>
+                <li title="익명" class="anonym" onclick="addClassNm(this)"></li>
                 <li title="완료" class="submit"></li>
               </ul>
             </form>
@@ -497,5 +494,6 @@
         <li class="copyright"><a href="/">© 에브리타임</a></li>
       </ul>
     </div>
+    <script src="js/detial.js"></script>
   </body>
 </html>
