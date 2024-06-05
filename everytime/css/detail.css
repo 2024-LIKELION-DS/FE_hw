@@ -31,15 +31,13 @@ hr {
 .nav_menu {
   box-sizing: border-box;
   height: 65px;
-  margin: 0px 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .logo_left {
   display: flex;
   box-sizing: border-box;
-  width: 250px;
   height: 70px;
 }
 
@@ -50,7 +48,6 @@ hr {
 
 .title {
   display: inline-block;
-  width: 150px;
   text-align: left;
 }
 
@@ -277,16 +274,14 @@ input {
   background-color: #f9f9f9;
 }
 
-.sec3 {
+.comment-top {
+  display: flex;
+}
+
+.comment-box {
+  padding: 10px;
   border: 1.5px solid #dddddd;
-  padding: 13px 15px;
   margin-top: -1px;
-}
-.sec3 > div {
-  display: flex;
-}
-.sec3 > div > div {
-  display: flex;
 }
 
 .nickname > img {
@@ -301,8 +296,25 @@ input {
   margin: 3px;
 }
 
+.replybtn {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a6a6a6;
+  background-color: white;
+  margin-top: -5px;
+  margin-right: -2px;
+}
+
 .comment-top {
   justify-content: space-between;
+}
+
+.nickname {
+  display: flex;
+}
+
+.comment-side {
+  display: flex;
 }
 
 .comment-side > p {
@@ -325,7 +337,23 @@ input {
   margin: 3px 0px;
 }
 
-.sec4 {
+.reply-box {
+  border: 1.5px solid #dddddd;
+  padding: 10px;
+  margin: 6px -6px -6px 30px;
+  background-color: #f8f8f8;
+}
+
+.input-box2 {
+  border: 1.5px solid #dddddd;
+  padding: 0px;
+  margin: 8px -6px -6px 30px;
+  display: flex;
+  background-color: #f8f8f8;
+  display: none;
+}
+
+.input-box {
   border: 1.5px solid #dddddd;
   padding: 0px;
   margin-top: -1px;
@@ -335,6 +363,7 @@ input {
 
 form {
   display: flex;
+  width: 100%;
 }
 
 .comment-input {
@@ -360,7 +389,7 @@ form {
   color: #959494;
 }
 
-.check1.active {
+#check:checked + .check1 {
   color: #d94423;
 }
 
@@ -368,8 +397,19 @@ form {
   background-color: #d94423;
 }
 
-.sec4 > form > img {
+.sec4 > div > form > button > img {
   margin: 0;
+}
+
+.sec3 > div > div > form > button > img {
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 40px;
 }
 
 .sec5 {
