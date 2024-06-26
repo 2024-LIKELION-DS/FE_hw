@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% load static %}{% block title %}index page{%endblock%} {% block body %}{% include "./header.html" %}
+<h1>[7차 세션]</h1>
+<p>wordCount 실습 제출합니다.</p>
+<a href="{% url 'wordCount' %}">wordCount 페이지로 이동</a>
+{% endblock %}
