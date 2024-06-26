@@ -1,6 +1,6 @@
 const button = document.querySelector("button");
-const id = document.querySelector("#id");
-const pw = document.querySelector("#password");
+const id = document.querySelector("#id_username");
+const pw = document.querySelector("#id_password");
 
 id.addEventListener("keyup", activeEvent);
 pw.addEventListener("keyup", activeEvent);
