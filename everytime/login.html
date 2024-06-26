@@ -1,22 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="{% static 'css//login.css' %}">
     <title>로그인 - 에브리타임</title>
 </head>
 
 <body>
     <header>
-        <div class="logo"><img src="./img/logo.png" width=210 height=55></div>
+        <a href="{% url 'post:home' %}">
+            <div class="logo"><img src="{% static 'img/logo.png' %}" width=210 height=55></div>
+        </a>
     </header>
     <section>
         <form>
+            {% csrf_token %}
             <div class="idpw">
-                <div class="id"><input type="text" placeholder="아이디"></div>
-                <div class="pw"><input type="password" placeholder="비밀번호"></div>
+                <div class="id"><input id="id_username" type="text" placeholder="아이디"></div>
+                <div class="pw"><input id="id_password" type="password" placeholder="비밀번호"></div>
             </div>
             <div class="login"><input type="submit" value="에브리타임 로그인"></div>
             <div class="serv_idpw">
@@ -25,7 +29,9 @@
             </div>
         </form>
 
-        <div class="create_id">회원가입</div>
+        <a href="{% url 'accounts:signup' %}">
+            <div class="create_id">회원가입</div>
+        </a>
     </section>
 
     <footer>
