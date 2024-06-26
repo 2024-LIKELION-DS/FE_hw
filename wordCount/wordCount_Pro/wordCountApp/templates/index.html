@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% load static %}{% block title %}index page{%endblock%} {% block body %}
+<h1>안녕하세요 아기사자 여러분</h1>
+<h2>테킷에서 배운 html을 사용하여</h2>
+<br />
+<h3>자기소개를 해보세요~^^</h3>
+<br />
+<a href="{% url 'wordCount' %}">wordCount 페이지로 가기!</a>
+{% endblock %}
