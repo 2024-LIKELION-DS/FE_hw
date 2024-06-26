@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% load static %} {% block title %}index page{% endblock %}
+{% block body %}
+            <h1>안녕하세요:)</h1>
+            <h3>저는 아기사자 강나연입니다❤️🦁</h3>
+            <img src="{% static 'img\ny.png' %}" alt="logo" />
+            <p>birth : 2000.07.15</p>
+            <p>major : 소프트웨어전공</p>
+            <P>instargram : @dusskdus</P>
+            <P>ph : 010-5187-5747</P>
+            <p>email : skdusb0007@naver.com</p>
+            <a href="{% url 'wordCount' %}">wordCount 페이지로 가기!</a>
+{% endblock %}
