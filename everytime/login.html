@@ -1,26 +1,21 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>로그인</title>
-    <link rel="stylesheet" href="./css/login.css" />
-    <link rel="icon" href="./img/logo.png" />
+    <link rel="stylesheet" href="{% static './css/login.css' %}" />
+    <link rel="icon" href="{% static './img/logo.png' %}" />
   </head>
   <body>
     <div data-v-c80e0668="">
       <div data-v-c80e0668="" class="container">
-        <h1 class="logo"></h1>
+        <a href="{% url 'accounts:signup' %}"><h1 class="logo"></h1></a>
         <form>
+          {% csrf_token %} {{ form.as_p }}
+
           <div class="input">
-            <input
-              id="id_input"
-              name="id"
-              type="text"
-              maxlength="20"
-              placeholder="아이디"
-              class="id_input"
-            />
+            <input id="id_input" name="id" type="text" maxlength="20" placeholder="아이디" class="id_input" />
             <input
               id="pw_input"
               name="password"
@@ -30,12 +25,7 @@
               class="pw_input"
             />
           </div>
-          <input
-            id="login_btn"
-            type="submit"
-            class="login_btn"
-            value="에브리타임 로그인"
-          />
+          <input id="login_btn" type="submit" class="login_btn" value="에브리타임 로그인" />
           <div class="options">
             <label class="keep">
               <input type="checkbox" />
@@ -46,28 +36,16 @@
           </div>
         </form>
         <p class="register">
-          <a href="/register?redirect_uri=https%3A%2F%2Feverytime.kr"
-            >회원가입</a
-          >
+          <a href="{% url 'accounts:signup' %}">회원가입</a>
         </p>
         <footer>
           <a href="https://everytime.kr/page/serviceagreement">이용약관</a>
-          <a
-            href="https://everytime.kr/page/privacy"
-            class="privacy"
-            style="font-weight: bold"
-            >개인정보처리방침</a
-          >
+          <a href="https://everytime.kr/page/privacy" class="privacy" style="font-weight: bold">개인정보처리방침</a>
           <a href="https://everytime.kr/page/faq">문의하기</a>
-          <a
-            href="https://everytime.kr"
-            class="copyright"
-            style="font-weight: bold"
-            >© 에브리타임</a
-          >
+          <a href="https://everytime.kr" class="copyright" style="font-weight: bold">© 에브리타임</a>
         </footer>
       </div>
     </div>
-    <script src="js/login.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
   </body>
 </html>
