@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}index page{% endblock %}
+{% block body %}
+<h1>제목</h1>
+<hr>
+<p>내용입니다아아아아</p>
+<a href="{% url 'wordCount' %}">wordCount 페이지로 가기!</a>
+{% endblock %}
