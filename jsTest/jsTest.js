@@ -17,7 +17,11 @@ let result = () => {
 };
 result();
 
-//3 => 0점
+<<<<<<< HEAD
+//3
+=======
+//3 ==> 0점
+>>>>>>> 최윤영
 let num;
 do {
   num = prompt("100을 초과하는 숫자를 입력해주세요.");
@@ -78,8 +82,14 @@ function change() {
   btn.onclick = function () {
     count++;
     if (count % 2 === 1) {
+<<<<<<< HEAD
+      count++;
+      btn.textContent = "likelion_2";
+    } else if (btn.onclick) {
+=======
       btn.textContent = "likelion_2";
     } else {
+>>>>>>> 최윤영
       btn.textContent = "likelion_3";
     }
   };
