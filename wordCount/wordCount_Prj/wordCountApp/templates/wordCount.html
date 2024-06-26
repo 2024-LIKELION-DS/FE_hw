@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% load static %} {% block title %}wordCount{% endblock %}
+<!--  -->
+{% block style %}<link rel="stylesheet" href="{% static 'css/header.css' %}" />{% endblock %}
+<!--  -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/wordCount.css' %}" />
+<!--  -->
+{% block body %}
+<div>
+  {% include "./header.html" %}
+  <h1>World Count!</h1>
+
+  <img src="{% static 'img/snoopy.png' %}" alt="img" />
+
+  <form action="{% url 'result' %}">
+    <textarea name="fulltext" cols="40" rows="20"></textarea>
+    <br />
+    <input type="submit" value="Count!" />
+  </form>
+</div>
+{% endblock %}
