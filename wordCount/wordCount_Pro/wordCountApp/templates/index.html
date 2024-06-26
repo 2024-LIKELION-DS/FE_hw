@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index page</title>
+  </head>
+  <body>
+    {% extends 'base.html' %}{% load static %}{% block title %}index page{%endblock %}{% block body %}
+    <h1>안녕하세요</h1>
+    <h2>반갑습니다</h2>
+
+    <a href="wordCount/">wordCount 페이지로 가기</a>
+    {% endblock %}
+  </body>
+</html>
