@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load static %} {% block title %}index page{%endblock %} {% block body %}
+<h1>오늘은 6월 24일 월요일</h1>
+
+<h1>자기소개 페이지를 만들어봐요</h1>
+<ul>
+  <li>name : 노진경</li>
+</ul>
+
+<a href="{% url 'wordCount' %}">wordCount 페이지로 가기!</a>
+{% endblock %}
